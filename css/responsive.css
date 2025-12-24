@@ -1,0 +1,281 @@
+/* =========================================================
+   GLOBAL RESPONSIVE STABILIZATION
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  width: 100%;
+  overflow-x: hidden;
+  padding-left: clamp(1.2rem, 4vw, 6rem);
+  padding-right: clamp(1.2rem, 4vw, 6rem);
+}
+
+p,
+li {
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FLUID TYPOGRAPHY (NO HALVING)
+========================================================= */
+
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 6rem);
+}
+
+.hero-title span {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  letter-spacing: clamp(0.2rem, 1vw, 0.6rem);
+}
+
+.hero-tagline {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+.hero-copy {
+  font-size: clamp(1rem, 2.6vw, 1.15rem);
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  letter-spacing: clamp(0.25rem, 1vw, 0.5rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+}
+
+p {
+  font-size: clamp(1rem, 2.6vw, 1.15rem);
+}
+
+/* =========================================================
+   NAVBAR & MENU
+========================================================= */
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 1.2rem;
+  }
+
+  .space {
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+  }
+
+  #rcs-fullscreenMenu {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   HERO SECTION (REFLOW, NOT SHRINK)
+========================================================= */
+
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    margin-top: 40px;
+  }
+
+  .hero-bg {
+    padding: 4rem 2rem;
+  }
+
+  .hero-image {
+    min-height: 45vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-bg {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* =========================================================
+   CLUB HIGHLIGHTS / CARDS
+========================================================= */
+
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #club-highlights {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .card {
+    padding: 1.8rem;
+  }
+}
+
+/* =========================================================
+   EVENT / TEASER SECTION
+========================================================= */
+
+@media (max-width: 992px) {
+  #teaser {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .teaser-container {
+    flex-direction: column;
+  }
+
+  .teaser-image {
+    height: 260px;
+    width: 100%;
+  }
+
+  .teaser-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .teaser-title {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+
+  .teaser-meta {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+/* =========================================================
+   ACHIEVEMENTS SECTION
+========================================================= */
+
+@media (max-width: 992px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .achievement-card {
+    padding: 1.8rem;
+  }
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.2rem;
+  }
+
+  .footer-logo {
+    order: -1;
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   BACKGROUND CANVAS (MOBILE PERFORMANCE)
+========================================================= */
+
+@media (max-width: 768px) {
+  #bgCanvas {
+    opacity: 0.35;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .achievements-section,
+  .achievements-container,
+  .achievements-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .achievements-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: stretch !important;
+  }
+
+  .achievement-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 2rem !important;
+  }
+
+  .achievement-image,
+  .achievement-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .achievement-image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+  .achievements-title{
+    font-size: 2rem !important;
+  }
+  .achievements-subtitle{
+    font-size: 1rem !important;
+  }
+}
