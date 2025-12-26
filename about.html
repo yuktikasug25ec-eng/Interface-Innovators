@@ -169,7 +169,66 @@
         </div>
       </div>
     </section>
-    <!---make new section here--->
+    <section>
+  <div class="container">
+    <div class="slider">
+      <div class="slides" style="--img:url('img1.jpg')">
+        <div class="content">
+          <h2>Slide 01</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img:url('img1.jpg')">
+        <div class="content">
+          <h2>Slide 02</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img:url('img1.jpg')">
+        <div class="content">
+          <h2>Slide 03</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img:url('img1.jpg')">
+        <div class="content">
+          <h2>Slide 04</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img:url('img1.jpg')">
+        <div class="content">
+          <h2>Slide 05</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img:url('img1.jpg')">
+        <div class="content">
+          <h2>Slide 06</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <span class="prev"></span>
+      <span class="next"></span>
+    </div>
+  </div>
+  <script>
+    let next=document.querySelector('.next');
+    let prev=document.querySelector('.prev');
+    let slider=document.querySelector('.slider');
+
+    next.addEventListener('click',function(){
+      let slides=document.querySelectorAll('.slides');
+      slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click',function(){
+      let slides=document.querySelectorAll('.slides');
+      slider.prepend(slides[slides.length-1]);
+    })
+  </script>
+</section>
 
     
 </body>
