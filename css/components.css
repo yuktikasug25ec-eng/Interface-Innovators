@@ -3242,6 +3242,7 @@ nav > div {
   padding: 6rem 8vw;
   position: relative;
   color: #e5ecff;
+  z-index: 10;
   overflow-anchor: none;
 }
 
@@ -3275,6 +3276,7 @@ nav > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
+  z-index: 10;
 }
 
 .project-card {
@@ -3353,7 +3355,7 @@ nav > div {
   grid-column: 1 / -1;
   width: 90%;
   margin: 2rem auto;
-  min-height: 80vh;
+  height: 50vh;
 }
 
 /* Enlarge text smoothly */
@@ -3387,4 +3389,53 @@ nav > div {
 /* Prevent jumpiness */
 .projects-grid {
   transition: all 0.6s ease;
+}
+
+/* Filtered cards */
+.project-card.filtered-out {
+  opacity: 0;
+  transform: scale(0.92);
+  pointer-events: none;
+  position: absolute;
+}
+
+.project-card.expanded::after {
+  content: "Press ESC to close";
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  letter-spacing: 0.15em;
+}
+
+/* Paragraph swap logic */
+.project-desc-long {
+  display: none;
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Expanded state */
+.project-card.expanded .project-desc-short {
+  display: none;
+}
+
+.project-card.expanded .project-desc-long {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInDesc 0.4s ease forwards;
+}
+
+/* Subtle animation */
+@keyframes fadeInDesc {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

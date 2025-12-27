@@ -219,13 +219,19 @@ window.addEventListener('load', () => {
 
 
 //Project filter logic
+
 const yearFilter = document.getElementById("yearFilter");
 const typeFilter = document.getElementById("typeFilter");
 const cards = document.querySelectorAll(".project-card");
 
-function filterProjects() {
+function applyFilters() {
   const year = yearFilter.value;
   const type = typeFilter.value;
+
+  // Reset expansion on filter
+  cards.forEach(card => {
+    card.classList.remove("expanded", "dimmed");
+  });
 
   cards.forEach(card => {
     const cardYear = card.dataset.year;
@@ -234,12 +240,17 @@ function filterProjects() {
     const yearMatch = year === "all" || cardYear === year;
     const typeMatch = type === "all" || cardType === type;
 
-    card.style.display = (yearMatch && typeMatch) ? "flex" : "none";
+    if (yearMatch && typeMatch) {
+      card.classList.remove("filtered-out");
+    } else {
+      card.classList.add("filtered-out");
+    }
   });
 }
 
-yearFilter.addEventListener("change", filterProjects);
-typeFilter.addEventListener("change", filterProjects);
+yearFilter.addEventListener("change", applyFilters);
+typeFilter.addEventListener("change", applyFilters);
+
 
 
 const projectCards = document.querySelectorAll(".project-card");
@@ -270,5 +281,18 @@ projectCards.forEach(card => {
       });
     }
   });
+});
+
+//esc collapse cards
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const expandedCard = document.querySelector(".project-card.expanded");
+    if (!expandedCard) return;
+
+    const cards = document.querySelectorAll(".project-card");
+    cards.forEach(card => {
+      card.classList.remove("expanded", "dimmed");
+    });
+  }
 });
 
