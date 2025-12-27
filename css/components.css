@@ -3123,7 +3123,7 @@ nav > div {
 .slider .slides
 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 240px;
   height: 320px;
