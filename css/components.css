@@ -3238,7 +3238,7 @@ nav > div {
 == Projects page SECTION ========
 =========================*/
 .projects-section {
-  min-height: 200vh;
+  min-height: 150vh;
   padding: 6rem 8vw;
   position: relative;
   color: #e5ecff;
@@ -3286,7 +3286,7 @@ nav > div {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  min-height: calc(200vh / 3);
+  min-height: calc(150vh / 3);
   cursor: pointer;
   transition: all 0.4s ease;
 }
@@ -3438,4 +3438,130 @@ nav > div {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/*==============================
+   EVENTS PAGE
+===============================*/
+
+.ev-page {
+  padding: 5rem 8vw;
+}
+
+.ev-page-title {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.25em;
+  margin-bottom: 3rem;
+}
+
+.ev-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.ev-filter select {
+  background: transparent;
+  border: 1px solid rgba(120,170,255,0.5);
+  color: #dbe6ff;
+  padding: 0.6rem 1.2rem;
+}
+
+.ev-section {
+  margin-bottom: 5rem;
+}
+
+.ev-section-title {
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+}
+
+.ev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.ev-card {
+  border: 1px solid rgba(120,170,255,0.25);
+  padding: 1.8rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.ev-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.ev-card:hover {
+  border-color: rgba(120,170,255,0.7);
+  box-shadow: 0 0 20px rgba(120,170,255,0.2);
+  transform: translateY(-6px);
+}
+
+.ev-meta {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin: 0.6rem 0;
+}
+
+.ev-register {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1.3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: #dbe6ff;
+  border: 1px solid rgba(120,170,255,0.55);
+}
+
+.ev-card.filtered {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* MODAL */
+.ev-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,8,15,0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.ev-modal img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.ev-modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.ev-modal-controls {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.ev-modal-controls button {
+  background: transparent;
+  border: 1px solid rgba(120,170,255,0.6);
+  color: #dbe6ff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
