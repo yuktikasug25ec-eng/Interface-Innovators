@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="images/background/logot.png"/>
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+    <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="flex justify-between items-center">
+      <div ><img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo"></div>
+      <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
+      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
+        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu Panel with glassmorphism -->
+  <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+    <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
+      <a   href="index.html" class="rcs-nav-link">Home</a>
+      <a   href="about.html" class="rcs-nav-link">About</a>
+      <a   href="events.html" class="rcs-nav-link">Events</a>
+      <a   href="team.html" class="rcs-nav-link">Team</a>
+      <a   href="achievements.html" class="rcs-nav-link">Achievement</a>
+      <a   href="news.html" class="rcs-nav-link">News</a>
+      <a   href="contact.html" class="rcs-nav-link">Contact Us</a>
+    </div>
+  </div>
+
+  <section class="projects-section" id="projects">
+
+  <h2 class="projects-title">Our Projects</h2>
+
+  <!-- Filters -->
+  <div class="projects-filters">
+    <select id="yearFilter" class="glass-1">
+      <option value="all">All Years</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+    </select>
+
+    <select id="typeFilter" class="glass-1">
+      <option value="all">All Domains</option>
+      <option value="drone">Drone</option>
+      <option value="robotic-arm">Robotic Arm</option>
+      <option value="ai">AI</option>
+      <option value="iot">IoT</option>
+    </select>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="projects-grid">
+
+    <div class="project-card glass" data-year="2024" data-type="drone">
+      <img src="assets/projects/drone.jpg" alt="Autonomous Drone">
+      <div class="project-content">
+        <h3>Autonomous Surveillance Drone <span>2024</span></h3>
+        <p>
+          A fully autonomous drone designed for real-time surveillance and terrain
+          mapping. The system integrates onboard vision, obstacle avoidance, and
+          intelligent flight control to enable safe and efficient missions in
+          complex environments.
+        </p>
+        <div class="project-tech">
+          Python • OpenCV • PX4 • ROS
+        </div>
+        <div class="project-team">
+          Team: A. Kumar, S. Verma
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+    <div class="project-card glass" data-year="2023" data-type="robotic-arm">
+      <img src="assets/projects/robotic_arm.jpg" alt="Robotic Arm">
+      <div class="project-content">
+        <h3>AI-Powered Robotic Arm <span>2023</span></h3>
+        <p>
+          An AI-powered robotic arm capable of performing complex tasks such as
+          object recognition, sorting, and assembly. The arm utilizes machine
+          learning algorithms to adapt to new objects and improve its performance
+          over time.
+        </p>
+        <div class="project-tech">
+          C++ • TensorFlow • Arduino
+        </div>
+        <div class="project-team">
+          Team: R. Singh, M. Gupta
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

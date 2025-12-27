@@ -3233,3 +3233,158 @@ nav > div {
   transform: translateY(0px);
   transition-delay: 0.5s;
 }
+
+/*========================
+== Projects page SECTION ========
+=========================*/
+.projects-section {
+  min-height: 200vh;
+  padding: 6rem 8vw;
+  position: relative;
+  color: #e5ecff;
+  overflow-anchor: none;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2.8rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.projects-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.projects-filters select {
+  background: #0b0f16;
+  border: 1px solid rgba(120, 170, 255, 0.35);
+  color: #dbe6ff;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.project-card {
+  border: 1px solid rgba(120, 170, 255, 0.25);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  min-height: calc(200vh / 3);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(120, 170, 255, 0.7);
+  box-shadow: 0 0 25px rgba(120, 170, 255, 0.15);
+  transform: translateY(-6px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 38%;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.85;
+}
+
+.project-content {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.project-content h3 {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.project-content h3 span {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-left: 0.5rem;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.project-tech {
+  font-size: 0.75rem;
+  color: #7aa2ff;
+  letter-spacing: 0.08em;
+}
+
+.project-team {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* EXPANDABLE CARD LOGIC */
+
+.project-card {
+  grid-column: span 1;
+  transition:
+    grid-column 0.6s ease,
+    transform 0.6s ease,
+    opacity 0.4s ease;
+}
+
+/* Expanded state */
+.project-card.expanded {
+  grid-column: 1 / -1;
+  width: 90%;
+  margin: 2rem auto;
+  min-height: 80vh;
+}
+
+/* Enlarge text smoothly */
+.project-card.expanded h3 {
+  font-size: 1.6rem;
+}
+
+.project-card.expanded p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.project-card.expanded .project-tech,
+.project-card.expanded .project-team {
+  font-size: 0.85rem;
+}
+
+/* Fade other cards */
+.project-card.dimmed {
+  opacity: 0.25;
+  transform: scale(0.96);
+  pointer-events: none;
+}
+
+/* Smooth image emphasis */
+.project-card.expanded img {
+  height: 45%;
+  opacity: 1;
+}
+
+/* Prevent jumpiness */
+.projects-grid {
+  transition: all 0.6s ease;
+}

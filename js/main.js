@@ -218,4 +218,57 @@ window.addEventListener('load', () => {
 })();
 
 
-//Slider 
+//Project filter logic
+const yearFilter = document.getElementById("yearFilter");
+const typeFilter = document.getElementById("typeFilter");
+const cards = document.querySelectorAll(".project-card");
+
+function filterProjects() {
+  const year = yearFilter.value;
+  const type = typeFilter.value;
+
+  cards.forEach(card => {
+    const cardYear = card.dataset.year;
+    const cardType = card.dataset.type;
+
+    const yearMatch = year === "all" || cardYear === year;
+    const typeMatch = type === "all" || cardType === type;
+
+    card.style.display = (yearMatch && typeMatch) ? "flex" : "none";
+  });
+}
+
+yearFilter.addEventListener("change", filterProjects);
+typeFilter.addEventListener("change", filterProjects);
+
+
+const projectCards = document.querySelectorAll(".project-card");
+
+projectCards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    const isExpanded = card.classList.contains("expanded");
+
+    // Reset all cards
+    projectCards.forEach(c => {
+      c.classList.remove("expanded", "dimmed");
+    });
+
+    if (!isExpanded) {
+      // Expand clicked card
+      card.classList.add("expanded");
+
+      // Dim others
+      projectCards.forEach(c => {
+        if (c !== card) c.classList.add("dimmed");
+      });
+
+      // Scroll into view smoothly
+      card.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  });
+});
+
