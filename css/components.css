@@ -124,19 +124,7 @@
 
 
 /* Full-hero radial vignette: transparent center, dark edges */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1; /* put vignette underneath the hero image */
-  background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.55) 70%,
-    rgba(0,0,0,0.9) 100%
-  );
-}
+
 
 
 
@@ -527,20 +515,7 @@ nav > div {
   z-index: 20;
 }
 
-/* Vignette overlay similar to hero::before */
-#club-highlights::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1; /* sit behind .container content */
-  background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.55) 70%,
-    rgba(0,0,0,0.9) 100%
-  );
-}
+
 .club-section .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -744,19 +719,7 @@ nav > div {
 }
 
 /* Vignette overlay similar to other sections */
-#teaser::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1; /* sit behind .teaser-container content */
-  background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.55) 70%,
-    rgba(0,0,0,0.9) 100%
-  );
-}
+
 
 .teaser-container {
   width: 90%;
@@ -918,21 +881,6 @@ nav > div {
   align-items: center;
 }
 
-.achievements-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.25) 55%,
-    rgba(0, 0, 0, 0.65) 80%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-}
 
 
 .achievements-container {
@@ -1310,10 +1258,6 @@ nav > div {
   }
 }
 
-
-/*----------------
-----ABOUT PAGE----
------------------*/
 
 /* ================= ABOUT SECTION ================= */
 
@@ -1722,20 +1666,6 @@ nav > div {
 }
 
 
-/* Full-hero radial vignette: transparent center, dark edges */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1; /* put vignette underneath the hero image */
-  background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.55) 70%,
-    rgba(0,0,0,0.9) 100%
-  );
-}
 
 
 
@@ -2127,19 +2057,7 @@ nav > div {
 }
 
 /* Vignette overlay similar to hero::before */
-#club-highlights::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1; /* sit behind .container content */
-  background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.55) 70%,
-    rgba(0,0,0,0.9) 100%
-  );
-}
+
 .club-section .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -2342,20 +2260,6 @@ nav > div {
   overflow: hidden;
 }
 
-/* Vignette overlay similar to other sections */
-#teaser::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1; /* sit behind .teaser-container content */
-  background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.55) 70%,
-    rgba(0,0,0,0.9) 100%
-  );
-}
 
 .teaser-container {
   width: 90%;
@@ -2516,23 +2420,6 @@ nav > div {
   display: flex;
   align-items: center;
 }
-
-.achievements-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.25) 55%,
-    rgba(0, 0, 0, 0.65) 80%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-}
-
 
 .achievements-container {
   max-width: 1200px;
@@ -2910,9 +2797,6 @@ nav > div {
 }
 
 
-/*----------------
-----ABOUT PAGE----
------------------*/
 
 /* ================= ABOUT SECTION ================= */
 
@@ -2926,6 +2810,7 @@ nav > div {
   overflow: hidden;
   flex-direction: column;
 }
+
 
 .about-title {
   text-align: center;
@@ -3065,6 +2950,8 @@ nav > div {
    ABOUT PAGE – NEON GLOW SLIDE CARDS
 ===================================== */
 
+
+
 .about-glowfx-section {
   min-height: 100vh;
   display: flex;
@@ -3098,11 +2985,16 @@ nav > div {
 /* FACE 1 (GLOW FACE) */
 .about-glowfx-face1 {
   position: relative;
-  background: #111;
+  background: #0b0f16;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  box-shadow:
+    12px 12px 24px rgba(0, 0, 0, 0.7),
+    -12px -12px 24px rgba(255, 255, 255, 0.035),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.03),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.6);
   transform: translateY(150px);
 }
 
@@ -3165,7 +3057,7 @@ nav > div {
 /* FACE 2 CONTENT */
 .about-glowfx-face2 p {
   font-size: 0.85rem;
-  color: #333;
+  color: #0b0f16;
 }
 
 .about-glowfx-face2 a {
@@ -3193,15 +3085,31 @@ nav > div {
   transform-origin: center;
 }
 
-.container
+.glass-1{
+  background-color: #0b0f16;
+  box-shadow:
+    12px 12px 24px rgba(0, 0, 0, 0.7),
+    -12px -12px 24px rgba(255, 255, 255, 0.035),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.03),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+/*========================
+== SLIDER COMPONENT ========
+=========================*/
+
+
+.container-slider
 {
-  position: absolute;
-  width: 100vw;
-  height: 100vw;
+  position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .slider
@@ -3325,4 +3233,3 @@ nav > div {
   transform: translateY(0px);
   transition-delay: 0.5s;
 }
-@media (max-width)

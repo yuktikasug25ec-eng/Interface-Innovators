@@ -79,6 +79,26 @@ body, html {
   background: #0b0f16;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  /* SINGLE 100vh VIGNETTE SLICE */
+  background: radial-gradient(circle at center,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,0.55) 70%,
+    rgba(0,0,0,0.9) 100%
+  );
+
+  background-size: 100% 100vh;
+  background-repeat: repeat-y;
+
+  z-index: 1; /* IMPORTANT */
+}
 
 #bgCanvas {
   position: fixed;

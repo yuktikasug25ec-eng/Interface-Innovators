@@ -11,10 +11,36 @@
     <title>About</title>
 </head>
 <body>
-    <div class="bg">
-        <div class="diffuser"></div>
-        <video src="images/background/star dust.mp4" width="100%" height="100vh" autoplay muted loop></video>
+  <canvas id="bgCanvas"></canvas>
+    
+    <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="flex justify-between items-center">
+      <div ><img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo"></div>
+      <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
+      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
+        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+      </button>
     </div>
+  </nav>
+
+  <!-- Menu Panel with glassmorphism -->
+  <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+    <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
+      <a   href="index.html" class="rcs-nav-link">Home</a>
+      <a   href="#" class="rcs-nav-link">Projects</a>
+      <a   href="#" class="rcs-nav-link">Events</a>
+      <a   href="#" class="rcs-nav-link">Team</a>
+      <a   href="#" class="rcs-nav-link">Achievement</a>
+      <a   href="#" class="rcs-nav-link">News</a>
+      <a   href="#" class="rcs-nav-link">Contact Us</a>
+    </div>
+  </div>
+
 
     <section id="about">
   <h2 class="about-title">Our History</h2>
@@ -66,7 +92,7 @@
   </div>
 </section>
 
-<section class="about-glowfx-section">
+<section class="about-glowfx-section" title="about-glowfx-title">
   <div class="about-glowfx-container">
 
     <!-- MISSION -->
@@ -131,7 +157,7 @@
       <div class="container">
         <h2 class="section-title">Club Highlights</h2>
         <div class="cards">
-          <article class="card glass">
+          <article class="card glass-1">
             <div class="card-image" style="background-image: url('images/projects/project1.jpg');"></div>
             <div class="card-peeker">
               <i class="fa-solid fa-trophy"></i>
@@ -143,7 +169,7 @@
             </div>
           </article>
 
-          <article class="card glass">
+          <article class="card glass-1">
             <div class="card-image" style="background-image: url('images/projects/project2.jpg');"></div>
             <div class="card-peeker">
               <i class="fa-solid fa-brain"></i>
@@ -155,7 +181,7 @@
             </div>
           </article>
 
-          <article class="card glass">
+          <article class="card glass-1">
             <div class="card-image" style="background-image: url('images/projects/project3.jpg');"></div>
             <div class="card-peeker">
               <i class="fa-solid fa-gear"></i>
@@ -169,40 +195,84 @@
         </div>
       </div>
     </section>
-    <section>
-  <div class="container">
+    <section id="club-highlights" class="club-section">
+      <div class="container">
+        <h2 class="section-title">Club Highlights</h2>
+        <div class="cards">
+          <article class="card glass-1">
+            <div class="card-image" style="background-image: url('images/projects/project1.jpg');"></div>
+            <div class="card-peeker">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Competitions</h3>
+              <p class="card-text">NIT Patna’s Robotics Club hosts engaging tech events like Path Enigma, a maze-solving robot competition, and participates in national platforms such as NRL and Robofest 5.0, fostering hands-on learning and skills across mechanical, electrical, and programming domains.</p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </article>
+
+          <article class="card glass-1">
+            <div class="card-image" style="background-image: url('images/projects/project2.jpg');"></div>
+            <div class="card-peeker">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Workshops</h3>
+              <p class="card-text">The Robotics Club at NIT Patna conducts hands-on workshops on Arduino, robot design, programming, and IoT, helping beginners and tech enthusiasts build practical skills, foster innovation, and prepare for future tech challenges.</p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </article>
+
+          <article class="card glass-1">
+            <div class="card-image" style="background-image: url('images/projects/project3.jpg');"></div>
+            <div class="card-peeker">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Research</h3>
+              <p class="card-text">The Robotics Club at NIT Patna drives hands-on innovation across AI/ML, IoT, 5G, cybersecurity, and 3D printing, building intelligent robots to solve real-world problems while fostering collaboration, future-ready skills, and employability.</p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  
+  <div class="container-slider">
+    
     <div class="slider">
-      <div class="slides" style="--img:url('img1.jpg')">
+      <div class="slides pic1" style="--img:url('../images/team/pic1.jpg')">
         <div class="content">
           <h2>Slide 01</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
         </div>
       </div>
-      <div class="slides" style="--img:url('img1.jpg')">
+      <div class="slides pic2" style="--img:url('../images/team/pic2.jpg')">
         <div class="content">
           <h2>Slide 02</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
         </div>
       </div>
-      <div class="slides" style="--img:url('img1.jpg')">
+      <div class="slides pic3" style="--img:url('../images/team/pic3.jpg')">
         <div class="content">
           <h2>Slide 03</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
         </div>
       </div>
-      <div class="slides" style="--img:url('img1.jpg')">
+      <div class="slides pic4" style="--img:url('../images/team/pic4.jpg')">
         <div class="content">
           <h2>Slide 04</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
         </div>
       </div>
-      <div class="slides" style="--img:url('img1.jpg')">
+      <div class="slides pic5" style="--img:url('../images/team/pic5.jpg')">
         <div class="content">
           <h2>Slide 05</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
         </div>
       </div>
-      <div class="slides" style="--img:url('img1.jpg')">
+      <div class="slides pic6" style="--img:url('../images/team/pic6.jpg')">
         <div class="content">
           <h2>Slide 06</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam maxime, tempore voluptatibus tempora, praesentium fugit, quasi vitae dolor corporis impedit pariatur voluptatum doloribus iure. Dolores, soluta! Aspernatur laboriosam rerum quisquam?</p>
@@ -214,22 +284,65 @@
       <span class="next"></span>
     </div>
   </div>
-  <script>
-    let next=document.querySelector('.next');
-    let prev=document.querySelector('.prev');
-    let slider=document.querySelector('.slider');
+  <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section social-media">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul class="link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section quick-contacts">
+          <h3>Quick Contacts</h3>
+          <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
+            <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+            <li><i class="fas fa-map-marker-alt"></i>    Ashok Rajpath, National Institute of Technology Patna
+   Incubation Center 3rd Floor - 800005</li>
+          </ul>
+        </div>
+        <div class="footer-section footer-logo">
+  <img src="images/background/logoM.png" alt="Robotics Club Logo">
+</div>
 
-    next.addEventListener('click',function(){
-      let slides=document.querySelectorAll('.slides');
-      slider.appendChild(slides[0]);
-    })
-    prev.addEventListener('click',function(){
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
+      </div>
+    </footer>
+    
+  <script src="js/main.js"></script>
+<script>
+   let next=document.querySelector('.next');
+ let prev=document.querySelector('.prev');
+ let slider=document.querySelector('.slider');
+
+ next.addEventListener('click',function(){
+  let slides=document.querySelectorAll('.slides');
+  slider.appendChild(slides[0]);
+  })
+  
+  prev.addEventListener('click',function(){
       let slides=document.querySelectorAll('.slides');
       slider.prepend(slides[slides.length-1]);
-    })
-  </script>
-</section>
+  })
+</script>
 
-    
 </body>
 </html>
