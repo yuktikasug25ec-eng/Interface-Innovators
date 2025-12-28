@@ -3301,7 +3301,7 @@ nav > div {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  min-height: calc(150vh / 3);
+  min-height: calc(100vh / 2);
   cursor: pointer;
   transition: all 0.4s ease;
 }
@@ -3314,7 +3314,7 @@ nav > div {
 
 .project-card img {
   width: 100%;
-  height: 38%;
+  height: 60%;
   object-fit: cover;
   border-radius: 4px;
   opacity: 0.85;
@@ -3370,7 +3370,7 @@ nav > div {
   grid-column: 1 / -1;
   width: 90%;
   margin: 2rem auto;
-  height: 50vh;
+  height: 75vh;
 }
 
 /* Enlarge text smoothly */
@@ -3397,13 +3397,13 @@ nav > div {
 
 /* Smooth image emphasis */
 .project-card.expanded img {
-  height: 45%;
+  height: 60%;
   opacity: 1;
 }
 
 /* Prevent jumpiness */
 .projects-grid {
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
 }
 
 /* Filtered cards */
