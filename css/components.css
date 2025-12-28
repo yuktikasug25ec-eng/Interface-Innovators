@@ -1003,7 +1003,7 @@ nav > div {
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes softGlow {
+@keyframes softGlowB {
   0% {
     box-shadow: 0 0 10px rgba(0, 131, 213, 0.35),
                 0 0 25px rgba(0, 131, 213, 0.2);
@@ -1018,16 +1018,31 @@ nav > div {
   }
 }
 
+@keyframes softGlowG {
+  0% {
+    box-shadow: 0 0 10px rgba(202, 213, 0, 0.35),
+                0 0 25px rgba(213, 174, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(202, 213, 0, 0.6),
+                0 0 65px rgba(202, 213, 0, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(202, 213, 0, 0.35),
+                0 0 25px rgba(213, 174, 0, 0.2);
+  }
+}
+
 .achievement-badge.gold {
   border-radius: 20%;
-  animation: softGlow 3.5s ease-in-out infinite;
+  animation: softGlowG 3.5s ease-in-out infinite;
   box-shadow: 0 0 12px rgba(255, 193, 7, 0.45),
               0 0 35px rgba(255, 193, 7, 0.25);
 }
 
 .achievement-badge.blue {
   border-radius: 20%;
-  animation: softGlow 3.5s ease-in-out infinite;
+  animation: softGlowB 3.5s ease-in-out infinite;
   box-shadow: 0 0 12px rgba(79, 156, 249, 0.5),
               0 0 38px rgba(79, 156, 249, 0.3);
 }
