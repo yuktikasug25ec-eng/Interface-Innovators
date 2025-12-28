@@ -2,9 +2,9 @@
 (function () {
   let currentScroll = window.scrollY;
   let velocity = 0;
-  const friction = 0.94;       // slightly higher friction for smoother deceleration
-  const acceleration = 0.5;    // lower acceleration for gentler speed
-  const maxSpeed = 40;         // lower max speed for control
+  const friction = 0.9;       // slightly higher friction for smoother deceleration
+  const acceleration = 0.1;    // lower acceleration for gentler speed
+  const maxSpeed = 30;         // lower max speed for control
 
   window.addEventListener('wheel', function (e) {
     e.preventDefault();

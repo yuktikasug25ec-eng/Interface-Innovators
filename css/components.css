@@ -3399,6 +3399,7 @@ nav > div {
 .project-card.expanded img {
   height: 60%;
   opacity: 1;
+  margin: auto;
 }
 
 /* Prevent jumpiness */
