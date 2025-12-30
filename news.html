@@ -43,6 +43,161 @@
       
     </div>
   </div>
+<!-- ================= CLUB NEWS SECTION ================= -->
+<section class="news-section club-news-section">
+
+  <div class="section-header">
+    <h2>Club News & Announcements</h2>
+    <p>Internal updates, meeting summaries, and official announcements</p>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="meeting">Meetings</button>
+    <button class="filter-btn" data-category="announcement">Announcements</button>
+    <button class="filter-btn" data-category="workshop">Workshops</button>
+  </div>
+
+  <!-- Cards -->
+  <div class="news-grid">
+
+    <article class="news-card" data-category="meeting">
+      <span class="tag club">Meeting</span>
+      <h3>Core Team Planning & Roadmap Discussion</h3>
+      <p class="meta">📅 15 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+      <p class="summary">
+        The core team conducted a strategic planning meeting to finalize the roadmap
+        for upcoming competitions, workshops, and research initiatives. Members
+        discussed timelines, role allocation, and collaboration with other technical
+        societies within the institute.
+      </p>
+      <button class="read-more" onclick="openModal(this)">Read More</button>
+    </article>
+
+    <article class="news-card" data-category="announcement">
+      <span class="tag tech">Announcement</span>
+      <h3>Recruitment Drive for First-Year Students</h3>
+      <p class="meta">📅 12 Jan 2025 | 🏷 Club Administration</p>
+      <p class="summary">
+        The Robotics Club announced its annual recruitment drive for first-year
+        students. Interested candidates will be evaluated through aptitude tests,
+        hands-on tasks, and interviews aimed at identifying technical curiosity and
+        teamwork skills.
+      </p>
+      <button class="read-more" onclick="openModal(this)">Read More</button>
+    </article>
+
+    <article class="news-card" data-category="workshop">
+      <span class="tag competition">Workshop</span>
+      <h3>Hands-on Workshop on ROS & Autonomous Navigation</h3>
+      <p class="meta">📅 8 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+      <p class="summary">
+        A hands-on workshop was conducted focusing on Robot Operating System (ROS)
+        fundamentals and autonomous navigation algorithms. Participants implemented
+        real-time simulations and learned industry-relevant robotics workflows.
+      </p>
+      <button class="read-more" onclick="openModal(this)">Read More</button>
+    </article>
+
+  </div>
+</section>
+<!-- ================= GLOBAL ROBOTICS NEWS SECTION ================= -->
+  <section class="news-section">
+<header class="news-header">
+  <h1>Recent Robotics News & Updates</h1>
+  <p>Latest happenings from our club and the global robotics ecosystem</p>
+</header>
+
+<!-- ================= FILTERS ================= -->
+<section class="filters">
+  <button class="filter-btn active" data-category="all">All</button>
+  <button class="filter-btn" data-category="club">Club News</button>
+  <button class="filter-btn" data-category="competition">Competition News</button>
+  <button class="filter-btn" data-category="tech">Tech Innovations</button>
+  <button class="filter-btn" data-category="research">Research Breakthroughs</button>
+</section>
+
+<!-- ================= NEWS GRID ================= -->
+<section class="news-grid">
+
+  <!-- CARD 1 -->
+  <article class="news-card" data-category="club">
+    <span class="tag club">Club News</span>
+    <h3>Weekly Robotics Club Strategy Meet</h3>
+    <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+    <p class="summary">
+      The Robotics Club conducted its weekly strategic meeting focusing on upcoming
+      national-level competitions, lab expansion plans, and interdisciplinary project
+      collaboration. Core teams presented progress updates, discussed resource allocation,
+      and finalized timelines for workshops and hackathons planned this semester.
+    </p>
+    <button class="btn-primary" onclick="openModal(this)">Read More</button>
+  </article>
+
+  <!-- CARD 2 -->
+  <article class="news-card" data-category="tech">
+    <span class="tag tech">Tech Innovations</span>
+    <h3>Humanoid Robots Achieve Advanced Dexterity</h3>
+    <p class="meta">📅 8 Jan 2025 | 🏷 IEEE Spectrum</p>
+    <p class="summary">
+      Recent breakthroughs in actuator design and AI-based control systems have enabled
+      humanoid robots to perform delicate manipulation tasks with unprecedented accuracy.
+      These advancements pave the way for safer human-robot collaboration in healthcare,
+      manufacturing, and service industries.
+    </p>
+    <button class="btn-primary" onclick="openModal(this)">Read More</button>
+  </article>
+
+  <!-- CARD 3 -->
+  <article class="news-card" data-category="competition">
+    <span class="tag competition">Competition News</span>
+    <h3>Indian Teams Shine at International Robotics Challenge</h3>
+    <p class="meta">📅 5 Jan 2025 | 🏷 RoboCup Federation</p>
+    <p class="summary">
+      Indian student teams delivered outstanding performances at the international robotics
+      challenge, excelling in autonomous navigation and swarm robotics categories. The event
+      highlighted India's growing strength in applied robotics research and innovation.
+    </p>
+    <button class="btn-primary" onclick="openModal(this)">Read More</button>
+  </article>
+
+  <!-- CARD 4 -->
+  <article class="news-card" data-category="research">
+    <span class="tag research">Research Breakthrough</span>
+    <h3>Soft Robotics for Medical Applications</h3>
+    <p class="meta">📅 2 Jan 2025 | 🏷 Nature Robotics</p>
+    <p class="summary">
+      Researchers have developed new soft robotic systems capable of minimally invasive
+      surgical assistance. These robots adapt dynamically to human tissue, reducing risk
+      and improving procedural accuracy in complex medical operations.
+    </p>
+    <button class="btn-primary" onclick="openModal(this)">Read More</button>
+  </article>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="newsletter">
+  <h2>Subscribe to Our Robotics Newsletter</h2>
+  <p>Get curated robotics updates, club announcements, and tech insights directly in your inbox.</p>
+  <form>
+    <input type="email" placeholder="Enter your email" disabled>
+    <button type="submit" disabled>Subscribe</button>
+  </form>
+  <small>* Subscription box is currently non-functional</small>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="newsModal">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalContent"></p>
+    <a href="https://www.roboticstomorrow.com/" target="_blank" class="external-link">Read Full Article ↗</a>
+  </div>
+</div>
+</section>
 
     <footer class="footer">
       <div class="footer-container">
@@ -87,6 +242,39 @@
       </div>
     </footer>
      <script src="js/main.js"></script>
+     <script>
+      // FILTER
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.filter-btn.active').classList.remove('active');
+    btn.classList.add('active');
+
+    const category = btn.dataset.category;
+    document.querySelectorAll('.news-card').forEach(card => {
+      card.style.display =
+        category === 'all' || card.dataset.category === category
+          ? 'block'
+          : 'none';
+    });
+  });
+});
+
+// MODAL
+function openModal(button) {
+  const card = button.parentElement;
+  document.getElementById('modalTitle').innerText =
+    card.querySelector('h3').innerText;
+  document.getElementById('modalContent').innerText =
+    card.querySelector('.summary').innerText + 
+    "\n\nThis article explores the topic in greater technical depth and industry context.";
+  document.getElementById('newsModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('newsModal').style.display = 'none';
+}
+
+     </script>
      <script src="js/filters.js"></script>
 </body>
 </html>
