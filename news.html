@@ -123,7 +123,6 @@
 <!-- ================= FILTERS ================= -->
 <section class="filters">
   <button class="filter-btn active" data-category="all">All</button>
-  <button class="filter-btn" data-category="club">Club News</button>
   <button class="filter-btn" data-category="competition">Competition News</button>
   <button class="filter-btn" data-category="tech">Tech Innovations</button>
   <button class="filter-btn" data-category="research">Research Breakthroughs</button>
@@ -132,60 +131,63 @@
 <!-- ================= NEWS GRID ================= -->
 <section class="news-grid">
 
-  <!-- CARD 1 -->
-  <article class="news-card" data-category="club">
-    <span class="tag club">Club News</span>
-    <h3>Weekly Robotics Club Strategy Meet</h3>
-    <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
-    <p class="summary">
-      The Robotics Club conducted its weekly strategic meeting focusing on upcoming
-      national-level competitions, lab expansion plans, and interdisciplinary project
-      collaboration. Core teams presented progress updates, discussed resource allocation,
-      and finalized timelines for workshops and hackathons planned this semester.
-    </p>
-    <button class="card-btn" onclick="openModal(this)">Read More</button>
-  </article>
+  <article class="news-card">
+  <span class="tag club">Club News</span>
+  <h3>Weekly Robotics Club Strategy Meet</h3>
+  <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+  <p class="summary">
+    The Robotics Club conducted its weekly strategic meeting focusing on upcoming
+    competitions and lab expansion plans.
+  </p>
 
-  <!-- CARD 2 -->
-  <article class="news-card" data-category="tech">
-    <span class="tag tech">Tech Innovations</span>
-    <h3>Humanoid Robots Achieve Advanced Dexterity</h3>
-    <p class="meta">📅 8 Jan 2025 | 🏷 IEEE Spectrum</p>
-    <p class="summary">
-      Recent breakthroughs in actuator design and AI-based control systems have enabled
-      humanoid robots to perform delicate manipulation tasks with unprecedented accuracy.
-      These advancements pave the way for safer human-robot collaboration in healthcare,
-      manufacturing, and service industries.
-    </p>
-    <button class="card-btn" onclick="openModal(this)">Read More</button>
-  </article>
+  <button class="read-more" data-modal="modal-strategy-meet">
+    Read More
+  </button>
+</article>
 
-  <!-- CARD 3 -->
-  <article class="news-card" data-category="competition">
-    <span class="tag competition">Competition News</span>
-    <h3>Indian Teams Shine at International Robotics Challenge</h3>
-    <p class="meta">📅 5 Jan 2025 | 🏷 RoboCup Federation</p>
-    <p class="summary">
-      Indian student teams delivered outstanding performances at the international robotics
-      challenge, excelling in autonomous navigation and swarm robotics categories. The event
-      highlighted India's growing strength in applied robotics research and innovation.
-    </p>
-    <button class="card-btn" onclick="openModal(this)">Read More</button>
-  </article>
+<article class="news-card">
+  <span class="tag club">Club News</span>
+  <h3>Weekly Robotics Club Strategy Meet</h3>
+  <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+  <p class="summary">
+    The Robotics Club conducted its weekly strategic meeting focusing on upcoming
+    competitions and lab expansion plans.
+  </p>
 
-  <!-- CARD 4 -->
-  <article class="news-card" data-category="research">
-    <span class="tag research">Research Breakthrough</span>
-    <h3>Soft Robotics for Medical Applications</h3>
-    <p class="meta">📅 2 Jan 2025 | 🏷 Nature Robotics</p>
-    <p class="summary">
-      Researchers have developed new soft robotic systems capable of minimally invasive
-      surgical assistance. These robots adapt dynamically to human tissue, reducing risk
-      and improving procedural accuracy in complex medical operations.
-    </p>
-    <button class="card-btn" onclick="openModal(this)">Read More</button>
-  </article>
+  <button class="read-more" data-modal="modal-strategy-workshop">
+    Read More
+  </button>
+</article>
 
+<article class="news-card">
+  <span class="tag club">Club News</span>
+  <h3>Weekly Robotics Club Strategy Meet</h3>
+  <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+  <p class="summary">
+    The Robotics Club conducted its weekly strategic meeting focusing on upcoming
+    competitions and lab expansion plans.
+  </p>
+
+  <button class="read-more" data-modal="modal-strategy-me">
+    Read More
+  </button>
+</article>
+
+<article class="news-card">
+  <span class="tag club">Club News</span>
+  <h3>Weekly Robotics Club Strategy Meet</h3>
+  <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+  <p class="summary">
+    The Robotics Club conducted its weekly strategic meeting focusing on upcoming
+    competitions and lab expansion plans.
+  </p>
+
+  <button class="read-more" data-modal="modal-strategy-mee">
+    Read More
+  </button>
+</article>
+
+    
 </section>
 
 <!-- ================= NEWSLETTER ================= -->
@@ -200,14 +202,114 @@
 </section>
 
 <!-- ================= MODAL ================= -->
-<div class="modal" id="newsModal">
+<div class="modal" id="modal-strategy-meet">
   <div class="modal-content neumorphic">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h3 id="modalTitle"></h3>
-    <p id="modalContent"></p>
-    <a href="https://www.roboticstomorrow.com/" target="_blank" class="external-link">Read Full Article ↗</a>
+    <span class="close" onclick="closeModal('modal-strategy-meet')">&times;</span>
+
+    <h3>Weekly Robotics Club Strategy Meet</h3>
+    <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. The Robotics Club held an in-depth strategic meeting to evaluate progress
+      across ongoing projects and competitions. Team leads presented status
+    </p>
+
+    <p>
+      Special emphasis was placed on interdisciplinary research, funding
+      opportunities, and expanding lab infrastructure. The meeting concluded
+      with finalized timelines for workshops, hackathons, and outreach programs
+      planned for the semester.
+    </p>
+
+    <a href="https://your-article-link.com"
+       target="_blank"
+       class="external-link">
+      Read Full Article ↗
+    </a>
   </div>
 </div>
+<div class="modal" id="modal-strategy-workshop">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal('modal-strategy-workshop')">&times;</span>
+
+    <h3>Weekly Robotics Club Strategy Meet</h3>
+    <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+
+    <p>
+      The Robotics Club held an in-depth strategic meeting to evaluate progress
+      across ongoing projects and competitions. Team leads presented status
+      reports, identified technical challenges, and proposed solutions for
+      improved collaboration.
+    </p>
+
+    <p>
+      Special emphasis was placed on interdisciplinary research, funding
+      opportunities, and expanding lab infrastructure. The meeting concluded
+      with finalized timelines for workshops, hackathons, and outreach programs
+      planned for the semester.
+    </p>
+
+    <a href="https://your-article-link.com"
+       target="_blank"
+       class="external-link">
+      Read Full Article ↗
+    </a>
+  </div>
+</div>
+<div class="modal" id="modal-strategy-me">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal('modal-strategy-me')">&times;</span>
+
+    <h3>Weekly Robotics Club Strategy Meet</h3>
+    <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+
+    <p>
+      The Robotics Club held an in-depth strategic meeting to evaluate progress
+      across ongoing projects and competitions. Team leads presented status
+      reports, identified technical challenges, and proposed solutions for
+      improved collaboration.
+    </p>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti eaque enim explicabo dolores nostrum molestias inventore quis ad delectus aut dolorum optio quos beatae, consequuntur maxime facilis fugit architecto libero.
+    </p>
+
+    <a href="https://roboticsandautomationnews.com/2025/12/30/opinion-manufacturings-future-is-high-tech-and-the-workforce-must-adapt/97952/"
+       target="_blank"
+       class="external-link">
+      Read Full Article ↗
+    </a>
+  </div>
+</div>
+<div class="modal" id="modal-strategy-mee">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal('modal-strategy-mee')">&times;</span>
+
+    <h3>Weekly Robotics Club Strategy Meet</h3>
+    <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
+
+    <p>
+      The Robotics Club held an in-depth strategic meeting to evaluate progress
+      across ongoing projects and competitions. Team leads presented status
+      reports, identified technical challenges, and proposed solutions for
+      improved collaboration.
+    </p>
+
+    <p>
+      Special sdsfsfkjkj hfrt ikuikij research, funding
+      opportunities, and expanding lab infrastructure. The meeting concluded
+      with finalized timelines for workshops, hackathons, and outreach programs
+      planned for the semester.
+    </p>
+
+    <a href="https://roboticsandautomationnews.com/2025/12/30/inbolt-launches-human-like-bin-picking-solution-powered-by-on-arm-ai-vision/97944/"
+       target="_blank"
+       class="external-link">
+      Read Full Article ↗
+    </a>
+  </div>
+</div>
+
 </section>
 
     <footer class="footer">
@@ -271,19 +373,25 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 // MODAL
-function openModal(button) {
-  const card = button.parentElement;
-  document.getElementById('modalTitle').innerText =
-    card.querySelector('h3').innerText;
-  document.getElementById('modalContent').innerText =
-    card.querySelector('.summary').innerText + 
-    "\n\nThis article explores the topic in greater technical depth and industry context.";
-  document.getElementById('newsModal').style.display = 'block';
+document.querySelectorAll('.read-more').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.dataset.modal;
+    document.getElementById(modalId).style.display = 'block';
+  });
+});
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
 }
 
-function closeModal() {
-  document.getElementById('newsModal').style.display = 'none';
-}
+// Close on outside click
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', e => {
+    if (e.target.classList.contains('modal')) {
+      modal.style.display = 'none';
+    }
+  });
+});
 
      </script>
      <script src="js/filters.js"></script>
