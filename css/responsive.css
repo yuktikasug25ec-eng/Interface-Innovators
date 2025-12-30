@@ -599,3 +599,23 @@ p {
   left: 360px;
 }
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+
+  .link-list li {
+    justify-content: center;
+  }
+}
+
