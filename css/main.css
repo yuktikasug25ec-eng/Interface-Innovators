@@ -87,7 +87,7 @@ body::before {
 
 .footer-container {
   width: 100%;
-  max-width: none; /* 🔥 important */
+  max-width: none; 
   padding: 0 4rem;
 
   display: grid;

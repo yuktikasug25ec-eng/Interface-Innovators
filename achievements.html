@@ -43,6 +43,148 @@
     </div>
   </div>
 
+<section class="achv-section">
+
+    <!-- HEADER -->
+    <div class="achv-header">
+        <h1>ACHIEVEMENTS</h1>
+        <p>Operational record of milestones & recognitions</p>
+    </div>
+
+    <!-- METRICS BAR -->
+    <div class="achv-metrics glass-1">
+        <div><span>35</span>Projects</div>
+        <div><span>18</span>Wins</div>
+        <div><span>12</span>Papers</div>
+        <div><span>₹50L+</span>Funding</div>
+    </div>
+
+    <!-- LOG PANEL -->
+<div class="achv-log-item glass-1" data-achv="eyantra">
+    <div class="achv-log-year">2024</div>
+
+    <div class="achv-log-content">
+        <h3>e-Yantra Robotics Competition</h3>
+        <p>Winner · IIT Bombay</p>
+        <span>Team: Embedded Systems Group</span>
+    </div>
+
+    <div class="achv-log-image">
+        <img src="images/projects/project1.jpg">
+    </div>
+</div>
+<div class="achv-log-item glass-1" data-achv="dst-grant" >
+    <div class="achv-log-year">2023</div>
+
+    <div class="achv-log-content">
+        <h3>DST Innovation Grant</h3>
+        <p>₹5,00,000</p>
+        <span>Medical Robotics Research</span>
+    </div>
+
+    <div class="achv-log-image">
+        <img src="images/projects/project2.jpg">
+    </div>
+</div>
+<div class="achv-log-item glass-1" data-achv="eyantra">
+    <div class="achv-log-year">2024</div>
+
+    <div class="achv-log-content">
+        <h3>e-Yantra Robotics Competition</h3>
+        <p>Winner · IIT Bombay</p>
+        <span>Team: Embedded Systems Group</span>
+    </div>
+
+    <div class="achv-log-image">
+        <img src="images/projects/project1.jpg">
+    </div>
+</div>
+<div class="achv-log-item glass-1" data-achv="dst-grant" >
+    <div class="achv-log-year">2023</div>
+
+    <div class="achv-log-content">
+        <h3>DST Innovation Grant</h3>
+        <p>₹5,00,000</p>
+        <span>Medical Robotics Research</span>
+    </div>
+
+    <div class="achv-log-image">
+        <img src="images/projects/project2.jpg">
+    </div>
+</div>
+<div class="achv-log-item glass-1" data-achv="eyantra">
+    <div class="achv-log-year">2024</div>
+
+    <div class="achv-log-content">
+        <h3>e-Yantra Robotics Competition</h3>
+        <p>Winner · IIT Bombay</p>
+        <span>Team: Embedded Systems Group</span>
+    </div>
+
+    <div class="achv-log-image">
+        <img src="images/projects/project1.jpg">
+    </div>
+</div>
+<div class="achv-log-item glass-1" data-achv="dst-grant" >
+    <div class="achv-log-year">2023</div>
+
+    <div class="achv-log-content">
+        <h3>DST Innovation Grant</h3>
+        <p>₹5,00,000</p>
+        <span>Medical Robotics Research</span>
+    </div>
+
+    <div class="achv-log-image">
+        <img src="images/projects/project2.jpg">
+    </div>
+</div>
+
+
+    </div>
+
+    <!-- TIMELINE GRID -->
+    <div class="achv-timeline-grid">
+        <div class="achv-year-block glass">
+            <span>2024</span>
+            <p>2 Wins · 1 Grant</p>
+        </div>
+        <div class="achv-year-block glass">
+            <span>2023</span>
+            <p>5 Projects · 3 Papers</p>
+        </div>
+        <div class="achv-year-block glass">
+            <span>2022</span>
+            <p>SIH Finalist</p>
+        </div>
+    </div>
+
+<!-- FULLSCREEN MODAL -->
+<div class="achv-modal" id="achvModal">
+    <div class="achv-modal-inner glass-1">
+
+        <span class="achv-modal-close" onclick="achvCloseModal()">×</span>
+
+        <div class="achv-modal-grid">
+            <img src="" alt="ModalImg" id="achvModalImg">
+            <div id="achvModalText">
+                <h2>e-Yantra Robotics Competition</h2>
+                <p><strong>Year:</strong> 2024</p>
+                <p><strong>Prize:</strong> Winner</p>
+                <p><strong>Team Members:</strong> A, B, C</p>
+                <p>
+                    Designed and deployed an autonomous robot capable of
+                    precise navigation and task execution under competition constraints.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</section>
+
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section social-media">
@@ -86,6 +228,86 @@
       </div>
     </footer>
      <script src="js/main.js"></script>
+     <script>
+const achvData = {
+    "eyantra": {
+        img: "images/projects/project1.jpg",
+        html: `
+            <h2>e-Yantra Robotics Competition</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Prize:</strong> Winner</p>
+            <p><strong>Team:</strong> Embedded Systems Group</p>
+            <p>
+                Designed and implemented an autonomous robotics system
+                under national-level competition constraints.
+            </p>
+        `
+    },
+
+    "dst-grant": {
+        img: "images/projects/project2.jpg",
+        html: `
+            <h2>DST Innovation Grant</h2>
+            <p><strong>Year:</strong> 2023</p>
+            <p><strong>Grant Amount:</strong> ₹5,00,000</p>
+            <p>
+                Awarded for research in AI-driven medical robotics
+                focusing on assistive healthcare solutions.
+            </p>
+        `
+    }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const achvModal = document.getElementById("achvModal");
+    const achvModalImg = document.getElementById("achvModalImg");
+    const achvModalText = document.getElementById("achvModalText");
+
+    /* CLICK HANDLER FOR ALL LOG ITEMS */
+    document.querySelector(".achv-section").addEventListener("click", e => {
+
+        const card = e.target.closest(".achv-log-item.glass-1");
+        if (!card) return;
+
+        const id = card.dataset.achv;
+        const data = achvData[id];
+
+        if (!data) {
+            console.error("No modal data for:", id);
+            return;
+        }
+
+        achvModalImg.src = data.img;
+        achvModalText.innerHTML = data.html;
+
+        achvModal.classList.add("achv-active");
+        document.body.style.overflow = "hidden";
+    });
+
+    /* CLOSE */
+    function achvCloseModal() {
+        achvModal.classList.remove("achv-active");
+        document.body.style.overflow = "auto";
+    }
+
+    window.achvCloseModal = achvCloseModal;
+
+    /* CLICK OUTSIDE */
+    achvModal.addEventListener("click", e => {
+        if (e.target === achvModal) achvCloseModal();
+    });
+
+    /* ESC */
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && achvModal.classList.contains("achv-active")) {
+            achvCloseModal();
+        }
+    });
+
+});
+
+     </script>
      <script src="js/filters.js"></script>
 </body>
 </html>
