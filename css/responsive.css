@@ -123,7 +123,10 @@ p {
 
 @media (max-width: 600px) {
   .hero-bg {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0rem;
+  }
+  .hero-title>span{
+    font-size: 4rem;
   }
 }
 
@@ -706,7 +709,7 @@ p {
     font-size: 0.85rem;
   }
 
-  .evt-action-btn {
+  .evt-toggle-btn {
     width: 100%;
     text-align: center;
   }
@@ -780,5 +783,19 @@ p {
 
   .evt-modal-nav {
     display: none; /* swipe instead of arrows */
+  }
+}
+
+@media (max-width: 768px) {
+  .evt-modal-caption {
+    padding: 1rem 1.2rem;
+  }
+
+  .evt-modal-title {
+    font-size: 1.3rem;
+  }
+
+  .evt-modal-desc {
+    font-size: 0.95rem;
   }
 }
