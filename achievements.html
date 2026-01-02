@@ -60,7 +60,7 @@
     </div>
 
     <!-- LOG PANEL -->
-<div class="achv-log-item glass-1" data-achv="eyantra">
+<div class="achv-log-item glass-1" data-achv="eyantra" title="click to know more">
     <div class="achv-log-year">2024</div>
 
     <div class="achv-log-content">
@@ -73,7 +73,7 @@
         <img src="images/projects/project1.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="dst-grant" >
+<div class="achv-log-item glass-1" data-achv="dst-grant"  title="click to know more">
     <div class="achv-log-year">2023</div>
 
     <div class="achv-log-content">
@@ -86,7 +86,7 @@
         <img src="images/projects/project2.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="eyantra">
+<div class="achv-log-item glass-1" data-achv="eyantra" title="click to know more">
     <div class="achv-log-year">2024</div>
 
     <div class="achv-log-content">
@@ -99,7 +99,7 @@
         <img src="images/projects/project1.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="dst-grant" >
+<div class="achv-log-item glass-1" data-achv="dst-grant"  title="click to know more">
     <div class="achv-log-year">2023</div>
 
     <div class="achv-log-content">
@@ -112,7 +112,7 @@
         <img src="images/projects/project2.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="eyantra">
+<div class="achv-log-item glass-1" data-achv="eyantra" title="click to know more">
     <div class="achv-log-year">2024</div>
 
     <div class="achv-log-content">
@@ -125,7 +125,7 @@
         <img src="images/projects/project1.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="dst-grant" >
+<div class="achv-log-item glass-1" data-achv="dst-grant"  title="click to know more">
     <div class="achv-log-year">2023</div>
 
     <div class="achv-log-content">
@@ -162,7 +162,7 @@
 <div class="achv-modal" id="achvModal">
     <div class="achv-modal-inner glass-1">
 
-        <span class="achv-modal-close" onclick="achvCloseModal()">×</span>
+        <span class="achv-modal-close" onclick="achvCloseModal()" title="close (press esc)">×</span>
 
         <div class="achv-modal-grid">
             <img src="" alt="ModalImg" id="achvModalImg">
@@ -305,6 +305,48 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+});
+
+/* COUNT UP ANIMATION */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const counters = document.querySelectorAll(".achv-section .achv-metrics span");
+    let animated = false;
+
+    const animateCounters = () => {
+        if (animated) return;
+        animated = true;
+
+        counters.forEach(counter => {
+            const raw = counter.innerText.replace(/[^\d]/g, "");
+            const target = parseInt(raw, 10);
+            if (isNaN(target)) return;
+
+            let current = 0;
+            const increment = Math.ceil(target / 60);
+
+            const update = () => {
+                current += increment;
+                if (current >= target) {
+                    counter.innerText = counter.innerText.includes("₹")
+                        ? "₹" + target + "L+"
+                        : target;
+                } else {
+                    counter.innerText = counter.innerText.includes("₹")
+                        ? "₹" + current
+                        : current;
+                    requestAnimationFrame(update);
+                }
+            };
+            update();
+        });
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) animateCounters();
+    }, { threshold: 0.4 });
+
+    observer.observe(document.querySelector(".achv-metrics"));
 });
 
      </script>

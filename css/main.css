@@ -67,6 +67,292 @@ body::before {
   background: radial-gradient(rgba(0, 0, 0, 0.9), transparent 200%);
 }
 
+/*Navbar Styles*/
+
+
+
+
+
+  .rcs-dropdown-hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .rcs-dropdown-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Hamburger animation (namespaced) */
+  #rcs-menuBtn .bar {
+    transition: all 0.3s ease-out;
+  }
+
+  #rcs-menuBtn.open .top-bar {
+    transform: rotate(45deg) translateY(0px);
+  }
+
+  #rcs-menuBtn.open .middle-bar {
+    opacity: 0;
+  }
+
+  #rcs-menuBtn.open .bottom-bar {
+    transform: rotate(-45deg) translateY(0px);
+  }
+
+  /* Additional styles for sidebar (namespaced) */
+  #rcs-fullscreenMenu {
+    backdrop-filter: blur(22px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba( 255, 255, 255, 0.18 ); 
+    /* ensure the menu is fully off-screen by default and animates in */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    z-index: 9000;
+    transform: translateX(100%);
+    transition: transform 300ms ease;
+  }
+
+  /* When open, slide into view */
+  #rcs-fullscreenMenu.rcs-open {
+    transform: translateX(0);
+  }
+
+  /* Link styles: bold, uppercase, no color change on hover */
+  .rcs-menu-items {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* match Decksmith 'items-start' */
+    padding-left: 2.5rem; /* match Tailwind 'pl-10' */
+  }
+
+  .rcs-nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    text-align: left; 
+    margin: 10px 0;
+    position: relative; 
+    font-size: 1.25rem; 
+    letter-spacing: 0; 
+    color: #ffffff;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    font-style: normal !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 0.3s ease-in-out;
+  }
+
+  .rcs-nav-link::after {
+    content: "\2197"; /* North-east pointing arrow */
+    margin-left: 10px;
+    opacity: 0;/* Arrow is hidden by default */
+  
+    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
+  }
+
+  .rcs-nav-link:hover::after {
+    opacity: 1; /* Show arrow on hover */
+  }
+
+  .rcs-nav-link:hover{
+    letter-spacing: 1px;
+    font-size: 1.55rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  /* 'More' button styling (match Decksmith flex + small gap) */
+  #rcs-dropdownToggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Tailwind 'space-x-2' ≈ 0.5rem */
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  /* rotation helper used by JS */
+  .rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 200ms ease;
+  }
+
+  /* Centering the links in the sidebar (namespaced) */
+  #rcs-fullscreenMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rcs-menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 90;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #00ffc8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: width 0.2s ease-out;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0 100px;
+    box-sizing: border-box;
+    z-index: 11000;
+}
+
+/* Ensure nav contents layout correctly without Tailwind */
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* Basic visible hamburger button fallback (namespaced) */
+#rcs-menuBtn {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 12000; /* ensure hamburger/cross sits above the sliding menu */
+}
+
+#rcs-menuBtn .bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+#rcs-menuBtn .top-bar { transform: translate(-50%, -8px); }
+#rcs-menuBtn .middle-bar { transform: translate(-50%, 0); }
+#rcs-menuBtn .bottom-bar { transform: translate(-50%, 8px); }
+
+#rcs-menuBtn.open .top-bar { transform: translate(-50%, 0) rotate(45deg); }
+#rcs-menuBtn.open .middle-bar { opacity: 0; }
+#rcs-menuBtn.open .bottom-bar { transform: translate(-50%, 0) rotate(-45deg); }
+
+
+
+
+.space{
+  letter-spacing: 20px;
+  font-weight: 600;
+  transition: 1s;
+  color: #ffffffd6 !important;
+  transition: letter-spacing 1s ease;
+}
+
+.space:hover{
+  letter-spacing: 25px;
+  transition: 1s;
+}
+
+
+#menuBtn .bar {
+    transition: all 0.3s ease-out;
+  }
+
+  #menuBtn.open .top-bar {
+    transform: rotate(45deg) translateY(0px);
+  }
+
+  #menuBtn.open .middle-bar {
+    opacity: 0;
+  }
+
+  #menuBtn.open .bottom-bar {
+    transform: rotate(-45deg) translateY(0px);
+  }
+
+  .glass {
+    backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba( 255, 255, 255, 0.18 );
+  }
+
+  /* Link styles: bold, uppercase, no color change on hover */
+  .nav-link {
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    position: relative; /* To position the arrow */
+  }
+
+  .nav-link::after {
+    content: "\2197"; /* North-east pointing arrow */
+    margin-left: 10px;
+    opacity: 0; /* Arrow is hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
+  }
+
+  .nav-link:hover::after {
+    opacity: 1; /* Show arrow on hover */
+  }
+
+  /* Centering the links in the sidebar */
+  #fullscreenMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 /* Footer Styles */
 
 .footer {
@@ -75,12 +361,11 @@ body::before {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   border-left: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-
   padding: 3rem 0 1rem;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   position: relative;
-  z-index: 10;
+  z-index: 5;
   width: 100%;
 }
 
@@ -89,11 +374,9 @@ body::before {
   width: 100%;
   max-width: none; 
   padding: 0 4rem;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
-
   align-items: stretch;
 }
 

@@ -619,3 +619,38 @@ p {
   }
 }
 
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width: 1024px) {
+    .achv-section .achv-metrics {
+        gap: 48px;
+    }
+
+    .achv-section .achv-metrics span {
+        font-size: 1.6rem;
+    }
+}
+
+/* ===============================
+   MOBILE – 2x2 GRID
+================================ */
+@media (max-width: 640px) {
+    .achv-section .achv-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .achv-section .achv-metrics > div {
+        font-size: 0.75rem;
+    }
+
+    .achv-section .achv-metrics span {
+        font-size: 1.5rem;
+    }
+}
+

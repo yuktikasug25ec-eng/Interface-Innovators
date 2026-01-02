@@ -131,293 +131,6 @@
   background: linear-gradient(90deg,#d0d0d0 0%, #0083d5 100%);
 }
 
-
-/* Full-hero radial vignette: transparent center, dark edges */
-
-
-
-
-
-  .rcs-dropdown-hidden {
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-
-  .rcs-dropdown-visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  /* Hamburger animation (namespaced) */
-  #rcs-menuBtn .bar {
-    transition: all 0.3s ease-out;
-  }
-
-  #rcs-menuBtn.open .top-bar {
-    transform: rotate(45deg) translateY(0px);
-  }
-
-  #rcs-menuBtn.open .middle-bar {
-    opacity: 0;
-  }
-
-  #rcs-menuBtn.open .bottom-bar {
-    transform: rotate(-45deg) translateY(0px);
-  }
-
-  /* Additional styles for sidebar (namespaced) */
-  #rcs-fullscreenMenu {
-    backdrop-filter: blur(22px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 2px solid rgba( 255, 255, 255, 0.18 ); 
-    /* ensure the menu is fully off-screen by default and animates in */
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 400px;
-    z-index: 9000;
-    transform: translateX(100%);
-    transition: transform 300ms ease;
-  }
-
-  /* When open, slide into view */
-  #rcs-fullscreenMenu.rcs-open {
-    transform: translateX(0);
-  }
-
-  /* Link styles: bold, uppercase, no color change on hover */
-  .rcs-menu-items {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* match Decksmith 'items-start' */
-    padding-left: 2.5rem; /* match Tailwind 'pl-10' */
-  }
-
-  .rcs-nav-link {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
-    text-align: left; 
-    margin: 10px 0;
-    position: relative; 
-    font-size: 1.25rem; 
-    letter-spacing: 0; 
-    color: #ffffff;
-    text-decoration: none !important;
-    text-shadow: none !important;
-    font-style: normal !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transition: 0.3s ease-in-out;
-  }
-
-  .rcs-nav-link::after {
-    content: "\2197"; /* North-east pointing arrow */
-    margin-left: 10px;
-    opacity: 0;/* Arrow is hidden by default */
-  
-    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
-  }
-
-  .rcs-nav-link:hover::after {
-    opacity: 1; /* Show arrow on hover */
-  }
-
-  .rcs-nav-link:hover{
-    letter-spacing: 1px;
-    font-size: 1.55rem;
-    transition: 0.3s ease-in-out;
-  }
-
-  /* 'More' button styling (match Decksmith flex + small gap) */
-  #rcs-dropdownToggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem; /* Tailwind 'space-x-2' ≈ 0.5rem */
-    color: #ffffff;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-  }
-
-  /* rotation helper used by JS */
-  .rotate-180 {
-    transform: rotate(180deg);
-    transition: transform 200ms ease;
-  }
-
-  /* Centering the links in the sidebar (namespaced) */
-  #rcs-fullscreenMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .rcs-menu-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 90;
-}
-
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #00ffc8;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: width 0.2s ease-out;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0 100px;
-    box-sizing: border-box;
-    z-index: 11000;
-}
-
-/* Ensure nav contents layout correctly without Tailwind */
-nav > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-/* Basic visible hamburger button fallback (namespaced) */
-#rcs-menuBtn {
-  background: transparent;
-  border: none;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  cursor: pointer;
-  z-index: 12000; /* ensure hamburger/cross sits above the sliding menu */
-}
-
-#rcs-menuBtn .bar {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background: #fff;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: transform 0.25s ease, opacity 0.2s ease;
-}
-
-#rcs-menuBtn .top-bar { transform: translate(-50%, -8px); }
-#rcs-menuBtn .middle-bar { transform: translate(-50%, 0); }
-#rcs-menuBtn .bottom-bar { transform: translate(-50%, 8px); }
-
-#rcs-menuBtn.open .top-bar { transform: translate(-50%, 0) rotate(45deg); }
-#rcs-menuBtn.open .middle-bar { opacity: 0; }
-#rcs-menuBtn.open .bottom-bar { transform: translate(-50%, 0) rotate(-45deg); }
-
-
-
-
-.space{
-  letter-spacing: 20px;
-  font-weight: 600;
-  transition: 1s;
-  color: #ffffffd6 !important;
-  transition: letter-spacing 1s ease;
-}
-
-.space:hover{
-  letter-spacing: 25px;
-  transition: 1s;
-}
-
-
-#menuBtn .bar {
-    transition: all 0.3s ease-out;
-  }
-
-  #menuBtn.open .top-bar {
-    transform: rotate(45deg) translateY(0px);
-  }
-
-  #menuBtn.open .middle-bar {
-    opacity: 0;
-  }
-
-  #menuBtn.open .bottom-bar {
-    transform: rotate(-45deg) translateY(0px);
-  }
-
-  .glass {
-    backdrop-filter: blur(30px);
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba( 255, 255, 255, 0.18 );
-  }
-
-  /* Link styles: bold, uppercase, no color change on hover */
-  .nav-link {
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
-    text-align: center;
-    margin: 10px 0;
-    position: relative; /* To position the arrow */
-  }
-
-  .nav-link::after {
-    content: "\2197"; /* North-east pointing arrow */
-    margin-left: 10px;
-    opacity: 0; /* Arrow is hidden by default */
-    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
-  }
-
-  .nav-link:hover::after {
-    opacity: 1; /* Show arrow on hover */
-  }
-
-  /* Centering the links in the sidebar */
-  #fullscreenMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
 /* Glassmorphism cards for Club Highlights */
 #club-highlights {
   padding: 5rem 8rem;
@@ -883,9 +596,8 @@ nav > div {
   width: 100%;
   min-height: 100vh;
   padding: 6rem 3rem;
-
+  z-index: 11;
   background: transparent;
-
   display: flex;
   align-items: center;
 }
@@ -1055,233 +767,6 @@ nav > div {
   box-shadow: 0 0 12px rgba(79, 156, 249, 0.5),
               0 0 38px rgba(79, 156, 249, 0.3);
 }
-
-/* Footer Styles */
-
-.footer {
-  background: rgba(0, 0, 0, 0.04);
-  backdrop-filter: blur(25px);
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  border-left: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-
-  padding: 3rem 0 1rem;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  z-index: 10;
-  width: 100%;
-}
-
-
-.footer-container {
-  width: 100%;
-  max-width: none; /* 🔥 important */
-  padding: 0 4rem;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-
-  align-items: stretch;
-}
-
-
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-section h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  background: linear-gradient(90deg, #d0d0d0 0%, #d50000 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.footer-section.social-media {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-
-.social-link {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  color: #ffffff;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.social-link:hover {
-  background: linear-gradient(90deg, #d0d0d0 0%, #0083d5 100%);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 131, 213, 0.3);
-}
-
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.contact-list li i {
-  margin-right: 0.75rem;
-  color: #0083d5;
-  font-size: 1.2rem;
-}
-
-.footer-section.quick-links {
-  display: flex;
-  flex-direction: column;
-}
-
-.link-list {
-  columns: 1; /* important — prevents awkward flow in grid */
-}
-
-
-.footer-section.quick-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-logo img {
-  max-width: 220px;
-  width: 100%;
-  height: auto;
-}
-
-
-.link-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  columns: 2;
-  column-gap: 2rem;
-}
-
-.link-list li {
-  margin-bottom: 0.75rem;
-  break-inside: avoid;
-  overflow: hidden;
-}
-
-.link-list a {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.link-list a:hover {
-  color: #0083d5;
-  transform: translateX(5px);
-}
-
-.link-list a::before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #d0d0d0 0%, #0083d5 100%);
-  transition: width 0.3s ease;
-}
-
-.link-list a:hover::before {
-  width: 100%;
-}
-
-.footer {
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(25px);
-  padding: 4rem 0 1.5rem;
-}
-
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-logo img {
-  width: 200px;
-  max-width: 100%;
-  opacity: 0.9;
-}
-
-
-.footer-logo img:hover {
-  opacity: 1;
-}
-
-.footer-bottom p {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
-  .contact-list li {
-    justify-content: center;
-  }
-
-  .link-list li {
-    justify-content: center;
-  }
-}
-
 
 /* ================= ABOUT SECTION ================= */
 
@@ -1563,263 +1048,6 @@ nav > div {
   transform: scale(1.15);
   transform-origin: center;
 }
-
-  #rcs-menuBtn.open .middle-bar {
-    opacity: 0;
-  }
-
-  #rcs-menuBtn.open .bottom-bar {
-    transform: rotate(-45deg) translateY(0px);
-  }
-
-  /* Additional styles for sidebar (namespaced) */
-  #rcs-fullscreenMenu {
-    backdrop-filter: blur(22px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 2px solid rgba( 255, 255, 255, 0.18 ); 
-    /* ensure the menu is fully off-screen by default and animates in */
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 400px;
-    z-index: 9000;
-    transform: translateX(100%);
-    transition: transform 300ms ease;
-  }
-
-  /* When open, slide into view */
-  #rcs-fullscreenMenu.rcs-open {
-    transform: translateX(0);
-  }
-
-  /* Link styles: bold, uppercase, no color change on hover */
-  .rcs-menu-items {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* match Decksmith 'items-start' */
-    padding-left: 2.5rem; /* match Tailwind 'pl-10' */
-  }
-
-  .rcs-nav-link {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
-    text-align: left; 
-    margin: 10px 0;
-    position: relative; 
-    font-size: 1.25rem; 
-    letter-spacing: 0; 
-    color: #ffffff;
-    text-decoration: none !important;
-    text-shadow: none !important;
-    font-style: normal !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transition: 0.3s ease-in-out;
-  }
-
-  .rcs-nav-link::after {
-    content: "\2197"; /* North-east pointing arrow */
-    margin-left: 10px;
-    opacity: 0;/* Arrow is hidden by default */
-  
-    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
-  }
-
-  .rcs-nav-link:hover::after {
-    opacity: 1; /* Show arrow on hover */
-  }
-
-  .rcs-nav-link:hover{
-    letter-spacing: 1px;
-    font-size: 1.55rem;
-    transition: 0.3s ease-in-out;
-  }
-
-  /* 'More' button styling (match Decksmith flex + small gap) */
-  #rcs-dropdownToggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem; /* Tailwind 'space-x-2' ≈ 0.5rem */
-    color: #ffffff;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-  }
-
-  /* rotation helper used by JS */
-  .rotate-180 {
-    transform: rotate(180deg);
-    transition: transform 200ms ease;
-  }
-
-  /* Centering the links in the sidebar (namespaced) */
-  #rcs-fullscreenMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .rcs-menu-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 90;
-}
-
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #00ffc8;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: width 0.2s ease-out;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0 100px;
-    box-sizing: border-box;
-    z-index: 11000;
-}
-
-/* Ensure nav contents layout correctly without Tailwind */
-nav > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-/* Basic visible hamburger button fallback (namespaced) */
-#rcs-menuBtn {
-  background: transparent;
-  border: none;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  cursor: pointer;
-  z-index: 12000; /* ensure hamburger/cross sits above the sliding menu */
-}
-
-#rcs-menuBtn .bar {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background: #fff;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: transform 0.25s ease, opacity 0.2s ease;
-}
-
-#rcs-menuBtn .top-bar { transform: translate(-50%, -8px); }
-#rcs-menuBtn .middle-bar { transform: translate(-50%, 0); }
-#rcs-menuBtn .bottom-bar { transform: translate(-50%, 8px); }
-
-#rcs-menuBtn.open .top-bar { transform: translate(-50%, 0) rotate(45deg); }
-#rcs-menuBtn.open .middle-bar { opacity: 0; }
-#rcs-menuBtn.open .bottom-bar { transform: translate(-50%, 0) rotate(-45deg); }
-
-
-
-
-.space{
-  letter-spacing: 20px;
-  font-weight: 600;
-  transition: 1s;
-  color: #ffffffd6 !important;
-  transition: letter-spacing 1s ease;
-}
-
-.space:hover{
-  letter-spacing: 25px;
-  transition: 1s;
-}
-
-
-#menuBtn .bar {
-    transition: all 0.3s ease-out;
-  }
-
-  #menuBtn.open .top-bar {
-    transform: rotate(45deg) translateY(0px);
-  }
-
-  #menuBtn.open .middle-bar {
-    opacity: 0;
-  }
-
-  #menuBtn.open .bottom-bar {
-    transform: rotate(-45deg) translateY(0px);
-  }
-
-  .glass {
-    backdrop-filter: blur(30px);
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba( 255, 255, 255, 0.18 );
-  }
-
-  /* Link styles: bold, uppercase, no color change on hover */
-  .nav-link {
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
-    text-align: center;
-    margin: 10px 0;
-    position: relative; /* To position the arrow */
-  }
-
-  .nav-link::after {
-    content: "\2197"; /* North-east pointing arrow */
-    margin-left: 10px;
-    opacity: 0; /* Arrow is hidden by default */
-    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
-  }
-
-  .nav-link:hover::after {
-    opacity: 1; /* Show arrow on hover */
-  }
-
-  /* Centering the links in the sidebar */
-  #fullscreenMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
 
 /* Glassmorphism cards for Club Highlights */
@@ -3779,26 +3007,92 @@ nav > div {
 }
 
 /* METRICS */
-.achv-metrics {
+
+.achv-section .achv-metrics {
     display: flex;
-    gap: 100px;
-    margin: 60px 0;
+    flex-wrap: wrap;               /* allow wrapping */
+    gap: 80px;
+    margin: 60px auto;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px 24px;
     background-color: #0b0f16;
+    border-radius: 16px;
+    max-width: 1100px;
 }
 
-.achv-metrics div {
+/* Individual metric */
+.achv-section .achv-metrics > div {
+    min-width: 140px;
+    text-align: center;
     font-size: 0.85rem;
     text-transform: uppercase;
     color: #9ca3af;
+    letter-spacing: 0.08em;
 }
 
-.achv-metrics span {
+/* Number */
+.achv-section .achv-metrics span {
     display: block;
     font-size: 1.8rem;
+    font-weight: 600;
     color: #60a5fa;
+    margin-bottom: 6px;
 }
+/* ===============================
+   METRICS HOVER GLOW
+================================ */
+
+.achv-section .achv-metrics > div {
+    position: relative;
+    padding: 12px 8px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.achv-section .achv-metrics > div::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: inherit;
+    background: radial-gradient(
+        circle,
+        rgba(96,165,250,0.35),
+        transparent 65%
+    );
+    opacity: 0;
+    filter: blur(14px);
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.achv-section .achv-metrics > div:hover {
+    transform: translateY(-6px);
+}
+
+.achv-section .achv-metrics > div:hover::before {
+    opacity: 1;
+}
+
+/* ===============================
+   FUNDING HIGHLIGHT
+================================ */
+
+.achv-section .achv-metrics > div:nth-child(4) {
+    background: linear-gradient(
+        135deg,
+        rgba(96,165,250,0.15),
+        rgba(124,58,237,0.15)
+    );
+    border: 1px solid rgba(96,165,250,0.45);
+    box-shadow:
+        0 0 20px rgba(96,165,250,0.25),
+        inset 0 0 12px rgba(124,58,237,0.15);
+}
+
+.achv-section .achv-metrics > div:nth-child(4) span {
+    color: #a5b4fc;
+}
+
 
 /* LOG */
 .achv-log {
@@ -3863,8 +3157,6 @@ nav > div {
     color: #60a5fa;
 }
 
-/* LOG ITEM WITH HOVER EXPAND */
-/* TIMELINE CARD BASE */
 /* ================================
    ACHIEVEMENTS TIMELINE GLOW
 ================================ */
@@ -3959,6 +3251,8 @@ nav > div {
     background: #0b0f16b5;
     opacity: 0;
     visibility: hidden;
+    z-index: 100;
+    backdrop-filter: blur(8px);
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -3973,7 +3267,7 @@ nav > div {
 .achv-modal-inner {
     width: 90%;
     max-width: 1100px;
-    margin: 6% auto;
+    margin: 10% auto;
     background: #0b0f16;
     padding: 40px;
     transform: translateY(20px);
@@ -4006,10 +3300,12 @@ nav > div {
     font-size: 32px;
     cursor: pointer;
     color: #9ca3af;
+    transition: color 0.3s ease;
+}
+.achv-modal-close:hover {
+    color: #e21212;
 }
 
 .achv-log-image {
     pointer-events: none;
 }
-
-
