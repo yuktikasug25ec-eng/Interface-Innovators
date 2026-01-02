@@ -2094,7 +2094,7 @@
   max-width: 600px;
   transition: 0.25s;
   transition-delay: 0s;
-  transform: translateY(70%);
+  padding-top: 60%;
   opacity: 0;
 }
 
@@ -2110,7 +2110,7 @@
 .abt-slider .abt-slides:nth-child(1) .abt-content,
 .abt-slider .abt-slides:nth-child(2) .abt-content{
   opacity: 1;
-  transform: translateY(65%);
+  padding-top: 25%;
   transition-delay: 0.5s;
 }
 
@@ -3329,4 +3329,9 @@
 
 .achv-log-image {
     pointer-events: none;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
 }

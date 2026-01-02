@@ -328,8 +328,12 @@ p {
   .abt-slider .abt-slides:nth-child(1) .abt-content,
   .abt-slider .abt-slides:nth-child(2) .abt-content{
     opacity: 1;
-    transform: translateY(50%);
+    padding-top: 45%;
     transition-delay: 0.5s;
+  }
+  .abt-slider .abt-slides:nth-child(1) .abt-content h2,
+  .abt-slider .abt-slides:nth-child(2) .abt-content h2{
+    font-size: 3em;
   }
 }
 
@@ -337,7 +341,7 @@ p {
   .abt-slider .abt-slides:nth-child(1) .abt-content,
   .abt-slider .abt-slides:nth-child(2) .abt-content{
     opacity: 1;
-    transform: translateY(40%);
+    padding-top: 40%;
     transition-delay: 0.5s;
   }
 }
@@ -625,5 +629,156 @@ p {
     opacity: 1;
     transform: none;
     pointer-events: auto;
+  }
+}
+
+
+/*===================
+====EVENTS PAGE======
+===================*/
+/* ---------- Tablets (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+  .evt-page {
+    padding: 5rem 6vw;
+  }
+
+  .evt-grid-2x3,
+  .evt-grid-1x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .evt-card.expanded {
+    grid-column: 1 / -1;
+  }
+
+  .evt-title {
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+  }
+
+  .evt-filter {
+    flex-wrap: wrap;
+  }
+
+  .evt-masonry {
+    column-count: 2;
+  }
+
+  .evt-modal img {
+    max-width: 90%;
+  }
+}
+
+/* ---------- Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+  .evt-page {
+    padding: 4rem 5vw;
+  }
+
+  .evt-title {
+    font-size: 1.6rem;
+    letter-spacing: 0.15em;
+  }
+
+  .evt-grid-2x3,
+  .evt-grid-1x3 {
+    grid-template-columns: 1fr;
+  }
+
+  .evt-card {
+    padding: 1.6rem;
+  }
+
+  .evt-card.expanded {
+    grid-column: auto;
+  }
+
+  .evt-card-media {
+    height: 180px;
+  }
+
+  .evt-filter {
+    gap: 0.6rem;
+  }
+
+  .evt-filter button {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .evt-action-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Disable hover-only image zoom on touch */
+  .evt-card:hover .evt-card-media img {
+    transform: none;
+  }
+
+  /* Masonry */
+  .evt-masonry {
+    column-count: 1;
+  }
+
+  /* Modal */
+  .evt-modal img {
+    max-width: 92%;
+  }
+
+  .evt-modal-nav {
+    font-size: 2.2rem;
+  }
+
+  .evt-prev {
+    left: 1rem;
+  }
+
+  .evt-next {
+    right: 1rem;
+  }
+
+  .evt-modal-close {
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* ---------- Small Phones (≤ 480px) ---------- */
+@media (max-width: 480px) {
+  .evt-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+  }
+
+  .evt-text-small,
+  .evt-text-large {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .evt-card-media {
+    height: 150px;
+  }
+
+  .evt-filter button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .evt-modal {
+    padding: 1.5rem;
+  }
+
+  .evt-modal img {
+    max-height: 75vh;
+    border-radius: 12px;
+  }
+
+  .evt-modal-nav {
+    display: none; /* swipe instead of arrows */
   }
 }
