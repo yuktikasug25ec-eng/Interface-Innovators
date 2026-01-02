@@ -240,51 +240,51 @@
       </div>
     </section>
 
-  
-  <div class="container-slider">
-    <div class="slider">
-      <div class="slides pic1" style="--img:url('../images/team/pic13.jpg')">
-        <div class="content">
-          <h2>Ongoing Activities</h2>
-          <p>The club actively conducts year-round events, workshops (such as on Arduino and ESP32), and projects on topics including IoT, drones, 3D designing, and AI-based systems.</p>
-        </div>
-      </div>
-      <div class="slides pic2" style="--img:url('../images/team/pic12.jpg')">
-        <div class="content">
-          <h2>Event Highlights</h2>
-          <p>Major internal events like "Machine Mayhem", "Robowars", and "Tiger's Nest" draw significant participation and audience engagement. </p>
-        </div>
-      </div>
-      <div class="slides pic3" style="--img:url('../images/team/pic11.jpg')">
-        <div class="content">
-          <h2>Competition Representation</h2>
-          <p>Members have consistently represented NIT Patna in various inter-college technical competitions, ideathons, and hackathons, including the Smart India Hackathon.</p>
-        </div>
-      </div>
-      <div class="slides pic4" style="--img:url('../images/team/pic10.jpg')">
-        <div class="content">
-          <h2>Idea Festival 2025</h2>
-          <p>A club member secured 2nd prize among over 25,000 teams at the Idea Festival 2025, organized by Startup Bihar, for an innovative VTOL-UAV (Vertical Take-off and Landing Unmanned Aerial Vehicle) idea.</p>
-        </div>
-      </div>
-      <div class="slides pic5" style="--img:url('../images/team/pic9.jpg')">
-        <div class="content">
-          <h2>ISRO Robotics Challenge 2025</h2>
-          <p>The club engineered an "Autonomous Navigation Aerial Vehicle" (ANAV) with a custom flight controller for the "Fly Me on Mars" theme, demonstrating advanced capabilities in autonomous navigation for extraterrestrial exploration.</p>
-        </div>
-      </div>
-      <div class="slides pic6" style="--img:url('../images/team/pic8.jpg')">
-        <div class="content">
-          <h2>Community Outreach</h2>
-          <p>The club actively promotes robotics among students in nearby schools and colleges, providing resources and opportunities for broader learning. </p>
-        </div>
+<div class="slider-container">
+  <div class="abt-slider">
+    <div class="abt-slides" style="--img:url('../images/projects/project1.jpg')">
+      <div class="abt-content">
+        <h2>Slide 01</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
       </div>
     </div>
-    <div class="buttons">
-      <span class="prev"></span>
-      <span class="next"></span>
+    <div class="abt-slides" style="--img:url('../images/projects/project2.jpg')">
+      <div class="abt-content">
+        <h2>Slide 02</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="abt-slides" style="--img:url('../images/projects/project3.jpg')">
+      <div class="abt-content">
+        <h2>Slide 03</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="abt-slides" style="--img:url('../images/projects/project4.jpg')">
+      <div class="abt-content">
+        <h2>Slide 04</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="abt-slides" style="--img:url('../images/projects/project5.jpg')">
+      <div class="abt-content">
+        <h2>Slide 05</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="abt-slides" style="--img:url('../images/projects/project6.jpg')">
+      <div class="abt-content">
+        <h2>Slide 06</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
     </div>
   </div>
+  <div class="abt-buttons">
+    <span class="prev"></span>
+    <span class="next"></span>
+  </div>
+</div>
+
   <footer class="footer">
       <div class="footer-container">
         <div class="footer-section social-media">
@@ -332,15 +332,15 @@
 <script>
    let next=document.querySelector('.next');
  let prev=document.querySelector('.prev');
- let slider=document.querySelector('.slider');
+ let slider=document.querySelector('.abt-slider');
 
  next.addEventListener('click',function(){
-  let slides=document.querySelectorAll('.slides');
+  let slides=document.querySelectorAll('.abt-slides');
   slider.appendChild(slides[0]);
   })
   
   prev.addEventListener('click',function(){
-      let slides=document.querySelectorAll('.slides');
+      let slides=document.querySelectorAll('.abt-slides');
       slider.prepend(slides[slides.length-1]);
   })
 </script>
