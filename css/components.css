@@ -2617,7 +2617,7 @@
   justify-content: center;
 }
 
-/* ===== Flip Card (YOUR EFFECT) ===== */
+/* ===== Flip Card ===== */
 .card_a {
   position: relative;
   width: 320px;
@@ -2644,7 +2644,7 @@
 }
 
 .card_a:hover .imgBox {
-  transform: rotateY(-180deg);
+  transform: rotateY(-90deg);
 }
 
 .card_a .imgBox img {
@@ -2736,13 +2736,6 @@
   margin-left: 5rem;
   margin-right: 5rem;
   margin-top: 40px;
-}
-
-.card-wrapper.grid .card_a:first-child .imgBox {
-  transform-origin: right center;
-}
-.card-wrapper.grid .card_a:first-child:hover .imgBox {
-  transform: rotateY(180deg);
 }
 
 
