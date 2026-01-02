@@ -654,3 +654,38 @@ p {
     }
 }
 
+/* ===============================
+   SWIPE DOWN TO CLOSE (MOBILE)
+================================ */
+
+@media (max-width: 768px) {
+  .achv-modal {
+    touch-action: pan-y;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .achv-modal.swiping {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .achv-slide-images,
+  .achv-image-track,
+  .achv-hover-image {
+    animation: none !important;
+    transform: none !important;
+    position: static !important;
+  }
+
+  .achv-hover-image {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+  }
+  .achv-modal-inner{
+    margin: 30% auto;
+  }
+}
+
+
