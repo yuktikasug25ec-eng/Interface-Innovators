@@ -799,3 +799,62 @@ p {
     font-size: 0.95rem;
   }
 }
+
+
+/* --- CONTACT RESPONSIVE MEDIA QUERIES --- */
+
+    /* Tablet and smaller (Max width 900px) */
+    @media (max-width: 900px) {
+        .cont-grid-layout {
+            grid-template-columns: 1fr; /* Stack into one column */
+            gap: 30px;
+        }
+
+        .cont-map-container {
+            height: 250px; /* Make map taller on mobile for better visibility */
+        }
+    }
+
+    /* Mobile (Max width 600px) */
+    @media (max-width: 600px) {
+        .cont-section-wrapper {
+            padding: 100px 10px; /* Less padding on edges */
+        }
+
+        .cont-main-title {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            width: 100%;
+            white-space: normal; /* Allow wrapping on small phones */
+        }
+
+        .cont-info-card, .cont-form-card {
+            padding: 20px; /* Reduces padding inside cards */
+        }
+
+        .cont-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Adjust social icons for small screens */
+        .cont-social-btn {
+            width: 35px;
+            height: 35px;
+            font-size: 0.8rem;
+        }
+        
+        /* Ensure inputs are easy to tap */
+        .cont-input, .cont-select, .cont-textarea {
+            padding: 14px; /* Larger touch target */
+        }
+
+        .cont-submit-btn {
+            padding: 16px;
+        }
+        
+        .cont-faq-grid {
+            grid-template-columns: 1fr; /* Force single column FAQ on small phones */
+        }
+    }

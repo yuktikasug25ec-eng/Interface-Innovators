@@ -122,7 +122,7 @@
 <section class="news-grid">
 
   <article class="news-card" data-category="competition">
-  <span class="tag club">Competition News</span>
+  <span class="tag competition">Competition News</span>
   <h3>“Teams from Costa Rica, Malaysia and Australia Receive the Aramco Innovation Award”</h3>
   <p class="meta">📅 November 28, 2025 | 🏷 World Robot Olympiad Association (WRO) press release</p>
   <p class="summary">
@@ -135,7 +135,7 @@
 </article>
 
 <article class="news-card">
-  <span class="tag club">Club News</span>
+  <span class="tag tech">Club News</span>
   <h3>Weekly Robotics Club Strategy Meet</h3>
   <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
   <p class="summary">
@@ -149,7 +149,7 @@
 </article>
 
 <article class="news-card">
-  <span class="tag club">Club News</span>
+  <span class="tag research">Club News</span>
   <h3>Weekly Robotics Club Strategy Meet</h3>
   <p class="meta">📅 12 Jan 2025 | 🏷 Robotics Club NIT Patna</p>
   <p class="summary">
@@ -190,7 +190,53 @@
 </section>
 
 <!-- ================= MODAL ================= -->
-<div class="modal" id="modal-strategy-meet">
+
+
+</section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section social-media">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul class="link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section quick-contacts">
+          <h3>Quick Contacts</h3>
+          <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
+            <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+            <li><i class="fas fa-map-marker-alt"></i>    Ashok Rajpath, National Institute of Technology Patna
+   Incubation Center 3rd Floor - 800005</li>
+          </ul>
+        </div>
+        <div class="footer-section footer-logo">
+  <img src="images/background/logoM.png" alt="Robotics Club Logo">
+</div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
+      </div>
+    </footer>
+    <div class="modal" id="modal-strategy-meet">
   <div class="modal-content neumorphic">
     <span class="close" onclick="closeModal('modal-strategy-meet')">&times;</span>
 
@@ -296,51 +342,6 @@
     </a>
   </div>
 </div>
-
-</section>
-
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section social-media">
-          <h3>Follow Us</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="footer-section quick-links">
-          <h3>Quick Links</h3>
-          <ul class="link-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-section quick-contacts">
-          <h3>Quick Contacts</h3>
-          <ul class="contact-list">
-            <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
-            <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-            <li><i class="fas fa-map-marker-alt"></i>    Ashok Rajpath, National Institute of Technology Patna
-   Incubation Center 3rd Floor - 800005</li>
-          </ul>
-        </div>
-        <div class="footer-section footer-logo">
-  <img src="images/background/logoM.png" alt="Robotics Club Logo">
-</div>
-
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
-      </div>
-    </footer>
      <script src="js/main.js"></script>
      <script>
       // FILTER
@@ -379,6 +380,7 @@ document.querySelectorAll('.modal').forEach(modal => {
     }
   });
 });
+
 
      </script>
      <script src="js/filters.js"></script>
