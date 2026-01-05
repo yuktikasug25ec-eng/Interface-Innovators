@@ -2417,7 +2417,8 @@
   display: block;
 }
 
-.evt-toggle-btn {
+.evt-toggle-btn,
+.evt-action-btn {
   margin-top: 1.5rem;
   background: transparent;
   border: 1px solid rgba(120,170,255,0.6);

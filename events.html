@@ -72,7 +72,7 @@
           Venue: Central Lawn, NIT Patna<br>
           RoboWars 2.0 is a flagship combat robotics event organized by the Robotics Club, NIT Patna. Teams design and build remote-controlled robots capable of withstanding intense battles inside a custom arena. The competition evaluates mechanical strength, control precision, strategy, and innovation. The event promises thrilling matches, live commentary, and exciting prizes for winners.
         </p>
-        <button class="evt-toggle-btn"><a href="https://google.com">Register</a></button>
+        <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
       </div>
 
       <div class="evt-card glass" data-category="workshop">
@@ -89,7 +89,7 @@
           Venue: EE Block, Lab-3<br>
           This beginner-friendly workshop introduces Python programming for embedded robotics systems. Participants will learn how to control motors, read sensor data, and build basic robotic applications using Raspberry Pi and microcontrollers. The session focuses on practical implementation with live demonstrations, making it ideal for students starting their robotics journey.
         </p>
-        <button class="evt-toggle-btn"><a href="https://google.com">Register</a></button>
+        <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
       </div>
       <div class="evt-card glass" data-category="competition">
         <div class="evt-card-media">
@@ -105,7 +105,7 @@
           Time: 11:00 AM – 3:00 PM<br>
           RoboRace challenges teams to design autonomous line-following robots capable of navigating complex paths with speed and precision. The track includes sharp turns, curves, and junctions to test algorithm efficiency and hardware tuning. Winners are determined based on completion time and consistency. The event encourages innovation in sensor optimization and control logic.
         </p>
-        <button class="evt-toggle-btn"><a href="https://google.com">Register</a></button>
+        <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
       </div>
 
       <div class="evt-card glass" data-category="competition">
@@ -122,7 +122,7 @@
           Venue: Robotics Club Room, Tech Block-C<br>
           The Robotics Club presents its semester project—an autonomous delivery robot designed for indoor navigation. The showcase includes live demonstrations, system architecture explanation, and discussions on path planning, obstacle avoidance, and hardware integration. Open to all students interested in applied robotics and real-world automation solutions.
         </p>
-        <button class="evt-toggle-btn" ><a href="https://google.com">Register</a></button>
+        <button class="evt-action-btn" ><a href="https://google.com">Register</a></button>
       </div>
       <div class="evt-card glass" data-category="workshop">
         <div class="evt-card-media">
@@ -138,7 +138,7 @@
           real-world flight challenges, component selection, and practical
           assembly with live demonstrations and guided experiments.
         </p>
-        <button class="evt-toggle-btn" ><a href="https://google.com">Register</a></button>
+        <button class="evt-action-btn" ><a href="https://google.com">Register</a></button>
       </div>
 
       <div class="evt-card glass" data-category="competition">
@@ -154,7 +154,7 @@
           testing mechanical design, motor control, and real-time decision
           making under pressure.
         </p>
-        <button class="evt-toggle-btn"><a href="https://google.com">Register</a></button>
+        <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
       </div>
     </div>
   </section>
@@ -351,10 +351,9 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ================= CARD EXPAND ================= */
+  /* ================= ONGOING EVENTS CARD EXPAND ================= */
   document.querySelectorAll(".evt-card").forEach(card => {
   const toggleBtn = card.querySelector(".evt-toggle-btn");
-
   if (!toggleBtn) return;
 
   toggleBtn.addEventListener("click", e => {
@@ -379,6 +378,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+/* ================= UPCOMING EVENTS CARD CLICK EXPAND ================= */
+document.querySelectorAll(".evt-section .evt-card").forEach(card => {
+
+  // skip cards that have "Know More" button (ongoing events)
+  if (card.querySelector(".evt-toggle-btn")) return;
+
+  card.addEventListener("click", e => {
+
+    if (e.target.closest(".evt-action-btn")) return;
+
+    const isOpen = card.classList.contains("expanded");
+
+    // close all other expanded cards
+    document.querySelectorAll(".evt-card.expanded").forEach(c => {
+      c.classList.remove("expanded");
+    });
+
+    // toggle current card
+    if (!isOpen) {
+      card.classList.add("expanded");
+    } else {
+      card.classList.remove("expanded");
+    }
+  });
+});
+
 
 
   /* ================= FILTER ================= */
