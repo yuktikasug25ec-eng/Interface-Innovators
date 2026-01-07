@@ -67,7 +67,7 @@
           A high-energy combat robotics competition where teams battle custom-built robots in a knockout arena.
         </p>
         <p class="evt-text-large">
-          Date: 9 January 2026<br>
+          Date: 18 January 2026<br>
           Time: 10:00 AM – 4:00 PM<br>
           Venue: Central Lawn, NIT Patna<br>
           RoboWars 2.0 is a flagship combat robotics event organized by the Robotics Club, NIT Patna. Teams design and build remote-controlled robots capable of withstanding intense battles inside a custom arena. The competition evaluates mechanical strength, control precision, strategy, and innovation. The event promises thrilling matches, live commentary, and exciting prizes for winners.
@@ -93,7 +93,7 @@
       </div>
       <div class="evt-card glass" data-category="competition">
         <div class="evt-card-media">
-    <img src="images/events/event3.jpg" alt="Event image">
+    <img src="images/events/event9.jpg" alt="Event image">
   </div>
         <h3>RoboRace: Line Follower Challenge</h3>
         <p class="evt-text-small">
@@ -126,7 +126,7 @@
       </div>
       <div class="evt-card glass" data-category="workshop">
         <div class="evt-card-media">
-    <img src="images/projects/project9.jpg" alt="Event image">
+    <img src="images/events/event8.jpg" alt="Event image">
   </div>
         <h3>Tech Talk: AI in Robotics</h3>
         <p class="evt-text-small">
@@ -143,7 +143,7 @@
 
       <div class="evt-card glass" data-category="competition">
         <div class="evt-card-media">
-    <img src="images/projects/project9.jpg" alt="Event image">
+    <img src="images/events/event10.jpg" alt="Event image">
   </div>
         <h3>Inter-College Robo Race</h3>
         <p class="evt-text-small">
@@ -500,20 +500,6 @@ document.querySelectorAll(".evt-section .evt-card").forEach(card => {
     if (e.key === "ArrowRight") showNext();
     if (e.key === "ArrowLeft") showPrev();
   });
-
-  /* ================= SWIPE DOWN CLOSE ================= */
-  let startY = 0;
-
-  modal.addEventListener("touchstart", e => {
-    startY = e.touches[0].clientY;
-  }, { passive: true });
-
-  modal.addEventListener("touchmove", e => {
-    if (e.touches[0].clientY - startY > 120) {
-      modal.style.display = "none";
-      document.body.style.overflow = "";
-    }
-  }, { passive: true });
 
 });
 </script>

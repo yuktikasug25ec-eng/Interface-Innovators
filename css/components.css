@@ -112,34 +112,14 @@
   margin-bottom: 1.5rem;
 }
 
-.btn-primary {
-  display: inline-block;
-  background: linear-gradient(90deg,#d0d0d0 0%, #d50000 100%);
-  color: #050505;
-  padding: 0.8rem 1.25rem;
-  border-radius: 10px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  text-decoration: none;
-  box-shadow: 0 6px 18px rgba(11,30,40,0.45);
-  transition: transform 180ms ease, box-shadow 180ms ease, letter-spacing 180ms ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(11,30,40,0.55);
-  letter-spacing: 3px;
-  background: linear-gradient(90deg,#d0d0d0 0%, #0083d5 100%);
-}
-
 /* Glassmorphism cards for Club Highlights */
-#club-highlights {
+#three-cards {
   padding: 5rem 8rem;
   color: var(--text);
   position: relative;
   z-index: 20;
 }
-.club-section .container {
+.three-cards-section .container {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -150,13 +130,6 @@
   font-weight: 700;
   text-align: center;
   color: var(--text);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
-  margin-top: 2rem;
 }
 
 .card {
@@ -218,17 +191,9 @@
   box-shadow: 0 6px 14px rgba(0,0,0,0.25); /* soft shadow */
 }
 
-@media (max-width: 900px) {
-  #club-highlights { padding: 3rem 1.25rem; }
-  .cards { grid-template-columns: 1fr; }
-}
-@media (max-width: 900px) {
-  #club-highlights { padding: 3rem 1.25rem; }
-  .cards { grid-template-columns: 1fr; }
-}
 
 /* Glassmorphism cards for Club Highlights */
-#club-highlights {
+#three-cards {
   min-height: 100vh; /* occupy one full viewport */
   padding: 3rem 4rem;
   display: flex;
@@ -239,7 +204,7 @@
 }
 
 
-.club-section .container {
+.three-cards-section .container {
   max-width: 1300px;
   margin: 0 auto;
   width: 100%;
@@ -279,15 +244,6 @@
   color: transparent;
   letter-spacing: 15px;
   text-shadow: 0 0 10px rgba(208,208,208,0.4), 0 0 20px rgba(0,131,213,0.4), 0 0 30px rgba(0,131,213,0.3);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 5.25rem;
-  width: 100%;
-  align-items: stretch;
 }
 
 .card {
@@ -338,18 +294,6 @@
   text-decoration: none;
 }
 
-@media (max-width: 1100px) {
-  .cards { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-  .card { min-height: 380px; }
-  .card-image { height: 190px; }
-}
-
-@media (max-width: 700px) {
-  #club-highlights { padding: 2rem 1rem; }
-  .cards { grid-template-columns: 1fr; }
-  .card { min-height: auto; }
-  .card-image { height: 180px; }
-}
 /* Hover scale + image clarity effect */
 .card {
   transform-origin: center;
@@ -389,21 +333,6 @@
   filter: drop-shadow(0 0 10px rgba(0,131,213,0.8));
 }
 
-@media (max-width: 700px) {
-  .card-peeker { right: 8px; bottom: 8px; }
-  .card-peeker img { width: 72px; height: 72px; }
-}
-
-/* Shift vertical project image down slightly to preserve focus */
-.cards .card:nth-child(3) .card-image {
-  background-position: center 35%;
-}
-
-@media (max-width: 700px) {
-  /* on small screens, keep centered to avoid awkward cropping */
-  .cards .card:nth-child(3) .card-image { background-position: center; }
-}
-
 /* Button background saturation effect (triggered by card hover) */
 .card-btn {
   transition: filter 220ms ease, transform 180ms ease, box-shadow 180ms ease, letter-spacing 220ms ease, text-transform 220ms ease, background 220ms ease;
@@ -428,169 +357,6 @@
   box-shadow: 0 10px 30px rgba(2,6,23,0.25);
   background: linear-gradient(90deg,#d0d0d0 0%, #0083d5 100%);
 }
-
-/* Teaser Section */
-#teaser {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 20;
-  overflow: hidden;
-}
-
-/* Vignette overlay similar to other sections */
-
-
-.teaser-container {
-  width: 90%;
-  height: 80%;
-  display: flex;
-  border-radius: 15px;
-  background: rgba(255,255,255,0.1);
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-  overflow: hidden;
-  position: relative;
-  z-index: 3; /* ensure sits above vignette */
-}
-
-.teaser-image {
-  flex: 1;
-  background-image: url('../images/background/pic1.png');
-  background-size: cover;
-  background-position: 70% center; 
-}
-
-.teaser-content {
-  flex: 1;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--text);
-  font-family: 'Poppins', sans-serif;
-}
-
-
-/* Teaser content layout (LEFT-SIDE STYLE) */
-.teaser-content {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-
-.teaser-eyebrow {
-  font-size: 0.95rem;
-  color: #8bbcff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.teaser-title {
-  font-size: 2.6rem;
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-.teaser-title span {
-  color: #6aa8ff;
-}
-
-.teaser-desc {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-}
-
-.teaser-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  margin-top: 0.6rem;
-}
-
-.teaser-btn {
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
-  color: #fff;
-  padding: 0.65rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.teaser-meta {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.75);
-}
-
-.teaser-countdown {
-  margin-top: 0.8rem;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.85);
-}
-
-.teaser-countdown strong {
-  font-size: 1.2rem;
-  margin: 0 4px;
-  color: var(--text);
-}
-
-/* TEASER SECTION TYPOGRAPHY – BIGGER VERSION */
-
-/* Eyebrow / label */
-.teaser-eyebrow {
-  font-size: 1.5rem;       /* noticeable */
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  margin-bottom: 0.8rem;
-  display: inline-block;
-  color: #4f9cf9;          /* accent color */
-}
-
-/* Title */
-.teaser-title {
-  font-size: 3.5rem;       /* big headline */
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-/* Highlight inside title */
-.teaser-title span {
-  color: #4f9cf9;
-  font-weight: 800;
-}
-
-/* Description / paragraph */
-.teaser-desc {
-  font-size: 1.5rem;       /* much larger */
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: #ddd;
-}
-
-/* Meta info (date, location) */
-.teaser-meta span {
-  font-size: 1.2rem;
-  margin-right: 1.5rem;
-  color: #ccc;
-}
-
-/* Button */
-.teaser-actions a.card-btn {
-  font-size: 1.15rem;       /* slightly bigger than card buttons */
-  padding: 14px 28px;
-}
-
 
 .achievements-section {
   position: relative;
@@ -769,293 +535,15 @@
               0 0 38px rgba(79, 156, 249, 0.3);
 }
 
-/* ================= ABOUT SECTION ================= */
-
-#about {
-  position: relative;
-  height: 100vh;
-  padding: 4rem 6rem;
-  color: #eaeaea;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-title {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  background: linear-gradient(90deg,#d0d0d0 20%, #0083d5 80%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.about-subtitle {
-  text-align: center;
-}
-
-
-/* Container that fills remaining height */
-.about-layout {
-  position: relative;
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-items: stretch;
-}
-
-
-/* Cards row */
-.about-cards {
-  width: 100%;
-  height: calc(100vh - 10rem); /* FULL CONTROL */
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 3rem;
-  padding-bottom: 7rem;
-}
-
-
-/* ================= NEUMORPHIC CARD ================= */
-
-.about-card {
-  height: 90%;
-  padding: 2.8rem 2.4rem;
-  border-radius: 26px;
-  background: #0b0f16;
-  margin-top: 15%;
-
-  /* REAL neumorphism */
-  box-shadow:
-    12px 12px 24px rgba(0, 0, 0, 0.7),
-    -12px -12px 24px rgba(255, 255, 255, 0.035),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.03),
-    inset -2px -2px 4px rgba(0, 0, 0, 0.6);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-/* Vertical connector */
-.about-card::after {
-  content: "";
-  position: absolute;
-  bottom: -70px;
-  left: 50%;
-  width: 2px;
-  height: 70px;
-  background: linear-gradient(
-    to bottom,
-    rgba(79, 209, 255, 0.8),
-    rgba(79, 209, 255, 0.1)
-  );
-  transform: translateX(-50%);
-}
-
-/* Icon */
-.about-card i {
-  font-size: 3rem;
-  color: #4fd1ff;
-  margin-bottom: 1.6rem;
-}
-
-/* Heading */
-.about-card h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-}
-
-/* Paragraph grows */
-.about-card p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #cfd3da;
-  margin-top: 50%;
-}
-
-/* ================= TIMELINE ================= */
-
-.timeline {
-  position: absolute;
-  bottom: 3.2rem;
-  left: 6rem;
-  right: 6rem;
-  height: 4px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    #4fd1ff,
-    transparent
-  );
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Timeline nodes */
-.timeline span {
-  width: 16px;
-  height: 16px;
-  background: #0b0f16;
-  border-radius: 50%;
-  box-shadow:
-    inset 3px 3px 6px rgba(0, 0, 0, 0.7),
-    inset -3px -3px 6px rgba(255, 255, 255, 0.04);
-  border: 2px solid #4fd1ff;
-}
-
-
-/* =====================================
-   ABOUT PAGE – NEON GLOW SLIDE CARDS
-===================================== */
-
-.about-glowfx-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6rem 3rem;
-  position: relative;
-  z-index: 5;
-}
-
-.about-glowfx-container {
-  width: 1100px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
-
-/* CARD */
-.about-glowfx-card {
-  position: relative;
-}
-
-/* FACE BASE */
-.about-glowfx-face {
-  width: 300px;
-  height: 300px;
-  transition: 0.4s;
-}
-
-/* FACE 1 (GLOW FACE) */
-.about-glowfx-face1 {
-  position: relative;
-  background: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  transform: translateY(150px);
-}
-
-.about-glowfx-card:hover .about-glowfx-face1 {
-  transform: translateY(0);
-  box-shadow:
-    inset 0 0 60px whitesmoke,
-
-    inset 20px 0 80px #ff2a2a,     /* RED */
-    inset -20px 0 80px #0083d5,   /* BLUE */
-
-    inset 20px 0 300px #ff2a2a,   /* RED */
-    inset -20px 0 300px #0083d5,  /* BLUE */
-
-    0 0 50px var(--text),
-
-    -10px 0 80px #ff2a2a,         /* RED */
-    10px 0 80px #0083d5;          /* BLUE */
-}
-
-
-/* FACE 1 CONTENT */
-.about-glowfx-face1 .about-glowfx-content {
-  opacity: 0.2;
-  transition: 0.5s;
-  text-align: center;
-}
-
-.about-glowfx-card:hover .about-glowfx-face1 .about-glowfx-content {
-  opacity: 1;
-}
-
-.about-glowfx-face1 i {
-  font-size: 6rem;
-  color: #fff;
-}
-
-.about-glowfx-face1 h3 {
-  font-size: 1.1rem;
-  color: #fff;
-  margin-top: 0.5rem;
-}
-
-/* FACE 2 (INFO PANEL) */
-.about-glowfx-face2 {
-  background: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-  transform: translateY(-150px);
-}
-
-.about-glowfx-card:hover .about-glowfx-face2 {
-  transform: translateY(0);
-}
-
-/* FACE 2 CONTENT */
-.about-glowfx-face2 p {
-  font-size: 0.85rem;
-  color: #333;
-}
-
-.about-glowfx-face2 a {
-  margin-top: 12px;
-  display: inline-block;
-  padding: 8px 12px;
-  text-decoration: none;
-  color: #111;
-  outline: 1px dashed #333;
-  transition: 0.3s;
-}
-
-.about-glowfx-face2 a:hover {
-  background: #111;
-  color: whitesmoke;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
-}
-
-/* ===============================
-   SCALE UP ABOUT GLOW CARDS
-================================ */
-
-.about-glowfx-card {
-  transform: scale(1.15);
-  transform-origin: center;
-}
-
 
 /* Glassmorphism cards for Club Highlights */
-#club-highlights {
+#three-cards {
   padding: 5rem 8rem;
   color: var(--text);
   position: relative;
   z-index: 20;
 }
-.club-section .container {
+.three-cards-section .container {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1066,13 +554,6 @@
   font-weight: 700;
   text-align: center;
   color: var(--text);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
-  margin-top: 2rem;
 }
 
 .card {
@@ -1134,17 +615,9 @@
   box-shadow: 0 6px 14px rgba(0,0,0,0.25); /* soft shadow */
 }
 
-@media (max-width: 900px) {
-  #club-highlights { padding: 3rem 1.25rem; }
-  .cards { grid-template-columns: 1fr; }
-}
-@media (max-width: 900px) {
-  #club-highlights { padding: 3rem 1.25rem; }
-  .cards { grid-template-columns: 1fr; }
-}
 
 /* Glassmorphism cards for Club Highlights */
-#club-highlights {
+#three-cards {
   min-height: 100vh; /* occupy one full viewport */
   padding: 3rem 4rem;
   display: flex;
@@ -1156,7 +629,7 @@
 
 /* Vignette overlay similar to hero::before */
 
-.club-section .container {
+.three-cards-section .container {
   max-width: 1300px;
   margin: 0 auto;
   width: 100%;
@@ -1255,18 +728,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 1100px) {
-  .cards { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-  .card { min-height: 380px; }
-  .card-image { height: 190px; }
-}
 
-@media (max-width: 700px) {
-  #club-highlights { padding: 2rem 1rem; }
-  .cards { grid-template-columns: 1fr; }
-  .card { min-height: auto; }
-  .card-image { height: 180px; }
-}
 /* Hover scale + image clarity effect */
 .card {
   transform-origin: center;
@@ -1306,20 +768,6 @@
   filter: drop-shadow(0 0 10px rgba(0,131,213,0.8));
 }
 
-@media (max-width: 700px) {
-  .card-peeker { right: 8px; bottom: 8px; }
-  .card-peeker img { width: 72px; height: 72px; }
-}
-
-/* Shift vertical project image down slightly to preserve focus */
-.cards .card:nth-child(3) .card-image {
-  background-position: center 35%;
-}
-
-@media (max-width: 700px) {
-  /* on small screens, keep centered to avoid awkward cropping */
-  .cards .card:nth-child(3) .card-image { background-position: center; }
-}
 
 /* Button background saturation effect (triggered by card hover) */
 .card-btn {
@@ -3107,7 +2555,7 @@
 
 .modal-content {
   max-width: 600px;
-  margin: 15% auto;
+  margin: 5% auto;
   padding: 30px;
   border-radius: 20px;
   background: var(--card);

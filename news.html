@@ -60,7 +60,7 @@
   </div>
 
   <!-- Cards -->
-  <div class="news-grid">
+  <div class="news-grid" id="news-page">
 
     <article class="news-card" data-category="meeting">
       <span class="tag club">Meeting</span>
@@ -69,7 +69,7 @@
       <p class="summary">
         The core team reviewed progress on ongoing robotics projects, finalized task distribution for freshers, and discussed preparation strategies for upcoming inter-college competitions.
       </p>
-      <button class="read-more" data-modal="modal-strategy-meet">Read More</button>
+      <button class="read-more" data-modal="modal-club-meet">Read More</button>
     </article>
 
     <article class="news-card" data-category="announcement">
@@ -79,7 +79,7 @@
       <p class="summary">
         The Robotics Club announced its annual recruitment drive for first-year students, outlining the selection process, domains offered, and timelines for orientation sessions.
       </p>
-      <button class="read-more" data-modal="modal-strategy-meet">Read More</button>
+      <button class="read-more" data-modal="modal-club-announcement">Read More</button>
     </article>
 
     <article class="news-card" data-category="workshop">
@@ -89,7 +89,7 @@
       <p class="summary">
         A beginner-friendly workshop introduced participants to Arduino programming, basic electronics, and real-time sensor interfacing through guided practical demonstrations.
       </p>
-      <button class="read-more" data-modal="modal-strategy-meet">Read More</button>
+      <button class="read-more" data-modal="modal-club-workshop">Read More</button>
     </article>
     <article class="news-card" data-category="workshop">
       <span class="tag competition">Workshop</span>
@@ -98,7 +98,7 @@
       <p class="summary">
         Participants were introduced to the basics of Robot Operating System (ROS), including node architecture and simulating mobile robots using Gazebo in a guided hands-on session.
       </p>
-      <button class="read-more" data-modal="modal-strategy-meet">Read More</button>
+      <button class="read-more" data-modal="modal-club-fourth">Read More</button>
     </article>
 
   </div>
@@ -155,20 +155,20 @@
     At the 2025 International Conference on Robotics and Automation (ICRA) in Atlanta, researchers from INSAIT unveiled a significant breakthrough in robotic visual generalization by developing ReVLA, a new method that dramatically improves how robots interpret and perform tasks in real-world environments that differ from their training data.
   </p>
 
-  <button class="read-more" data-modal="modal-strategy-me">
+  <button class="read-more" data-modal="modal-strategy-rb">
     Read More
   </button>
 </article>
 
 <article class="news-card" data-category="competition">
-  <span class="tag club">Competition News</span>
+  <span class="tag competition">Competition News</span>
   <h3>Vietnam Wins Runner-Up Title at the 2025 FIRST Tech Challenge World Championship</h3>
   <p class="meta">📅 April 20, 2025 | 🏷 PANO (Vietnam News)</p>
   <p class="summary">
    Vietnam’s GreenAms Robotics Team 24751 from Hanoi-Amsterdam High School secured the runner-up title at the 2025 FIRST Tech Challenge (FTC) World Championship in Houston, USA, the world’s largest robotics competition, marking a historic achievement for the country’s robotics scene.
   </p>
 
-  <button class="read-more" data-modal="modal-strategy-mee">
+  <button class="read-more" data-modal="modal-strategy-cn">
     Read More
   </button>
 </article>
@@ -276,9 +276,9 @@
     </a>
   </div>
 </div>
-<div class="modal" id="modal-strategy-me">
+<div class="modal" id="modal-strategy-rb">
   <div class="modal-content neumorphic">
-    <span class="close" onclick="closeModal('modal-strategy-me')">&times;</span>
+    <span class="close" onclick="closeModal('modal-strategy-rb')">&times;</span>
 
     <h3>INSAIT Advances Robotic Visual Generalization at ICRA 2025</h3>
     <p class="meta">📅 May 23, 2025 | 🏷 INSAIT press release & research announcement</p>
@@ -298,9 +298,9 @@
     </a>
   </div>
 </div>
-<div class="modal" id="modal-strategy-mee">
+<div class="modal" id="modal-strategy-cn">
   <div class="modal-content neumorphic">
-    <span class="close" onclick="closeModal('modal-strategy-mee')">&times;</span>
+    <span class="close" onclick="closeModal('modal-strategy-cn')">&times;</span>
 
     <h3>Vietnam Wins Runner-Up Title at the 2025 FIRST Tech Challenge World Championship</h3>
     <p class="meta">📅 April 20, 2025 | 🏷PANO (Vietnam News)</p>
@@ -318,6 +318,79 @@
        class="external-link">
       Read Full Article ↗
     </a>
+  </div>
+</div>
+
+<div class="modal" id="modal-club-meet">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal('modal-club-meet')">&times;</span>
+
+    <h3>Weekly Core Team Review </h3>
+    <p class="meta">📅  12 September 2025 | 🏷Robotics Club NIT Patna</p>
+
+    <p>
+      The weekly review meeting focused on evaluating the status of ongoing robotics projects and identifying bottlenecks. Sub-teams presented progress on drone navigation, line-following optimization, and the newly proposed robotic arm initiative.
+    </p>
+
+    <p>
+      A brief discussion was held on component procurement delays and strategies to improve coordination across domains. Seniors also emphasized documentation practices for long-term continuity and advised juniors on competition preparation timelines. Actionable tasks were assigned for the upcoming week with follow-ups scheduled for the next meeting.
+    </p>
+
+
+  </div>
+</div>
+<div class="modal" id="modal-club-announcement">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal('modal-club-announcement')">&times;</span>
+
+    <h3>Freshers’ Orientation & Recruitment Drive</h3>
+    <p class="meta">📅 20 August 2025  | 🏷Club Administration</p>
+
+    <p>
+      The club officially announced the freshers’ orientation and recruitment program for first-year students. The announcement includes an overview of roles across mechanical, electronics, and software divisions, along with the multi-stage selection process consisting of orientation, a basic aptitude test, and a hands-on task round.
+    </p>
+
+    <p>
+      Interested students were instructed to register through the club portal, with deadlines and event dates clearly communicated. The drive aims to onboard talented newcomers and expand the club’s project bandwidth ahead of the upcoming competition season.
+    </p>
+
+
+  </div>
+</div>
+<div class="modal" id="modal-club-workshop">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal('modal-club-workshop')">&times;</span>
+
+    <h3>Hands-on Arduino & Sensors Workshop</h3>
+    <p class="meta">📅 5 October 2025 | 🏷 Robotics Club NIT Patna</p>
+
+    <p>
+      This beginner-level workshop introduced attendees to Arduino microcontrollers, electrical interfacing, and environmental sensors. Over the session, participants learned how to set up Arduino IDE, write basic sketches, and interface modules like ultrasonic sensors, IR sensors, and temperature modules.
+    </p>
+
+    <p>
+      Mentors guided students through real-time debugging, signal reading, and actuating outputs such as LEDs and buzzers. The workshop concluded with a mini challenge where teams built small sensor-based interaction circuits. Feedback from participants indicated high engagement and enthusiasm for more hardware-based learning sessions.
+    </p>
+
+
+  </div>
+</div>
+<div class="modal" id="modal-club-fourth">
+  <div class="modal-content neumorphic">
+    <span class="close" onclick="closeModal('modal-club-fourth')">&times;</span>
+
+    <h3>Introduction to ROS & Robot Simulation</h3>
+    <p class="meta">📅 18 October 2025 | 🏷Robotics Club NIT Patna</p>
+
+    <p>
+      This intermediate workshop introduced students to ROS (Robot Operating System), covering key concepts such as nodes, topics, services, publishers/subscribers, and TF frames. Attendees also gained exposure to Gazebo for 3D simulation of mobile robots.
+    </p>
+
+    <p>
+      Demonstrations included configuring ROS workspaces, visualizing sensor data in RViz, and simulating differential-drive robots under dynamic conditions. The goal of the workshop was to familiarize students with modern robotic software stacks used in research and industry, laying foundational skills for autonomous systems and future SLAM/navigation projects.
+    </p>
+
+
   </div>
 </div>
      <script src="js/main.js"></script>

@@ -141,7 +141,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  #club-highlights {
+  #three-cards {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
@@ -858,3 +858,10 @@ p {
             grid-template-columns: 1fr; /* Force single column FAQ on small phones */
         }
     }
+
+
+@media (max-width: 900px) {
+  #three-cards { padding: 3rem 1.25rem; }
+  .cards { grid-template-columns: 1fr; }
+}
+
