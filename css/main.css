@@ -1,3 +1,8 @@
+/* =========================================
+   1. IMPORTS & VARIABLES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --card: #1a2335;
   --accent: #ff3b3b;
@@ -8,49 +13,47 @@
   --dot-size: 2.6px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* =========================================
+   2. GLOBAL RESET & BODY
+   ========================================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body, html {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   margin: 0;
-  background: transparent;
-  overflow-y: auto;
   background: #0b0f16;
+  overflow-y: auto;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
+/* Vignette Overlay (Fixed) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-
   pointer-events: none;
-
-  /* SINGLE 100vh VIGNETTE SLICE */
   background: radial-gradient(circle at center,
     rgba(0,0,0,0) 0%,
     rgba(0,0,0,0) 40%,
     rgba(0,0,0,0.55) 70%,
     rgba(0,0,0,0.9) 100%
   );
-
   background-size: 100% 100vh;
   background-repeat: repeat-y;
-
-  z-index: 1; /* IMPORTANT */
+  z-index: 1;
 }
 
+/* =========================================
+   3. BACKGROUND LAYERS
+   ========================================= */
 #bgCanvas {
   position: fixed;
   inset: 0;
@@ -58,7 +61,7 @@ body::before {
   pointer-events: none;
 }
 
-.bg{
+.bg {
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -68,7 +71,7 @@ body::before {
   overflow: hidden;
 }
 
-.diffuser{
+.diffuser {
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -76,170 +79,21 @@ body::before {
   background: radial-gradient(rgba(0, 0, 0, 0.9), transparent 200%);
 }
 
-  .rcs-dropdown-hidden {
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-
-  .rcs-dropdown-visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  /* Hamburger animation (namespaced) */
-  #rcs-menuBtn .bar {
-    transition: all 0.3s ease-out;
-  }
-
-  #rcs-menuBtn.open .top-bar {
-    transform: rotate(45deg) translateY(0px);
-  }
-
-  #rcs-menuBtn.open .middle-bar {
-    opacity: 0;
-  }
-
-  #rcs-menuBtn.open .bottom-bar {
-    transform: rotate(-45deg) translateY(0px);
-  }
-
-  /* Additional styles for sidebar (namespaced) */
-  #rcs-fullscreenMenu {
-    backdrop-filter: blur(22px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 2px solid rgba( 255, 255, 255, 0.18 ); 
-    /* ensure the menu is fully off-screen by default and animates in */
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 400px;
-    z-index: 9000;
-    transform: translateX(100%);
-    transition: transform 300ms ease;
-  }
-
-  /* When open, slide into view */
-  #rcs-fullscreenMenu.rcs-open {
-    transform: translateX(0);
-  }
-
-  /* Link styles: bold, uppercase, no color change on hover */
-  .rcs-menu-items {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* match Decksmith 'items-start' */
-    padding-left: 2.5rem; /* match Tailwind 'pl-10' */
-  }
-
-  .rcs-nav-link {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
-    text-align: left; 
-    margin: 10px 0;
-    position: relative; 
-    font-size: 1.25rem; 
-    letter-spacing: 0; 
-    color: var(--text);
-    text-decoration: none !important;
-    text-shadow: none !important;
-    font-style: normal !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transition: 0.3s ease-in-out;
-  }
-
-  .rcs-nav-link::after {
-    content: "\2197"; /* North-east pointing arrow */
-    margin-left: 10px;
-    opacity: 0;/* Arrow is hidden by default */
-  
-    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
-  }
-
-  .rcs-nav-link:hover::after {
-    opacity: 1; /* Show arrow on hover */
-  }
-
-  .rcs-nav-link:hover{
-    letter-spacing: 1px;
-    font-size: 1.55rem;
-    transition: 0.3s ease-in-out;
-  }
-
-  /* 'More' button styling (match Decksmith flex + small gap) */
-  #rcs-dropdownToggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem; /* Tailwind 'space-x-2' ≈ 0.5rem */
-    color: var(--text);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-  }
-
-  /* rotation helper used by JS */
-  .rotate-180 {
-    transform: rotate(180deg);
-    transition: transform 200ms ease;
-  }
-
-  /* Centering the links in the sidebar (namespaced) */
-  #rcs-fullscreenMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .rcs-menu-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 90;
-}
-
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #00ffc8;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: width 0.2s ease-out;
-}
-
+/* =========================================
+   4. NAVIGATION BAR (MAIN)
+   ========================================= */
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0 100px;
-    box-sizing: border-box;
-    z-index: 11000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 100px;
+  box-sizing: border-box;
+  z-index: 11000;
 }
 
-/* Ensure nav contents layout correctly without Tailwind */
 nav > div {
   display: flex;
   justify-content: space-between;
@@ -247,8 +101,39 @@ nav > div {
   height: 100%;
 }
 
-/* Basic visible hamburger button fallback (namespaced) */
-#rcs-menuBtn {
+.glass {
+  backdrop-filter: blur(30px);
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Scroll Progress Bar */
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 90;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #00ffc8;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: width 0.2s ease-out;
+}
+
+/* =========================================
+   5. HAMBURGER MENU BUTTON
+   ========================================= */
+/* Supports both IDs (#rcs-menuBtn and #menuBtn) used in your code */
+#rcs-menuBtn,
+#menuBtn {
   background: transparent;
   border: none;
   width: 40px;
@@ -258,10 +143,11 @@ nav > div {
   justify-content: center;
   position: relative;
   cursor: pointer;
-  z-index: 12000; /* ensure hamburger/cross sits above the sliding menu */
+  z-index: 12000;
 }
 
-#rcs-menuBtn .bar {
+#rcs-menuBtn .bar,
+#menuBtn .bar {
   display: block;
   width: 24px;
   height: 3px;
@@ -272,99 +158,130 @@ nav > div {
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
-#rcs-menuBtn .top-bar { transform: translate(-50%, -8px); }
-#rcs-menuBtn .middle-bar { transform: translate(-50%, 0); }
-#rcs-menuBtn .bottom-bar { transform: translate(-50%, 8px); }
+/* Bar Positions */
+#rcs-menuBtn .top-bar, #menuBtn .top-bar { transform: translate(-50%, -8px); }
+#rcs-menuBtn .middle-bar, #menuBtn .middle-bar { transform: translate(-50%, 0); }
+#rcs-menuBtn .bottom-bar, #menuBtn .bottom-bar { transform: translate(-50%, 8px); }
 
-#rcs-menuBtn.open .top-bar { transform: translate(-50%, 0) rotate(45deg); }
-#rcs-menuBtn.open .middle-bar { opacity: 0; }
-#rcs-menuBtn.open .bottom-bar { transform: translate(-50%, 0) rotate(-45deg); }
+/* Animation: Open State */
+#rcs-menuBtn.open .top-bar, #menuBtn.open .top-bar { transform: translate(-50%, 0) rotate(45deg); }
+#rcs-menuBtn.open .middle-bar, #menuBtn.open .middle-bar { opacity: 0; }
+#rcs-menuBtn.open .bottom-bar, #menuBtn.open .bottom-bar { transform: translate(-50%, 0) rotate(-45deg); }
 
+/* =========================================
+   6. FULLSCREEN SIDEBAR MENU
+   ========================================= */
+/* Supports #rcs-fullscreenMenu and legacy #fullscreenMenu */
+#rcs-fullscreenMenu,
+#fullscreenMenu {
+  backdrop-filter: blur(22px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 2px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  z-index: 9000;
+  transform: translateX(100%);
+  transition: transform 300ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Slide In Class */
+#rcs-fullscreenMenu.rcs-open {
+  transform: translateX(0);
+}
 
+.rcs-menu-items,
+.menu-items {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2.5rem;
+}
 
-.space{
-  letter-spacing: 20px;
+/* Nav Links Styling */
+.rcs-nav-link,
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+  position: relative;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  color: var(--text);
+  text-decoration: none !important;
+  transition: 0.3s ease-in-out;
+}
+
+.rcs-nav-link::after,
+.nav-link::after {
+  content: "\2197"; /* Arrow */
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rcs-nav-link:hover::after,
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+.rcs-nav-link:hover,
+.nav-link:hover {
+  letter-spacing: 1px;
+  font-size: 1.55rem;
+}
+
+/* Dropdown visibility utilities */
+.rcs-dropdown-hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.rcs-dropdown-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#rcs-dropdownToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  transition: 1s;
-  color: var(--text) !important;
-  transition: letter-spacing 1s ease;
 }
 
-.space:hover{
-  letter-spacing: 25px;
-  transition: 1s;
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 200ms ease;
 }
 
-
-#menuBtn .bar {
-    transition: all 0.3s ease-out;
-  }
-
-  #menuBtn.open .top-bar {
-    transform: rotate(45deg) translateY(0px);
-  }
-
-  #menuBtn.open .middle-bar {
-    opacity: 0;
-  }
-
-  #menuBtn.open .bottom-bar {
-    transform: rotate(-45deg) translateY(0px);
-  }
-
-  .glass {
-    backdrop-filter: blur(30px);
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba( 255, 255, 255, 0.18 );
-  }
-
-  /* Link styles: bold, uppercase, no color change on hover */
-  .nav-link {
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
-    text-align: center;
-    margin: 10px 0;
-    position: relative; /* To position the arrow */
-  }
-
-  .nav-link::after {
-    content: "\2197"; /* North-east pointing arrow */
-    margin-left: 10px;
-    opacity: 0; /* Arrow is hidden by default */
-    transition: opacity 0.3s ease; /* Smooth transition for the arrow */
-  }
-
-  .nav-link:hover::after {
-    opacity: 1; /* Show arrow on hover */
-  }
-
-  /* Centering the links in the sidebar */
-  #fullscreenMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-/* Footer Styles */
-
+/* =========================================
+   7. FOOTER SECTION
+   ========================================= */
 .footer {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(25px);
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   border-left: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  padding: 3rem 0 1rem;
+  padding: 4rem 0 1.5rem;
   color: var(--text);
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -372,18 +289,15 @@ nav > div {
   width: 100%;
 }
 
-
 .footer-container {
   width: 100%;
-  max-width: none; 
+  max-width: none;
   padding: 0 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   align-items: stretch;
 }
-
-
 
 .footer-section {
   flex: 1;
@@ -402,12 +316,12 @@ nav > div {
   color: transparent;
 }
 
+/* Social Media Icons */
 .footer-section.social-media {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 
 .social-link {
   display: inline-block;
@@ -430,6 +344,13 @@ nav > div {
   box-shadow: 0 8px 20px rgba(0, 131, 213, 0.3);
 }
 
+/* Contacts List */
+.footer-section.quick-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
 .contact-list {
   list-style: none;
   padding: 0;
@@ -450,35 +371,11 @@ nav > div {
   font-size: 1.2rem;
 }
 
+/* Quick Links */
 .footer-section.quick-links {
   display: flex;
   flex-direction: column;
 }
-
-.link-list {
-  columns: 1; 
-}
-
-
-.footer-section.quick-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-logo img {
-  max-width: 220px;
-  width: 100%;
-  height: auto;
-}
-
 
 .link-list {
   list-style: none;
@@ -519,17 +416,9 @@ nav > div {
   transition: width 0.3s ease;
 }
 
-.link-list a:hover::before {
-  width: 100%;
-}
+.link-list a:hover::before { width: 100%; }
 
-.footer {
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(25px);
-  padding: 4rem 0 1.5rem;
-}
-
-
+/* Footer Bottom / Logo */
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
@@ -547,12 +436,10 @@ nav > div {
   width: 200px;
   max-width: 100%;
   opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
-
-.footer-logo img:hover {
-  opacity: 1;
-}
+.footer-logo img:hover { opacity: 1; }
 
 .footer-bottom p {
   font-size: 0.9rem;
@@ -560,23 +447,39 @@ nav > div {
   margin: 0;
 }
 
-/*====BUTTONS====*/
+/* =========================================
+   8. COMPONENT CLASSES & UTILITIES
+   ========================================= */
+
+/* Primary Button */
 .btn-primary {
   display: inline-block;
-  background: linear-gradient(90deg,#d0d0d0 0%, #d50000 100%);
+  background: linear-gradient(90deg, #d0d0d0 0%, #d50000 100%);
   color: #050505;
   padding: 0.8rem 1.25rem;
   border-radius: 10px;
   font-weight: 700;
   letter-spacing: 0px;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(11,30,40,0.45);
+  box-shadow: 0 6px 18px rgba(11, 30, 40, 0.45);
   transition: transform 180ms ease, box-shadow 180ms ease, letter-spacing 180ms ease;
 }
 
 .btn-primary:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(11,30,40,0.55);
+  box-shadow: 0 12px 30px rgba(11, 30, 40, 0.55);
   letter-spacing: 3px;
-  background: linear-gradient(90deg,#d0d0d0 0%, #0083d5 100%);
+  background: linear-gradient(90deg, #d0d0d0 0%, #0083d5 100%);
+}
+
+/* Letter Spacing Utility */
+.space {
+  letter-spacing: 20px;
+  font-weight: 600;
+  color: var(--text) !important;
+  transition: letter-spacing 1s ease;
+}
+
+.space:hover {
+  letter-spacing: 25px;
 }

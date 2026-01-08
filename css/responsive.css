@@ -1,6 +1,6 @@
 /* =========================================================
-   GLOBAL RESPONSIVE STABILIZATION
-========================================================= */
+   1. GLOBAL RESET & FLUID TYPOGRAPHY
+   ========================================================= */
 
 *,
 *::before,
@@ -36,9 +36,8 @@ li {
   line-height: 1.6;
 }
 
-/* =========================================================
-   FLUID TYPOGRAPHY (NO HALVING)
-========================================================= */
+/* --- Fluid Typography (Clamp) --- */
+/* Scales text smoothly between viewports without breakpoints */
 
 .hero-title {
   font-size: clamp(2.6rem, 6vw, 6rem);
@@ -71,8 +70,8 @@ p {
 }
 
 /* =========================================================
-   NAVBAR & MENU
-========================================================= */
+   2. NAVBAR & MENU
+   ========================================================= */
 
 @media (max-width: 768px) {
   nav {
@@ -90,21 +89,23 @@ p {
 }
 
 /* =========================================================
-   HERO SECTION (REFLOW, NOT SHRINK)
-========================================================= */
+   3. HERO SECTION
+   ========================================================= */
 
-@media(max-width: 1600px){
-  .hero-bg{
+/* Large Screens: Slight scaling down */
+@media (max-width: 1600px) {
+  .hero-bg {
     padding-left: 2rem;
     scale: 0.8;
   }
-  .hero-title>span{
+  .hero-title > span {
     letter-spacing: 0.6rem;
     font-size: 5rem;
     font-weight: 800;
   }
 }
 
+/* Tablet/Laptop: Stack columns */
 @media (max-width: 992px) {
   .hero {
     grid-template-columns: 1fr;
@@ -121,25 +122,38 @@ p {
   }
 }
 
+/* Mobile: Adjust padding and font size */
 @media (max-width: 600px) {
   .hero-bg {
     padding: 3rem 0rem;
   }
-  .hero-title>span{
+  .hero-title > span {
     font-size: 4rem;
   }
 }
 
 /* =========================================================
-   CLUB HIGHLIGHTS / CARDS
-========================================================= */
+   4. CLUB HIGHLIGHTS (CARDS)
+   ========================================================= */
 
+/* Small Laptop: Switch to 2 columns */
 @media (max-width: 1100px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Tablet: Adjust padding */
+@media (max-width: 900px) {
+  #three-cards {
+    padding: 3rem 1.25rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile: Stack vertically */
 @media (max-width: 768px) {
   #three-cards {
     padding-top: 3rem;
@@ -157,9 +171,10 @@ p {
 }
 
 /* =========================================================
-   EVENT / TEASER SECTION
-========================================================= */
+   5. TEASER SECTION
+   ========================================================= */
 
+/* Tablet: Stack content vertically */
 @media (max-width: 992px) {
   #teaser {
     height: auto;
@@ -180,6 +195,7 @@ p {
   }
 }
 
+/* Mobile: Font sizes and layout spacing */
 @media (max-width: 600px) {
   .teaser-title {
     font-size: clamp(1.8rem, 5vw, 2.2rem);
@@ -192,9 +208,20 @@ p {
 }
 
 /* =========================================================
-   ACHIEVEMENTS SECTION
-========================================================= */
+   6. ACHIEVEMENTS SECTION
+   ========================================================= */
 
+/* Tablet: Adjust metrics spacing */
+@media (max-width: 1024px) {
+  .achv-section .achv-metrics {
+    gap: 48px;
+  }
+  .achv-section .achv-metrics span {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablet: Stack main grid */
 @media (max-width: 992px) {
   .achievements-grid {
     grid-template-columns: 1fr;
@@ -202,54 +229,8 @@ p {
   }
 }
 
-@media (max-width: 600px) {
-  .achievement-card {
-    padding: 1.8rem;
-  }
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
+/* Mobile: Force full width and reset flex props */
 @media (max-width: 768px) {
-  .footer {
-    padding: 3rem 0 1.5rem;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2.2rem;
-  }
-
-  .footer-logo {
-    order: -1;
-  }
-
-  .contact-list li {
-    justify-content: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-}
-
-/* =========================================================
-   BACKGROUND CANVAS (MOBILE PERFORMANCE)
-========================================================= */
-
-@media (max-width: 768px) {
-  #bgCanvas {
-    opacity: 0.35;
-  }
-}
-
-
-
-@media (max-width: 768px) {
-
   .achievements-section,
   .achievements-container,
   .achievements-grid {
@@ -287,139 +268,55 @@ p {
     height: auto !important;
     object-fit: cover;
   }
-  .achievements-title{
+
+  .achievements-title {
     font-size: 2rem !important;
   }
-  .achievements-subtitle{
+  .achievements-subtitle {
     font-size: 1rem !important;
   }
 }
-/*about page responsive fixes*/
-@media (max-width:900px){
-  .abt-slider{
-    position: absolute;
-    inset: 40px 40px 200px 40px;
-  }
-  .abt-slider .abt-slides{
-    width: 100px;
-    height: 150px;
-    top: initial;
-    bottom: -250px;
-  }
 
-  .abt-slider .abt-slides:nth-child(1),
-  .abt-slider .abt-slides:nth-child(2){
-    top: initial;
-    bottom: 0px;
-  }
-
-  .abt-slider .abt-slides:nth-child(3){
-    left: 0;
-  }
-  .abt-slider .abt-slides:nth-child(4){
-    left: 120px;
-  }
-  .abt-slider .abt-slides:nth-child(5){
-    left: 240px;
-  }
-  .abt-slider .abt-slides:nth-child(6){
-    left: 360px;
-  }
-}
-
-@media(max-width:768px){
-  .abt-slider .abt-slides:nth-child(1) .abt-content,
-  .abt-slider .abt-slides:nth-child(2) .abt-content{
-    opacity: 1;
-    padding-top: 45%;
-    transition-delay: 0.5s;
-  }
-  .abt-slider .abt-slides:nth-child(1) .abt-content h2,
-  .abt-slider .abt-slides:nth-child(2) .abt-content h2{
-    font-size: 3em;
-  }
-}
-
-@media(max-width:400px){
-  .abt-slider .abt-slides:nth-child(1) .abt-content,
-  .abt-slider .abt-slides:nth-child(2) .abt-content{
-    opacity: 1;
-    padding-top: 40%;
-    transition-delay: 0.5s;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
+/* Small Mobile: 2x2 Grid for metrics */
+@media (max-width: 640px) {
+  .achv-section .achv-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    padding: 24px;
     text-align: center;
   }
 
-  .social-links {
-    justify-content: center;
+  .achv-section .achv-metrics > div {
+    font-size: 0.75rem;
   }
 
-  .contact-list li {
-    justify-content: center;
+  .achv-section .achv-metrics span {
+    font-size: 1.5rem;
   }
-
-  .link-list li {
-    justify-content: center;
+  
+  .achievement-card {
+    padding: 1.8rem;
   }
 }
 
+/* =========================================================
+   7. ABOUT PAGE
+   ========================================================= */
 
-/* ===============================
-   TABLET
-================================ */
-@media (max-width: 1024px) {
-    .achv-section .achv-metrics {
-        gap: 48px;
-    }
-
-    .achv-section .achv-metrics span {
-        font-size: 1.6rem;
-    }
-}
-
-/* ===============================
-   MOBILE – 2x2 GRID
-================================ */
-@media (max-width: 640px) {
-    .achv-section .achv-metrics {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 28px;
-        padding: 24px;
-        text-align: center;
-    }
-
-    .achv-section .achv-metrics > div {
-        font-size: 0.75rem;
-    }
-
-    .achv-section .achv-metrics span {
-        font-size: 1.5rem;
-    }
-}
-
-/* ===============================
-   About Page Responsive Fixes
-================================ */
-
+/* Large Laptop: Handle horizontal scroll */
 @media (max-width: 1440px) {
   .about-layout {
     overflow-x: auto;
     overflow-y: hidden;
   }
-  .timeline{
+  .timeline {
     visibility: hidden;
   }
 }
 
-/* ---------- Tablets ---------- */
+/* Tablet: Adjust grid and spacing */
 @media (max-width: 1024px) {
-
   #about {
     height: auto;
     padding: 4.5rem 3rem;
@@ -448,10 +345,35 @@ p {
   }
 }
 
+/* Mobile Landscape: Slider adjustments */
+@media (max-width: 900px) {
+  .abt-slider {
+    position: absolute;
+    inset: 40px 40px 200px 40px;
+  }
+  .abt-slider .abt-slides {
+    width: 100px;
+    height: 150px;
+    top: initial;
+    bottom: -250px;
+  }
 
-/* ---------- Mobile ---------- */
+  /* Reset top positions for active slides */
+  .abt-slider .abt-slides:nth-child(1),
+  .abt-slider .abt-slides:nth-child(2) {
+    top: initial;
+    bottom: 0px;
+  }
+
+  /* Positioning remaining slides */
+  .abt-slider .abt-slides:nth-child(3) { left: 0; }
+  .abt-slider .abt-slides:nth-child(4) { left: 120px; }
+  .abt-slider .abt-slides:nth-child(5) { left: 240px; }
+  .abt-slider .abt-slides:nth-child(6) { left: 360px; }
+}
+
+/* Mobile Portrait: Vertical Stack for Cards */
 @media (max-width: 768px) {
-
   #about {
     padding: 4.5rem 1.5rem;
     height: auto;
@@ -467,7 +389,6 @@ p {
     margin-bottom: 2rem;
   }
 
-  /* Switch to vertical layout */
   .about-layout {
     flex-direction: column;
     overflow: visible;
@@ -495,8 +416,9 @@ p {
     margin-top: 1rem;
   }
 
-  /* Vertical timeline */
+  /* Vertical Timeline Implementation */
   .timeline {
+    visibility: visible;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -506,12 +428,7 @@ p {
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      #4fd1ff,
-      transparent
-    );
+    background: linear-gradient(to bottom, transparent, #4fd1ff, transparent);
   }
 
   .timeline span {
@@ -519,34 +436,61 @@ p {
     height: 14px;
     margin-left: -5px;
   }
+
+  /* Slider Text Adjustments */
+  .abt-slider .abt-slides:nth-child(1) .abt-content,
+  .abt-slider .abt-slides:nth-child(2) .abt-content {
+    opacity: 1;
+    padding-top: 45%;
+    transition-delay: 0.5s;
+  }
+  .abt-slider .abt-slides:nth-child(1) .abt-content h2,
+  .abt-slider .abt-slides:nth-child(2) .abt-content h2 {
+    font-size: 3em;
+  }
 }
 
-
-/* ---------- Small phones ---------- */
+/* Small Phones */
 @media (max-width: 480px) {
-
   .about-title {
     font-size: 1.7rem;
   }
-
   .about-card h3 {
     font-size: 1.25rem;
   }
-
   .about-card i {
     font-size: 2.5rem;
   }
-
   .about-card p {
     font-size: 0.9rem;
   }
+  
+  .abt-slider .abt-slides:nth-child(1) .abt-content,
+  .abt-slider .abt-slides:nth-child(2) .abt-content {
+    padding-top: 40%;
+  }
 }
 
-/*====================================
-====PROJECTS PAGE RESPONSIVE FIXES====
-====================================*/
-@media (max-width: 768px) {
+/* =========================================================
+   8. PROJECTS SECTION
+   ========================================================= */
 
+/* Tablet: 2 Columns */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-card img {
+    height: 220px;
+  }
+  .project-card.expanded {
+    width: 95%;
+    height: auto;
+  }
+}
+
+/* Mobile: 1 Column & Expansion Logic */
+@media (max-width: 768px) {
   .projects-section {
     padding: 5rem 5vw;
   }
@@ -556,7 +500,6 @@ p {
     letter-spacing: 0.15em;
   }
 
-  /* Filters stack */
   .projects-filters {
     flex-direction: column;
     gap: 1rem;
@@ -567,7 +510,6 @@ p {
     font-size: 1rem;
   }
 
-  /* Single column grid */
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.8rem;
@@ -585,49 +527,28 @@ p {
   .project-content h3 {
     font-size: 1.05rem;
   }
-
   .project-content p {
     font-size: 0.9rem;
   }
 
-  /* Expanded behavior on mobile */
+  /* Expanded State Mobile */
   .project-card.expanded {
     grid-column: 1 / -1;
     width: 100%;
     height: auto;
     margin: 1rem 0;
   }
-
   .project-card.expanded h3 {
     font-size: 1.3rem;
   }
-
   .project-card.expanded p {
     font-size: 0.95rem;
   }
-
   .project-card.expanded::after {
     display: none;
   }
-}
 
-@media (max-width: 1024px) {
-
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-card img {
-    height: 220px;
-  }
-
-  .project-card.expanded {
-    width: 95%;
-    height: auto;
-  }
-}
-
-@media (max-width: 768px) {
+  /* Reset Dimming on Mobile for usability */
   .project-card.dimmed {
     opacity: 1;
     transform: none;
@@ -635,11 +556,11 @@ p {
   }
 }
 
+/* =========================================================
+   9. EVENTS SECTION
+   ========================================================= */
 
-/*===================
-====EVENTS PAGE======
-===================*/
-/* ---------- Tablets (≤ 1024px) ---------- */
+/* Tablet: Grid and Modal adjustments */
 @media (max-width: 1024px) {
   .evt-page {
     padding: 5rem 6vw;
@@ -667,12 +588,22 @@ p {
     column-count: 2;
   }
 
+  .evt-modal {
+    padding: 1.5rem;
+  }
+
   .evt-modal img {
     max-width: 90%;
+    max-height: 75vh;
+    border-radius: 12px;
+  }
+
+  .evt-modal-nav {
+    display: none; /* Hide arrows, rely on swipe/tap */
   }
 }
 
-/* ---------- Mobile (≤ 768px) ---------- */
+/* Mobile: Single Column, Compact Layout */
 @media (max-width: 768px) {
   .evt-page {
     padding: 4rem 5vw;
@@ -691,7 +622,7 @@ p {
   .evt-card {
     padding: 1.6rem;
   }
-
+  
   .evt-card.expanded {
     grid-column: auto;
   }
@@ -703,7 +634,6 @@ p {
   .evt-filter {
     gap: 0.6rem;
   }
-
   .evt-filter button {
     padding: 0.4rem 0.9rem;
     font-size: 0.85rem;
@@ -714,154 +644,142 @@ p {
     text-align: center;
   }
 
-  /* Disable hover-only image zoom on touch */
+  /* Disable hover-only zoom on touch */
   .evt-card:hover .evt-card-media img {
     transform: none;
   }
 
-  /* Masonry */
   .evt-masonry {
     column-count: 1;
   }
 
-  /* Modal */
+  /* Modal Mobile Adjustments */
   .evt-modal img {
     max-width: 92%;
   }
-
-  .evt-modal-nav {
-    font-size: 2.2rem;
-  }
-
-  .evt-prev {
-    left: 1rem;
-  }
-
-  .evt-next {
-    right: 1rem;
-  }
-
   .evt-modal-close {
     top: 1rem;
     right: 1.5rem;
     font-size: 1.8rem;
   }
+  .evt-modal-caption {
+    padding: 1rem 1.2rem;
+  }
+  .evt-modal-title {
+    font-size: 1.3rem;
+  }
+  .evt-modal-desc {
+    font-size: 0.95rem;
+  }
 }
 
-/* ---------- Small Phones (≤ 480px) ---------- */
+/* Small Phones: Text scaling */
 @media (max-width: 480px) {
   .evt-title {
     font-size: 1.4rem;
     letter-spacing: 0.1em;
   }
-
   .evt-text-small,
   .evt-text-large {
     font-size: 0.9rem;
     line-height: 1.6;
   }
-
   .evt-card-media {
     height: 150px;
   }
-
   .evt-filter button {
     flex: 1 1 auto;
     text-align: center;
   }
 }
 
-@media (max-width: 1024px) {
-  .evt-modal {
-    padding: 1.5rem;
-  }
+/* =========================================================
+   10. CONTACT SECTION
+   ========================================================= */
 
-  .evt-modal img {
-    max-height: 75vh;
-    border-radius: 12px;
-  }
-
-  .evt-modal-nav {
-    display: none; /* swipe instead of arrows */
-  }
-}
-
-@media (max-width: 768px) {
-  .evt-modal-caption {
-    padding: 1rem 1.2rem;
-  }
-
-  .evt-modal-title {
-    font-size: 1.3rem;
-  }
-
-  .evt-modal-desc {
-    font-size: 0.95rem;
-  }
-}
-
-
-/* --- CONTACT RESPONSIVE MEDIA QUERIES --- */
-
-    /* Tablet and smaller (Max width 900px) */
-    @media (max-width: 900px) {
-        .cont-grid-layout {
-            grid-template-columns: 1fr; /* Stack into one column */
-            gap: 30px;
-        }
-
-        .cont-map-container {
-            height: 250px; /* Make map taller on mobile for better visibility */
-        }
-    }
-
-    /* Mobile (Max width 600px) */
-    @media (max-width: 600px) {
-        .cont-section-wrapper {
-            padding: 100px 10px; /* Less padding on edges */
-        }
-
-        .cont-main-title {
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            width: 100%;
-            white-space: normal; /* Allow wrapping on small phones */
-        }
-
-        .cont-info-card, .cont-form-card {
-            padding: 20px; /* Reduces padding inside cards */
-        }
-
-        .cont-subtitle {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        /* Adjust social icons for small screens */
-        .cont-social-btn {
-            width: 35px;
-            height: 35px;
-            font-size: 0.8rem;
-        }
-        
-        /* Ensure inputs are easy to tap */
-        .cont-input, .cont-select, .cont-textarea {
-            padding: 14px; /* Larger touch target */
-        }
-
-        .cont-submit-btn {
-            padding: 16px;
-        }
-        
-        .cont-faq-grid {
-            grid-template-columns: 1fr; /* Force single column FAQ on small phones */
-        }
-    }
-
-
+/* Tablet: Stack Grid */
 @media (max-width: 900px) {
-  #three-cards { padding: 3rem 1.25rem; }
-  .cards { grid-template-columns: 1fr; }
+  .cont-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cont-map-container {
+    height: 250px;
+  }
 }
 
+/* Mobile: Padding and Touch Targets */
+@media (max-width: 600px) {
+  .cont-section-wrapper {
+    padding: 100px 10px;
+  }
+
+  .cont-main-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    width: 100%;
+    white-space: normal;
+  }
+
+  .cont-info-card, .cont-form-card {
+    padding: 20px;
+  }
+
+  .cont-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .cont-social-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .cont-input, .cont-select, .cont-textarea {
+    padding: 14px;
+  }
+  
+  .cont-submit-btn {
+    padding: 16px;
+  }
+  
+  .cont-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   11. FOOTER & UTILITIES
+   ========================================================= */
+
+/* Mobile: Center align footer content */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2.2rem;
+  }
+
+  .footer-logo {
+    order: -1;
+  }
+
+  .contact-list li,
+  .social-links,
+  .link-list li {
+    justify-content: center;
+  }
+  
+  /* Reduce background canvas opacity for performance/visibility */
+  #bgCanvas {
+    opacity: 0.35;
+  }
+}

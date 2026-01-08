@@ -52,7 +52,7 @@
     </div>
 
     <!-- METRICS BAR -->
-    <div class="achv-metrics glass-1">
+    <div class="achv-metrics neumorphism">
         <div><span>35</span>Projects</div>
         <div><span>18</span>Wins</div>
         <div><span>12</span>Papers</div>
@@ -60,7 +60,7 @@
     </div>
 
     <!-- LOG PANEL -->
-<div class="achv-log-item glass-1" data-achv="eyantra" title="click to know more">
+<div class="achv-log-item neumorphism" data-achv="eyantra" title="click to know more">
     <div class="achv-log-year">2024</div>
 
     <div class="achv-log-content">
@@ -73,7 +73,7 @@
         <img src="images/projects/project1.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="dst-grant"  title="click to know more">
+<div class="achv-log-item neumorphism" data-achv="dst-grant"  title="click to know more">
     <div class="achv-log-year">2023</div>
 
     <div class="achv-log-content">
@@ -86,11 +86,11 @@
         <img src="images/projects/project2.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="eyantra" title="click to know more">
+<div class="achv-log-item neumorphism" data-achv="apple-pie" title="click to know more">
     <div class="achv-log-year">2024</div>
 
     <div class="achv-log-content">
-        <h3>e-Yantra Robotics Competition</h3>
+        <h3>applepie</h3>
         <p>Winner · IIT Bombay</p>
         <span>Team: Embedded Systems Group</span>
     </div>
@@ -99,7 +99,7 @@
         <img src="images/projects/project1.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="dst-grant"  title="click to know more">
+<div class="achv-log-item neumorphism" data-achv="dst-grant"  title="click to know more">
     <div class="achv-log-year">2023</div>
 
     <div class="achv-log-content">
@@ -112,7 +112,7 @@
         <img src="images/projects/project2.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="eyantra" title="click to know more">
+<div class="achv-log-item neumorphism" data-achv="eyantra" title="click to know more">
     <div class="achv-log-year">2024</div>
 
     <div class="achv-log-content">
@@ -125,7 +125,7 @@
         <img src="images/projects/project1.jpg">
     </div>
 </div>
-<div class="achv-log-item glass-1" data-achv="dst-grant"  title="click to know more">
+<div class="achv-log-item neumorphism" data-achv="dst-grant"  title="click to know more">
     <div class="achv-log-year">2023</div>
 
     <div class="achv-log-content">
@@ -160,7 +160,7 @@
 
 <!-- FULLSCREEN MODAL -->
 <div class="achv-modal" id="achvModal">
-    <div class="achv-modal-inner glass-1">
+    <div class="achv-modal-inner neumorphism">
 
         <span class="achv-modal-close" onclick="achvCloseModal()" title="close (press esc)">×</span>
 
@@ -244,6 +244,20 @@ const achvData = {
         `
     },
 
+    "apple-pie": {
+        img: "images/projects/project1.jpg",
+        html: `
+            <h2>Wingardiam LEVI DOSA </h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Prize:</strong> Winner</p>
+            <p><strong>Team:</strong> Embedded Systems Group</p>
+            <p>
+                Designed and implemented an autonomous robotics system
+                under national-level competition constraints.
+            </p>
+        `
+    },
+
     "dst-grant": {
         img: "images/projects/project2.jpg",
         html: `
@@ -267,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* CLICK HANDLER FOR ALL LOG ITEMS */
     document.querySelector(".achv-section").addEventListener("click", e => {
 
-        const card = e.target.closest(".achv-log-item.glass-1");
+        const card = e.target.closest(".achv-log-item.neumorphism");
         if (!card) return;
 
         const id = card.dataset.achv;
