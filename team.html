@@ -1,257 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team</title>
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/png" href="images/background/logot.png"/>
+
+    <link rel="icon" type="image/png" href="images/background/logot.png" />
 </head>
+
 <body>
 
-<canvas id="bgCanvas"></canvas>
+    <canvas id="bgCanvas"></canvas>
 
     <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
-  <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
-    <div class="flex justify-between items-center">
-      <div ><img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo"></div>
-      <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
-      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
-        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
-        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
-        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
-      </button>
+        <div class="progress-bar" id="progressBar"></div>
     </div>
-  </nav>
 
-  <!-- Menu Panel with glassmorphism -->
-  <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
-    <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
-      
-      <a   href="index.html" class="rcs-nav-link">Home</a>
-      <a   href="about.html" class="rcs-nav-link">About</a>
-      <a   href="projects.html" class="rcs-nav-link">Projects</a>
-      <a   href="events.html" class="rcs-nav-link">Events</a>
-      <a   href="news.html" class="rcs-nav-link">News</a>
-      <a   href="achievements.html" class="rcs-nav-link">Achievement</a>
-      <a   href="contact.html" class="rcs-nav-link">Contact Us</a>
-      
-    </div>
-  </div>
-<div class="team-page">
-<!-- ================= Faculty Advisor ================= -->
-<section class="section">
-  <h1 class="section-title">Faculty Advisor</h1>
+    <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="flex justify-between items-center">
+            <div>
+                <img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo">
+            </div>
+            
+            <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
 
-  <div class="card-wrapper grid">
-    <div class="card_a">
-      <div class="imgBox">
-        <img src="images/team/team1.jfif">
-        <img src="images/team/team2.jpg">
-      </div>
-
-      <div class="details">
-        <div class="content_1">
-          <h2>Dr. Bharat Gupta<br><span>Faculty Advisor</span></h2>
-          <p class="quote">
-            “There are an endless number of things to discover about robotics. A lot of it is just too fantastic for people to believe.”
-          </p>
+            <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
+                <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+                <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+                <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+            </button>
         </div>
-      </div>
-    </div>
-    <div class="card_a">
-      <div class="imgBox">
-        <img src="images/team/team3.jpeg">
-        <img src="images/team/team4.jpeg">
-      </div>
+    </nav>
 
-      <div class="details">
-        <div class="content_1">
-          <h2>Dr. Gagandeep Meena<br><span>PI / Mentor (Faculty Advisor role)</span></h2>
-          <p class="quote">
-            “If something robotic can have responsibilities, then it should also have rights.”
-          </p>
+    <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+        <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
+            <a href="index.html" class="rcs-nav-link">Home</a>
+            <a href="about.html" class="rcs-nav-link">About</a>
+            <a href="projects.html" class="rcs-nav-link">Projects</a>
+            <a href="events.html" class="rcs-nav-link">Events</a>
+            <a href="news.html" class="rcs-nav-link">News</a>
+            <a href="achievements.html" class="rcs-nav-link">Achievement</a>
+            <a href="contact.html" class="rcs-nav-link">Contact Us</a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= Core Team ================= -->
-<section class="section">
-  <h1 class="section-title">Core Team</h1>
-
-  <div class="card-wrapper grid">
-    
-    <div class="card_a">
-      <div class="imgBox">
-        <img src="images/team/team5.jpg">
-        <img src="images/team/team6.jfif">
-      </div>
-      <div class="details">
-        <div class="content_1">
-          <h2>Darshan Jain<br><span>President</span></h2>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card_a">
-      <div class="imgBox">
-        <img src="images/team/CT3.jpg">
-        <img src="images/team/team7.jfif">
-      </div>
-      <div class="details">
-        <div class="content_1">
-          <h2>Kapish Varshney<br><span>Vice President</span></h2>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="card_a">
-      <div class="imgBox">
-        <img src="images/team/team8.jpeg">
-        <img src="images/team/team9.jfif">
-      </div>
-      <div class="details">
-        <div class="content_1">
-          <h2>Mayank Kumar<br><span>Coordinator</span></h2>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
+    <div class="team-page">
+
+        <section class="section">
+            <h1 class="section-title">Faculty Advisor</h1>
+
+            <div class="card-wrapper grid">
+                <div class="card_a">
+                    <div class="imgBox">
+                        <img src="images/team/team1.jfif">
+                        <img src="images/team/team2.jpg">
+                    </div>
+
+                    <div class="details">
+                        <div class="content_1">
+                            <h2>Dr. Bharat Gupta<br><span>Faculty Advisor</span></h2>
+                            <p class="quote">
+                                “There are an endless number of things to discover about robotics. A lot of it is just too fantastic for people to believe.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_a">
+                    <div class="imgBox">
+                        <img src="images/team/team3.jpeg">
+                        <img src="images/team/team4.jpeg">
+                    </div>
+
+                    <div class="details">
+                        <div class="content_1">
+                            <h2>Dr. Gagandeep Meena<br><span>PI / Mentor (Faculty Advisor role)</span></h2>
+                            <p class="quote">
+                                “If something robotic can have responsibilities, then it should also have rights.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h1 class="section-title">Core Team</h1>
+
+            <div class="card-wrapper grid">
+                
+                <div class="card_a">
+                    <div class="imgBox">
+                        <img src="images/team/team5.jpg">
+                        <img src="images/team/team6.jfif">
+                    </div>
+                    <div class="details">
+                        <div class="content_1">
+                            <h2>Darshan Jain<br><span>President</span></h2>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_a">
+                    <div class="imgBox">
+                        <img src="images/team/CT3.jpg">
+                        <img src="images/team/team7.jfif">
+                    </div>
+                    <div class="details">
+                        <div class="content_1">
+                            <h2>Kapish Varshney<br><span>Vice President</span></h2>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_a">
+                    <div class="imgBox">
+                        <img src="images/team/team8.jpeg">
+                        <img src="images/team/team9.jfif">
+                    </div>
+                    <div class="details">
+                        <div class="content_1">
+                            <h2>Mayank Kumar<br><span>Coordinator</span></h2>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h1 class="section-title">Team Members</h1>
+
+            <div class="member-card-grid">
+
+                <div class="member-card">
+                    <h3>Hardware</h3>
+                    <ul>
+                        <li><span>Aman Kumar</span> — Embedded Systems</li>
+                        <li><span>Rohit Verma</span> — PCB Design</li>
+                    </ul>
+                </div>
+
+                <div class="member-card">
+                    <h3>Software</h3>
+                    <ul>
+                        <li><span>Priya Sharma</span> — Backend</li>
+                        <li><span>Neha Singh</span> — Frontend</li>
+                    </ul>
+                </div>
+
+                <div class="member-card">
+                    <h3>AI / ML</h3>
+                    <ul>
+                        <li><span>Sahil Jain</span> — Machine Learning</li>
+                    </ul>
+                </div>
+
+                <div class="member-card">
+                    <h3>Design</h3>
+                    <ul>
+                        <li><span>Ankit Raj</span> — UI/UX</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h1 class="section-title">Notable Alumni</h1>
+
+            <div class="alumni-card-grid">
+
+                <div class="alumni-card">
+                    <h3>Jane Doe</h3>
+                    <p class="role">Robotics Engineer</p>
+                    <p class="org">Tesla, USA</p>
+                    <span class="batch">Batch of 2021</span>
+                </div>
+
+                <div class="alumni-card">
+                    <h3>Arjun Mehta</h3>
+                    <p class="role">Founder & CEO</p>
+                    <p class="org">RoboStart</p>
+                    <span class="batch">Batch of 2019</span>
+                </div>
+
+                <div class="alumni-card">
+                    <h3>Priyanshu Singh</h3>
+                    <p class="role">Research Scientist</p>
+                    <p class="org">ISRO</p>
+                    <span class="batch">Batch of 2020</span>
+                </div>
+
+            </div>
+        </section>
+
     </div>
-
-  </div>
-</section>
-
-<!-- ================= Team Members ================= -->
-<section>
-  <h1 class="section-title">Team Members</h1>
-
-  <div class="member-card-grid">
-
-    <div class="member-card">
-      <h3>Hardware</h3>
-      <ul>
-        <li><span>Aman Kumar</span> — Embedded Systems</li>
-        <li><span>Rohit Verma</span> — PCB Design</li>
-      </ul>
-    </div>
-
-    <div class="member-card">
-      <h3>Software</h3>
-      <ul>
-        <li><span>Priya Sharma</span> — Backend</li>
-        <li><span>Neha Singh</span> — Frontend</li>
-      </ul>
-    </div>
-
-    <div class="member-card">
-      <h3>AI / ML</h3>
-      <ul>
-        <li><span>Sahil Jain</span> — Machine Learning</li>
-      </ul>
-    </div>
-
-    <div class="member-card">
-      <h3>Design</h3>
-      <ul>
-        <li><span>Ankit Raj</span> — UI/UX</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= Alumni ================= -->
-<section>
-  <h1 class="section-title">Notable Alumni</h1>
-
-  <div class="alumni-card-grid">
-
-    <div class="alumni-card">
-      <h3>Jane Doe</h3>
-      <p class="role">Robotics Engineer</p>
-      <p class="org">Tesla, USA</p>
-      <span class="batch">Batch of 2021</span>
-    </div>
-
-    <div class="alumni-card">
-      <h3>Arjun Mehta</h3>
-      <p class="role">Founder & CEO</p>
-      <p class="org">RoboStart</p>
-      <span class="batch">Batch of 2019</span>
-    </div>
-
-    <div class="alumni-card">
-      <h3>Priyanshu Singh</h3>
-      <p class="role">Research Scientist</p>
-      <p class="org">ISRO</p>
-      <span class="batch">Batch of 2020</span>
-    </div>
-
-  </div>
-</section>
-
-</div>
-
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section social-media">
-          <h3>Follow Us</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="footer-section quick-links">
-          <h3>Quick Links</h3>
-          <ul class="link-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-section quick-contacts">
-          <h3>Quick Contacts</h3>
-          <ul class="contact-list">
-            <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
-            <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-            <li><i class="fas fa-map-marker-alt"></i>    Ashok Rajpath, National Institute of Technology Patna
-   Incubation Center 3rd Floor - 800005</li>
-          </ul>
-        </div>
-        <div class="footer-section footer-logo">
-  <img src="images/background/logoM.png" alt="Robotics Club Logo">
-</div>
+        <div class="footer-container">
+            
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
 
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
-      </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul class="link-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section quick-contacts">
+                <h3>Quick Contacts</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
+                    <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, National Institute of Technology Patna Incubation Center 3rd Floor - 800005</li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-logo">
+                <img src="images/background/logoM.png" alt="Robotics Club Logo">
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
+        </div>
     </footer>
-     <script src="js/main.js"></script>
-     <script src="js/filters.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/filters.js"></script>
 </body>
+
 </html>

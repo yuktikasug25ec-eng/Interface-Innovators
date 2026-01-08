@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/png" href="images/background/logot.png"/>
-    <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Robotics Club NIT Patna</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link rel="icon" type="image/png" href="images/background/logot.png"/>
 </head>
 <body>
+
   <canvas id="bgCanvas"></canvas>
-    
-    <div class="progress-container">
+  <div class="progress-container">
     <div class="progress-bar" id="progressBar"></div>
   </div>
+
   <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
     <div class="flex justify-between items-center">
-      <div ><img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo"></div>
+      <div>
+        <img src="images/background/logot.png" alt="Robotics Club Logo" width="120px" style="margin-left: 20px;">
+      </div>
+      
       <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
-      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
+      
+      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none" aria-label="Toggle Menu">
         <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
         <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
         <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
@@ -28,323 +35,284 @@
     </div>
   </nav>
 
-  <!-- Menu Panel with glassmorphism -->
   <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
     <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
-      <a   href="index.html" class="rcs-nav-link">Home</a>
-      <a   href="projects.html" class="rcs-nav-link">Projects</a>
-      <a   href="events.html" class="rcs-nav-link">Events</a>
-      <a   href="team.html" class="rcs-nav-link">Team</a>
-      <a   href="achievements.html" class="rcs-nav-link">Achievement</a>
-      <a   href="news.html" class="rcs-nav-link">News</a>
-      <a   href="contact.html" class="rcs-nav-link">Contact Us</a>
+      <a href="index.html" class="rcs-nav-link">Home</a>
+      <a href="projects.html" class="rcs-nav-link">Projects</a>
+      <a href="events.html" class="rcs-nav-link">Events</a>
+      <a href="team.html" class="rcs-nav-link">Team</a>
+      <a href="achievements.html" class="rcs-nav-link">Achievement</a>
+      <a href="news.html" class="rcs-nav-link">News</a>
+      <a href="contact.html" class="rcs-nav-link">Contact Us</a>
     </div>
   </div>
 
+  <section id="about">
+    <h2 class="about-title">Our History</h2>
+    <p class="about-subtitle">The Robotics Club at NIT Patna embodies the spirit of innovation and technical excellence.</p>
 
-    <section id="about">
-  <h2 class="about-title">Our History</h2>
-  <p class="about-subtitle">The Robotics Club at NIT Patna embodies the spirit of innovation and technical excellence.</p>
+    <div class="about-layout">
+      <div class="about-cards">
+        <div class="about-card">
+          <i class="fa-solid fa-robot"></i>
+          <h3>Our Beginning (2015–16)</h3>
+          <p>Founded by Nripendra Saraj Sir at NIT Patna, the Robotics Club was created as a hub for students passionate about innovation and technology.</p>
+        </div>
 
-  <div class="about-layout">
-    <div class="about-cards">
+        <div class="about-card">
+          <i class="fa-solid fa-microchip"></i>
+          <h3>Diverse Expertise</h3>
+          <p>Our members range from seasoned coders and brilliant designers to hardware scientists, creating a dynamic environment for collaboration and learning.</p>
+        </div>
 
-      <div class="about-card">
-        <i class="fa-solid fa-robot"></i>
-        <h3>Our Beginning (2015–16)</h3>
-        <p>Founded by Nripendra Saraj Sir at NIT Patna, the Robotics Club was created as a hub for students passionate about innovation and technology.</p>
-      </div>
+        <div class="about-card">
+          <i class="fa-solid fa-users"></i>
+          <h3>Competitions & Achievements</h3>
+          <p>Members have proudly represented NIT Patna at events like the Smart India Hackathon, currently led by our Captain Dheeraj Kumar Sir.</p>
+        </div>
 
-      <div class="about-card">
-        <i class="fa-solid fa-microchip"></i>
-        <h3>Diverse Expertise</h3>
-        <p>Our members range from seasoned coders and brilliant designers to hardware scientists, creating a dynamic environment for collaboration and learning.</p>
-      </div>
+        <div class="about-card">
+          <i class="fa-solid fa-trophy"></i>
+          <h3>Skill Enhancement & Awareness</h3>
+          <p>The club focuses on enhancing technical skills while exposing students to the fascinating world of robotics, automation, and electronics.</p>
+        </div>
 
-      <div class="about-card">
-        <i class="fa-solid fa-users"></i>
-        <h3>Competitions & Achievements</h3>
-        <p>Members have proudly represented NIT Patna at events like the Smart India Hackathon, currently led by our Captain Dheeraj Kumar Sir.</p>
-      </div>
-
-      <div class="about-card">
-        <i class="fa-solid fa-trophy"></i>
-        <h3>Skill Enhancement & Awareness</h3>
-        <p>The club focuses on enhancing technical skills while exposing students to the fascinating world of robotics, automation, and electronics.</p>
-      </div>
-
-      <div class="about-card">
-        <i class="fa-solid fa-calendar-minus"></i>
-        <h3>Events & Festivities</h3>
-        <p>With a rich roster of engaging and exciting events, this year’s techno-cultural fest provided an exhilarating experience for all participants.</p>
-      </div>
-
-
-    </div>
-
-    <div class="timeline">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</section>
-
-<section class="about-glowfx-section">
-  <div class="about-glowfx-container">
-
-    <!-- MISSION -->
-    <div class="about-glowfx-card">
-      <div class="about-glowfx-face about-glowfx-face1">
-        <div class="about-glowfx-content">
-          <i class="fas fa-rocket"></i>
-          <h3>Mission</h3>
+        <div class="about-card">
+          <i class="fa-solid fa-calendar-minus"></i>
+          <h3>Events & Festivities</h3>
+          <p>With a rich roster of engaging and exciting events, this year’s techno-cultural fest provided an exhilarating experience for all participants.</p>
         </div>
       </div>
-      <div class="about-glowfx-face about-glowfx-face2">
-        <div class="about-glowfx-content">
-          <p>
-           The Robotics Club of NIT Patna promotes hands-on learning in robotics, fostering technical skills, innovation, and teamwork while connecting students with real-world and industry-relevant challenges.
-          </p>
-          <a href="#">Explore</a>
-        </div>
+
+      <div class="timeline">
+        <span></span><span></span><span></span><span></span><span></span>
       </div>
     </div>
+  </section>
 
-    <!-- VISION -->
-    <div class="about-glowfx-card">
-      <div class="about-glowfx-face about-glowfx-face1">
-        <div class="about-glowfx-content">
-          <i class="fas fa-eye"></i>
-          <h3>Vision</h3>
-        </div>
-      </div>
-      <div class="about-glowfx-face about-glowfx-face2">
-        <div class="about-glowfx-content">
-          <p>
-            The Robotics Club of NIT Patna envisions shaping the future by leading technological innovation, building intelligent machines, and inspiring students to explore AI, automation, and advanced robotics while nurturing the next generation of creative and capable engineering leaders.
-          </p>
-          <a href="#">Discover</a>
-        </div>
-      </div>
-    </div>
+  <section class="about-glowfx-section">
+    <div class="about-glowfx-container">
 
-    <!-- OBJECTIVES -->
-    <div class="about-glowfx-card">
-      <div class="about-glowfx-face about-glowfx-face1">
-        <div class="about-glowfx-content">
-          <i class="fas fa-bullseye"></i>
-          <h3>Objectives</h3>
-        </div>
-      </div>
-      <div class="about-glowfx-face about-glowfx-face2">
-        <div class="about-glowfx-content">
-          <p>
-             The Robotics Club of NIT Patna promotes hands-on learning through workshops and projects in robotics, coding, and system design. It nurtures innovation by turning ideas into real robots, builds industry-relevant technical skills, and fosters collaboration while exploring future and real-world applications of robotics.
-          </p>
-          <a href="#">Learn More</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    <section id="three-cards" class="three-cards-section">
-      <div class="container">
-        <h2 class="section-title">Club Activities and Focus areas</h2>
-        <div class="cards">
-          <article class="card neumorphism">
-            <div class="card-image" style="background-image: url('images/projects/project4.jpg');"></div>
-            <div class="card-peeker">
-              <i class="fa-solid fa-trophy"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Competitions</h3>
-              <p class="card-text">NIT Patna’s Robotics Club hosts engaging tech events like Path Enigma, a maze-solving robot competition, and participates in national platforms such as NRL and Robofest 5.0, fostering hands-on learning and skills across mechanical, electrical, and programming domains.</p>
-              <a href="#" class="card-btn">Learn More</a>
-            </div>
-          </article>
-
-          <article class="card neumorphism">
-            <div class="card-image" style="background-image: url('images/projects/project5.jpg');"></div>
-            <div class="card-peeker">
-              <i class="fa-solid fa-brain"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Workshops</h3>
-              <p class="card-text">The Robotics Club at NIT Patna conducts hands-on workshops on Arduino, robot design, programming, and IoT, helping beginners and tech enthusiasts build practical skills, foster innovation, and prepare for future tech challenges.</p>
-              <a href="#" class="card-btn">Learn More</a>
-            </div>
-          </article>
-
-          <article class="card neumorphism">
-            <div class="card-image" style="background-image: url('images/projects/project6.jpg');"></div>
-            <div class="card-peeker">
-              <i class="fa-solid fa-gear"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Research</h3>
-              <p class="card-text">The Robotics Club at NIT Patna drives hands-on innovation across AI/ML, IoT, 5G, cybersecurity, and 3D printing, building intelligent robots to solve real-world problems while fostering collaboration, future-ready skills, and employability.</p>
-              <a href="#" class="card-btn">Learn More</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section>
-      
-    </section>
-    <section id="three-cards" class="three-cards-section">
-      <div class="container">
-        <h2 class="section-title">Infrastructure and Lab facilities</h2>
-        <div class="cards">
-          <article class="card neumorphism">
-            <div class="card-image" style="background-image: url('images/projects/project7.jpg');"></div>
-            <div class="card-peeker">
-              <i class="fa-solid fa-robot"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Robotics Lab</h3>
-              <p class="card-text">The Robotics Lab of the Robotics Club at NIT Patna is a hands-on innovation space where students design, build, and test robotic systems. Equipped with essential tools, electronics, and software resources, the lab encourages practical learning, teamwork, and experimentation, helping members transform ideas into real-world robotic solutions.</p>
-              <a href="#" class="card-btn">Learn More</a>
-            </div>
-          </article>
-
-          <article class="card neumorphism">
-            <div class="card-image" style="background-image: url('images/projects/project9.jpg');"></div>
-            <div class="card-peeker">
-              <i class="fa-solid fa-atom"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Electronics Lab</h3>
-              <p class="card-text">The Electronics Lab of the Robotics Club at NIT Patna provides a practical workspace for learning and experimentation with electronic circuits and embedded systems. It enables students to design, assemble, and test hardware for robotics projects, fostering strong foundations in electronics, troubleshooting skills, and real-world problem solving.</p>
-              <a href="#" class="card-btn">Learn More</a>
-            </div>
-          </article>
-
-          <article class="card neumorphism">
-            <div class="card-image" style="background-image: url('images/projects/project8.jpg');"></div>
-            <div class="card-peeker">
-              <i class="fa-solid fa-code"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">AI & Coding</h3>
-              <p class="card-text">The AI & Coding Lab of the Robotics Club at NIT Patna focuses on developing intelligent systems through programming, data analysis, and machine learning. It offers a collaborative environment where students enhance their coding skills, work on AI-driven robotics applications, and build software solutions that integrate seamlessly with hardware systems.</p>
-              <a href="#" class="card-btn">Learn More</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-<div class="slider-container">
-  <div class="abt-slider">
-    <div class="abt-slides" style="--img:url('../images/projects/project1.jpg')">
-      <div class="abt-content">
-        <h2>Foundation & Vision (Early Years)</h2>
-        <p>The Robotics Club at NIT Patna was established to cultivate hands-on engineering skills and promote innovation in automation, embedded systems, and intelligent machines among students.</p>
-      </div>
-    </div>
-    <div class="abt-slides" style="--img:url('../images/projects/project2.jpg')">
-      <div class="abt-content">
-        <h2>Initial Projects & Skill Building</h2>
-        <p>In its formative phase, the club focused on basic robotics projects such as line followers, obstacle-avoiding robots, and Arduino-based systems, helping members build strong technical fundamentals.</p>
-      </div>
-    </div>
-    <div class="abt-slides" style="--img:url('../images/projects/project3.jpg')">
-      <div class="abt-content">
-        <h2>Expansion into Advanced Domains</h2>
-        <p>With growing expertise, the club expanded into advanced areas including autonomous navigation, robotic arms, IoT integration, computer vision, and AI-based control systems.</p>
-      </div>
-    </div>
-    <div class="abt-slides" style="--img:url('../images/projects/project4.jpg')">
-      <div class="abt-content">
-        <h2>Workshops, Competitions & Outreach</h2>
-        <p>The club began organizing technical workshops, hackathons, and inter-college competitions, while actively participating in national-level robotics and technology events.</p>
-      </div>
-    </div>
-    <div class="abt-slides" style="--img:url('../images/projects/project5.jpg')">
-      <div class="abt-content">
-        <h2>Flagship Projects & Team Growth</h2>
-        <p>Multiple large-scale team projects were initiated, emphasizing real-world problem solving, research-oriented development, and collaboration across different engineering disciplines.</p>
-      </div>
-    </div>
-    <div class="abt-slides" style="--img:url('../images/projects/project6.jpg')">
-      <div class="abt-content">
-        <h2>Present Day & Future Direction</h2>
-        <p>Today, the Robotics Club continues to innovate through ongoing projects, mentoring new members, strengthening industry exposure, and aiming to contribute impactful solutions in robotics and automation.</p>
-      </div>
-    </div>
-  </div>
-  <div class="abt-buttons">
-    <span class="prev"></span>
-    <span class="next"></span>
-  </div>
-</div>
-
-  <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section social-media">
-          <h3>Follow Us</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+      <div class="about-glowfx-card">
+        <div class="about-glowfx-face about-glowfx-face1">
+          <div class="about-glowfx-content">
+            <i class="fas fa-rocket"></i>
+            <h3>Mission</h3>
           </div>
         </div>
-        <div class="footer-section quick-links">
-          <h3>Quick Links</h3>
-          <ul class="link-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+        <div class="about-glowfx-face about-glowfx-face2">
+          <div class="about-glowfx-content">
+            <p>The Robotics Club of NIT Patna promotes hands-on learning in robotics, fostering technical skills, innovation, and teamwork while connecting students with real-world and industry-relevant challenges.</p>
+            <a href="#">Explore</a>
+          </div>
         </div>
-        <div class="footer-section quick-contacts">
-          <h3>Quick Contacts</h3>
-          <ul class="contact-list">
-            <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
-            <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-            <li><i class="fas fa-map-marker-alt"></i>    Ashok Rajpath, National Institute of Technology Patna
-   Incubation Center 3rd Floor - 800005</li>
-          </ul>
+      </div>
+
+      <div class="about-glowfx-card">
+        <div class="about-glowfx-face about-glowfx-face1">
+          <div class="about-glowfx-content">
+            <i class="fas fa-eye"></i>
+            <h3>Vision</h3>
+          </div>
         </div>
-        <div class="footer-section footer-logo">
-  <img src="images/background/logoM.png" alt="Robotics Club Logo">
-</div>
+        <div class="about-glowfx-face about-glowfx-face2">
+          <div class="about-glowfx-content">
+            <p>The Robotics Club of NIT Patna envisions shaping the future by leading technological innovation, building intelligent machines, and inspiring students to explore AI, automation, and advanced robotics.</p>
+            <a href="#">Discover</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-glowfx-card">
+        <div class="about-glowfx-face about-glowfx-face1">
+          <div class="about-glowfx-content">
+            <i class="fas fa-bullseye"></i>
+            <h3>Objectives</h3>
+          </div>
+        </div>
+        <div class="about-glowfx-face about-glowfx-face2">
+          <div class="about-glowfx-content">
+            <p>The Robotics Club of NIT Patna promotes hands-on learning through workshops and projects in robotics, coding, and system design. It nurtures innovation by turning ideas into real robots.</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="three-cards" class="three-cards-section">
+    <div class="container">
+      <h2 class="section-title">Club Activities and Focus Areas</h2>
+      <div class="cards">
+        
+        <article class="card neumorphism">
+          <div class="card-image" style="background-image: url('images/projects/project4.jpg');"></div>
+          <div class="card-peeker"><i class="fa-solid fa-trophy"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Competitions</h3>
+            <p class="card-text">NIT Patna’s Robotics Club hosts engaging tech events like Path Enigma, a maze-solving robot competition, and participates in national platforms such as NRL and Robofest 5.0.</p>
+            <a href="#" class="card-btn">Learn More</a>
+          </div>
+        </article>
+
+        <article class="card neumorphism">
+          <div class="card-image" style="background-image: url('images/projects/project5.jpg');"></div>
+          <div class="card-peeker"><i class="fa-solid fa-brain"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Workshops</h3>
+            <p class="card-text">The Robotics Club at NIT Patna conducts hands-on workshops on Arduino, robot design, programming, and IoT, helping beginners and tech enthusiasts build practical skills.</p>
+            <a href="#" class="card-btn">Learn More</a>
+          </div>
+        </article>
+
+        <article class="card neumorphism">
+          <div class="card-image" style="background-image: url('images/projects/project6.jpg');"></div>
+          <div class="card-peeker"><i class="fa-solid fa-gear"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Research</h3>
+            <p class="card-text">The Robotics Club at NIT Patna drives hands-on innovation across AI/ML, IoT, 5G, cybersecurity, and 3D printing, building intelligent robots to solve real-world problems.</p>
+            <a href="#" class="card-btn">Learn More</a>
+          </div>
+        </article>
 
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
+    </div>
+  </section>
+
+  <section id="three-cards" class="three-cards-section">
+    <div class="container">
+      <h2 class="section-title">Infrastructure and Lab Facilities</h2>
+      <div class="cards">
+        
+        <article class="card neumorphism">
+          <div class="card-image" style="background-image: url('images/projects/project7.jpg');"></div>
+          <div class="card-peeker"><i class="fa-solid fa-robot"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Robotics Lab</h3>
+            <p class="card-text">The Robotics Lab is a hands-on innovation space where students design, build, and test robotic systems. Equipped with essential tools and software resources.</p>
+            <a href="#" class="card-btn">Learn More</a>
+          </div>
+        </article>
+
+        <article class="card neumorphism">
+          <div class="card-image" style="background-image: url('images/projects/project9.jpg');"></div>
+          <div class="card-peeker"><i class="fa-solid fa-atom"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Electronics Lab</h3>
+            <p class="card-text">The Electronics Lab provides a practical workspace for learning and experimentation with electronic circuits, embedded systems, and hardware testing.</p>
+            <a href="#" class="card-btn">Learn More</a>
+          </div>
+        </article>
+
+        <article class="card neumorphism">
+          <div class="card-image" style="background-image: url('images/projects/project8.jpg');"></div>
+          <div class="card-peeker"><i class="fa-solid fa-code"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">AI & Coding</h3>
+            <p class="card-text">The AI & Coding Lab focuses on developing intelligent systems through programming, data analysis, and machine learning in a collaborative environment.</p>
+            <a href="#" class="card-btn">Learn More</a>
+          </div>
+        </article>
+
       </div>
-    </footer>
+    </div>
+  </section>
+
+  <div class="slider-container">
+    <div class="abt-slider">
+      <div class="abt-slides" style="--img:url('../images/projects/project1.jpg')">
+        <div class="abt-content">
+          <h2>Foundation & Vision (Early Years)</h2>
+          <p>The Robotics Club at NIT Patna was established to cultivate hands-on engineering skills and promote innovation in automation.</p>
+        </div>
+      </div>
+      <div class="abt-slides" style="--img:url('../images/projects/project2.jpg')">
+        <div class="abt-content">
+          <h2>Initial Projects & Skill Building</h2>
+          <p>In its formative phase, the club focused on basic robotics projects such as line followers and Arduino-based systems.</p>
+        </div>
+      </div>
+      <div class="abt-slides" style="--img:url('../images/projects/project3.jpg')">
+        <div class="abt-content">
+          <h2>Expansion into Advanced Domains</h2>
+          <p>With growing expertise, the club expanded into advanced areas including autonomous navigation, IoT, and AI-based control.</p>
+        </div>
+      </div>
+      <div class="abt-slides" style="--img:url('../images/projects/project4.jpg')">
+        <div class="abt-content">
+          <h2>Workshops, Competitions & Outreach</h2>
+          <p>The club began organizing technical workshops and inter-college competitions while participating in national-level events.</p>
+        </div>
+      </div>
+      <div class="abt-slides" style="--img:url('../images/projects/project5.jpg')">
+        <div class="abt-content">
+          <h2>Flagship Projects & Team Growth</h2>
+          <p>Multiple large-scale team projects were initiated, emphasizing real-world problem solving and collaboration.</p>
+        </div>
+      </div>
+      <div class="abt-slides" style="--img:url('../images/projects/project6.jpg')">
+        <div class="abt-content">
+          <h2>Present Day & Future Direction</h2>
+          <p>Today, the Robotics Club continues to innovate through ongoing projects, mentoring new members, and strengthening industry exposure.</p>
+        </div>
+      </div>
+    </div>
+    <div class="abt-buttons">
+      <span class="prev"></span>
+      <span class="next"></span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-section social-media">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul class="link-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section quick-contacts">
+        <h3>Quick Contacts</h3>
+        <ul class="contact-list">
+          <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
+          <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+          <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, NIT Patna, Incubation Center 3rd Floor - 800005</li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-logo">
+        <img src="images/background/logoM.png" alt="Robotics Club Logo">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
+    </div>
+  </footer>
     
   <script src="js/main.js"></script>
-<script>
-   let next=document.querySelector('.next');
- let prev=document.querySelector('.prev');
- let slider=document.querySelector('.abt-slider');
-
- next.addEventListener('click',function(){
-  let slides=document.querySelectorAll('.abt-slides');
-  slider.appendChild(slides[0]);
-  })
-  
-  prev.addEventListener('click',function(){
-      let slides=document.querySelectorAll('.abt-slides');
-      slider.prepend(slides[slides.length-1]);
-  })
-</script>
-<script src="js/filters.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/filters.js"></script>
 
 </body>
 </html>

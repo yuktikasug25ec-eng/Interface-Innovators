@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,135 +9,118 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/png" href="images/background/logot.png"/>
+    <link rel="icon" type="image/png" href="images/background/logot.png" />
 </head>
+
 <body>
 
-<canvas id="bgCanvas"></canvas>
+    <canvas id="bgCanvas"></canvas>
 
     <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
-  <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
-    <div class="flex justify-between items-center">
-      <div ><img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo"></div>
-      <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
-      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
-        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
-        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
-        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
-      </button>
+        <div class="progress-bar" id="progressBar"></div>
     </div>
-  </nav>
 
-  <!-- Menu Panel with glassmorphism -->
-  <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
-    <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
-      
-      <a   href="index.html" class="rcs-nav-link">Home</a>
-      <a   href="about.html" class="rcs-nav-link">About</a>
-      <a   href="projects.html" class="rcs-nav-link">Projects</a>
-      <a   href="events.html" class="rcs-nav-link">Events</a>
-      <a   href="team.html" class="rcs-nav-link">Team</a>
-      <a   href="achievements.html" class="rcs-nav-link">Achievement</a>
-      <a   href="news.html" class="rcs-nav-link">News</a>
-      
+    <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="flex justify-between items-center">
+            <div><img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo"></div>
+            <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
+            <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
+                <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+                <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+                <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+        <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
+            <a href="index.html" class="rcs-nav-link">Home</a>
+            <a href="about.html" class="rcs-nav-link">About</a>
+            <a href="projects.html" class="rcs-nav-link">Projects</a>
+            <a href="events.html" class="rcs-nav-link">Events</a>
+            <a href="team.html" class="rcs-nav-link">Team</a>
+            <a href="achievements.html" class="rcs-nav-link">Achievement</a>
+            <a href="news.html" class="rcs-nav-link">News</a>
+        </div>
     </div>
-  </div>
 
-<div class="cont-section-wrapper">
-    <div class="cont-background-grid"></div>
+    <div class="cont-section-wrapper">
+        <div class="cont-background-grid"></div>
 
-    <div class="cont-container">
-        <h1 class="cont-main-title">Contact Us</h1>
+        <div class="cont-container">
+            <h1 class="cont-main-title">Contact Us</h1>
 
-        <div class="cont-grid-layout">
-            
-            <div class="cont-info-section">
-                <div class="cont-info-card">
-                    <h2 class="cont-subtitle">Get in Touch</h2>
-                    <ul class="cont-details-list">
-                        <li class="cont-details-item">
-                            <span class="cont-icon">&#9993;</span> <span>robotics@nitp.ac.in</span>
-                        </li>
-                        <li class="cont-details-item">
-                            <span class="cont-icon">&#9742;</span> <span>+91 12345 67890</span>
-                        </li>
-                        <li class="cont-details-item">
-                            <span class="cont-icon">&#128205;</span> <span>Incubation Center, 3rd Floor<br>Ashok Rajpath, NIT Patna - 800005</span>
-                        </li>
-                        <li class="cont-details-item">
-                            <span class="cont-icon">&#128340;</span> <span>General Meetings: Fridays, 5:00 PM<br>Lab Open: Mon-Sat, 10 AM - 8 PM</span>
-                        </li>
-                    </ul>
+            <div class="cont-grid-layout">
+                <div class="cont-info-section">
+                    <div class="cont-info-card">
+                        <h2 class="cont-subtitle">Get in Touch</h2>
+                        <ul class="cont-details-list">
+                            <li class="cont-details-item"><span class="cont-icon">✉</span> <span>robotics@nitp.ac.in</span></li>
+                            <li class="cont-details-item"><span class="cont-icon">☎</span> <span>+91 12345 67890</span></li>
+                            <li class="cont-details-item"><span class="cont-icon">📍</span> <span>Incubation Center, 3rd Floor<br>Ashok Rajpath, NIT Patna - 800005</span></li>
+                            <li class="cont-details-item"><span class="cont-icon">🕔</span> <span>Mon-Sat, 10 AM - 8 PM</span></li>
+                        </ul>
 
-                    <h2 class="cont-subtitle">Locate Us</h2>
-                    <div class="cont-map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.521830467137!2d85.16941987610551!3d25.620800914411614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58dce6732867%3A0x4059f39a1ac82f06!2sNational%20Institute%20of%20Technology%2C%20Patna!5e0!3m2!1sen!2sin!4v1767500850051!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                        <h2 class="cont-subtitle">Locate Us</h2>
+                        <div class="cont-map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.521830467137!2d85.16941987610551!3d25.620800914411614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58dce6732867%3A0x4059f39a1ac82f06!2sNational%20Institute%20of%20Technology%2C%20Patna!5e0!3m2!1sen!2sin!4v1767500850051!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
 
-                    <div class="cont-social-links">
-                        <a href="#" class="cont-social-btn" title="Facebook">f</a>
-                        <a href="#" class="cont-social-btn" title="Twitter">t</a>
-                        <a href="#" class="cont-social-btn" title="Instagram">i</a>
-                        <a href="#" class="cont-social-btn" title="LinkedIn">in</a>
-                        <a href="#" class="cont-social-btn" title="GitHub">git</a>
+                        <div class="cont-social-links">
+                            <a href="#" class="cont-social-btn" title="Facebook">f</a>
+                            <a href="#" class="cont-social-btn" title="Twitter">t</a>
+                            <a href="#" class="cont-social-btn" title="Instagram">i</a>
+                            <a href="#" class="cont-social-btn" title="LinkedIn">in</a>
+                            <a href="#" class="cont-social-btn" title="GitHub">git</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="cont-form-section">
-                <div class="cont-form-card">
-                    <form id="originalContactForm">
-                        <h2 class="cont-subtitle">Contact Form</h2>
-                        
-                        <div class="cont-form-group">
-                            <label class="cont-label">Name</label>
-                            <input type="text" class="cont-input" placeholder="Your Name" required>
+                <div class="cont-form-section">
+                    <div class="cont-form-card">
+                        <form id="originalContactForm">
+                            <h2 class="cont-subtitle">Contact Form</h2>
+                            <div class="cont-form-group">
+                                <label class="cont-label">Name</label>
+                                <input type="text" class="cont-input" placeholder="Your Name" required>
+                            </div>
+                            <div class="cont-form-group">
+                                <label class="cont-label">Email</label>
+                                <input type="email" class="cont-input" placeholder="Your Email" required>
+                            </div>
+                            <div class="cont-form-group">
+                                <label class="cont-label">Subject</label>
+                                <input type="text" class="cont-input" placeholder="Topic" required>
+                            </div>
+                            <div class="cont-form-group">
+                                <label class="cont-label">Purpose</label>
+                                <select class="cont-select">
+                                    <option>General Inquiry</option>
+                                    <option>Join Club</option>
+                                    <option>Collaboration</option>
+                                </select>
+                            </div>
+                            <div class="cont-form-group">
+                                <label class="cont-label">Message</label>
+                                <textarea class="cont-textarea" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="cont-submit-btn">Submit</button>
+                        </form>
+
+                        <div id="successView" class="cont-success-view">
+                            <div class="cont-success-icon">✔</div>
+                            <h2>Form Submitted!</h2>
+                            <p>Thank you for reaching out.</p>
+                            <button id="fillAgainBtn" class="cont-reset-btn">Fill Another Form</button>
                         </div>
-
-                        <div class="cont-form-group">
-                            <label class="cont-label">Email</label>
-                            <input type="email" class="cont-input" placeholder="Your Email" required>
-                        </div>
-
-                        <div class="cont-form-group">
-                            <label class="cont-label">Subject</label>
-                            <input type="text" class="cont-input" placeholder="Topic" required>
-                        </div>
-
-                        <div class="cont-form-group">
-                            <label class="cont-label">Purpose</label>
-                            <select class="cont-select">
-                                <option>General Inquiry</option>
-                                <option>Join Club</option>
-                                <option>Event Question</option>
-                                <option>Collaboration</option>
-                            </select>
-                        </div>
-
-                        <div class="cont-form-group">
-                            <label class="cont-label">Message</label>
-                            <textarea class="cont-textarea" placeholder="Write your message here..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="cont-submit-btn">Submit</button>
-                    </form>
-
-                    <div id="successView" class="cont-success-view">
-                        <div class="cont-success-icon">✔</div>
-                        <h2 style="color: #fff;">Form Submitted!</h2>
-                        <p>Thank you for reaching out to the Robotics Club.</p>
-                        <button id="fillAgainBtn" class="cont-reset-btn">Fill Another Form</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
         <div class="cont-faq-marquee-container">
-        <h2 class="cont-subtitle" style="text-align: center; border: none;">Frequently Asked Questions</h2>
-        <div class="cont-marquee-track">
+            <h2 class="cont-subtitle" style="text-align: center; border: none;">Frequently Asked Questions</h2>
+            <div class="cont-marquee-track">
             <div class="cont-faq-item">
                 <span class="cont-faq-question">How do I join?</span>
                 <p class="cont-faq-answer">Apply during our recruitment drive at the start of each semester.</p>
@@ -180,71 +164,52 @@
             </div>
         </div>
         </div>
-
     </div>
-</div>
-  
+
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section social-media">
-          <h3>Follow Us</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
-          </div>
+        <div class="footer-container">
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul class="link-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section quick-contacts">
+                <h3>Quick Contacts</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
+                    <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, NIT Patna - 800005</li>
+                </ul>
+            </div>
+            <div class="footer-section footer-logo">
+                <img src="images/background/logoM.png" alt="Robotics Club Logo">
+            </div>
         </div>
-        <div class="footer-section quick-links">
-          <h3>Quick Links</h3>
-          <ul class="link-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="news.html">News</a></li>
-          </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
         </div>
-        <div class="footer-section quick-contacts">
-          <h3>Quick Contacts</h3>
-          <ul class="contact-list">
-            <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
-            <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-            <li><i class="fas fa-map-marker-alt"></i>    Ashok Rajpath, National Institute of Technology Patna
-   Incubation Center 3rd Floor - 800005</li>
-          </ul>
-        </div>
-        <div class="footer-section footer-logo">
-  <img src="images/background/logoM.png" alt="Robotics Club Logo">
-</div>
-
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
-      </div>
     </footer>
-     <script src="js/main.js"></script>
-<script>
-    const form = document.getElementById('originalContactForm');
-    const successView = document.getElementById('successView');
-    const fillAgainBtn = document.getElementById('fillAgainBtn');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Visual Switch
-        form.style.display = 'none';
-        successView.style.display = 'block';
-    });
-
-    fillAgainBtn.addEventListener('click', function() {
-        form.reset();
-        form.style.display = 'block';
-        successView.style.display = 'none';
-    });
-</script>
-     <script src="js/filters.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/filters.js"></script>
 </body>
+
 </html>
