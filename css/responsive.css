@@ -36,8 +36,7 @@ li {
   line-height: 1.6;
 }
 
-/* --- Fluid Typography (Clamp) --- */
-/* Scales text smoothly between viewports without breakpoints */
+/* --- Fluid Typography --- */
 
 .hero-title {
   font-size: clamp(2.6rem, 6vw, 6rem);
@@ -128,7 +127,7 @@ p {
     padding: 3rem 0rem;
   }
   .hero-title > span {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 }
 
@@ -751,7 +750,142 @@ p {
 }
 
 /* =========================================================
-   11. FOOTER & UTILITIES
+   11. NEWS SECTION
+   ========================================================= */
+
+.news-card {
+    height: auto;           /* Allow card to grow with content */
+    min-height: 450px;      /* Maintain the tall look */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start;
+}
+
+/* Push the 'Read More' button to the bottom of the card */
+.news-card .read-more {
+    margin-top: auto;       
+    padding-top: 20px;
+}
+
+/* Improve Grid wrapping logic */
+.news-grid {
+    /* Lower the min-width to 280px to fit on small phones */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Reduce the huge 60px padding which squeezes content */
+    padding: 40px 20px;
+}
+
+/* =========================================
+   Tablet & Small Laptop (max-width: 1024px)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    .news-header h1, 
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .club-news-section {
+        padding-top: 120px; /* Reduce top spacing slightly */
+    }
+}
+
+/* =========================================
+   Mobile Devices (max-width: 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    
+    /* Adjust Section Padding */
+    .news-section {
+        padding: 2rem 5vw;
+    }
+
+    .club-news-section {
+        padding-top: 100px;
+    }
+
+    /* Typography Scaling */
+    .news-header h1, 
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p,
+    .news-header p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* Grid & Cards */
+    .news-grid {
+        padding: 20px 0; /* Remove side padding to give cards more room */
+        gap: 20px;
+    }
+
+    .news-card {
+        min-height: auto; /* Let cards be naturally sized on mobile */
+    }
+
+    /* Modal Responsiveness */
+    .modal-content {
+        width: 90%;         /* Take up most of the screen width */
+        margin: 15vh auto;  /* Center vertically with visual balance */
+        padding: 20px;      /* Reduce internal padding */
+        max-height: 80vh;   /* Prevent modal from being taller than screen */
+        overflow-y: auto;   /* Scroll inside modal if content is long */
+    }
+
+    .close {
+        scale: 1.5;         /* Make close button slightly smaller */
+    }
+}
+
+/* =========================================
+   Small Mobile (max-width: 480px)
+   ========================================= */
+@media screen and (max-width: 480px) {
+
+    /* Filters Stack */
+    .filters {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+        flex: 1 1 auto; /* Allow buttons to grow/shrink nicely */
+    }
+
+    /* Newsletter Stack */
+    .newsletter form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .newsletter input, 
+    .newsletter button {
+        width: 100%;      /* Full width inputs for easy tapping */
+        margin: 0;
+    }
+
+    /* Specific Card Adjustments */
+    .news-grid {
+        grid-template-columns: 1fr; /* Force single column */
+    }
+}
+/* Mobile specific tweaks (Optional, but nice) */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        width: 100%;
+        max-height: 85vh; /* slightly smaller on mobile to leave room for browser bars */
+    }
+}
+
+
+/* =========================================================
+   12. FOOTER & UTILITIES
    ========================================================= */
 
 /* Mobile: Center align footer content */
