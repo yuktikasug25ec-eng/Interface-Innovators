@@ -29,6 +29,8 @@ To ensure the website remains scalable:
 - **External image sources** (https://unsplash.com/photos/white-robot-near-brown-wall-2EJCSULRwC8)
                              (https://unsplash.com/photos/a-white-robot-is-standing-in-front-of-a-black-background-CjWsslYVnPI)
                              (https://unsplash.com/photos/blue-and-black-continuous-track-l74VaCZon7I)
+                             (https://www.pexels.com/photo/green-and-grey-circuit-board-57007/)
+                             (https://unsplash.com/photos/a-custom-built-robot-sits-on-a-light-colored-floor-jqbfDonHaBU)
                              We have used free licensed images from unsplash/pexels as stated in the guidelines pdf.
 
 ## Setup Instructions
