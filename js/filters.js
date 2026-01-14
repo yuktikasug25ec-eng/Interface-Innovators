@@ -51,10 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (evtButtons.length > 0) {
     evtButtons.forEach(btn => {
       btn.addEventListener("click", () => {
-        // UI Active State (Optional: add .active css logic here if needed)
-        // evtButtons.forEach(b => b.classList.remove("active"));
-        // btn.classList.add("active");
-
         const filter = btn.dataset.filter;
         evtCards.forEach(card => {
           // Check if card is inside the Upcoming Events section
