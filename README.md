@@ -1,8 +1,8 @@
 # Robotics Club Website
 
 ## Developer Information
-- **Name:** [Your Name]
-- **Contact:** [Your Email] | [Your Phone Number] | [Your LinkedIn/GitHub]
+- **Team members:** [Yuktika Singh] [Suhani Sinha] [Niharika Prakash] [Matam Nikhitha Sree] 
+- **Contact:** [yuktikas.ug25.ec@nitp.ac.in] | [9532353500] | [(https://github.com/yuktikasug25ec-eng/Interface-Innovators)]
 
 ## Technology Choice and Reason
 This website is built using **HTML5**, **CSS3**, and **Vanilla JavaScript**. The choice of technologies was made because:
