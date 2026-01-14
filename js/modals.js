@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "eyantra": {
         img: "images/team/team10.jpg",
         html: `
-            <h2>e-Yantra Robotics Competition</h2>
-            <p><strong>Year:</strong> 2024</p>
-            <p><strong>Prize:</strong> Winner</p>
-            <p><strong>Team:</strong> Embedded Systems Group</p>
+            <h2>Idea Festival 2025 (Startup Bihar / Startup India platform</h2>
+            <p><strong>Year:</strong> 2025</p>
+            <p><strong>Prize:</strong> 2nd Prize among 25,000+ teams</p>
+            <p><strong>Team:</strong>  Adarsh Aarav (lead)
+                                       Sonu Kumar
+                                       Kumar Shourya
+                                       Aditya Kumar</p>
             <p>
-                Designed and implemented an autonomous robotics system
-                under national-level competition constraints.
+                Recognized for an AI-powered VTOL-UAV concept
             </p>
         `
     },
