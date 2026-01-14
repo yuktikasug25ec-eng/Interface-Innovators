@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <h2>Idea Festival 2025 (Startup Bihar / Startup India platform</h2>
             <p><strong>Year:</strong> 2025</p>
             <p><strong>Prize:</strong> 2nd Prize among 25,000+ teams</p>
-            <p><strong>Team:</strong>  Adarsh Aarav (lead)
-                                       Sonu Kumar
-                                       Kumar Shourya
+            <p><strong>Team:</strong>  Adarsh Aarav (lead),
+                                       Sonu Kumar,
+                                       Kumar Shourya,
                                        Aditya Kumar</p>
             <p>
                 Recognized for an AI-powered VTOL-UAV concept
@@ -24,55 +24,69 @@ document.addEventListener("DOMContentLoaded", () => {
         `
     },
 
-    "apple-pie": {
-        img: "images/projects/project1.jpg",
+    "Competition": {
+        img: "images/team/pic3.jpg",
         html: `
             <h2>Participation & Representation at National Robotics Competitions</h2>
-            <p><strong>Year:</strong> 2024</p>
-            <p><strong>Prize:</strong> Winner</p>
-            <p><strong>Team:</strong> Embedded Systems Group</p>
+            <p><strong>Year:</strong> Vaious Years</p>
+            <p><strong>Prize:</strong> Represented NIT Patna teams at national level</p>
+            <p><strong>Team:</strong> Members varied across years</p>
             <p>
-                Designed and implemented an autonomous robotics system
-                under national-level competition constraints.
+                Competitions:
+                Smart India Hackathon<br>
+                e-Yantra Robotics Competition (eYRC)<br>
+                Other robotics events & workshops<br>
+                Club members have consistently been involved and built competitive robots for these events.
             </p>
         `
     },
-    "choco-pie": {
+    "Research1": {
         img: "images/projects/project1.jpg",
         html: `
-            <h2>Wingardiam LEVI choco-pie </h2>
-            <p><strong>Year:</strong> 2024</p>
-            <p><strong>Prize:</strong> Winner</p>
-            <p><strong>Team:</strong> Embedded Systems Group</p>
+            <h2>Autonomous Navigation for Campus UAV </h2>
+            <p><strong>Year:</strong> 2025</p>
+            <p><strong>Authors:</strong> A. Aarav, S. Kumar, K. Shourya, A. Kumar</p>
             <p>
-                Designed and implemented an autonomous robotics system
-                under national-level competition constraints.
+                <strong>Conference/Journal:</strong> IEEE International Conference on Robotics and Automation (ICRA)
             </p>
         `
     },
-    "otto-pie": {
+    "Research2": {
         img: "images/projects/project1.jpg",
         html: `
-            <h2>Wingardiam LEVI otto </h2>
+            <h2>Sensor-Fusion Based Control for Multi-Legged Robots </h2>
             <p><strong>Year:</strong> 2024</p>
-            <p><strong>Prize:</strong> Winner</p>
-            <p><strong>Team:</strong> Embedded Systems Group</p>
+            <p><strong>Authors:</strong> N. Singh, P. Bharti, D. Kumar</p>
             <p>
-                Designed and implemented an autonomous robotics system
-                under national-level competition constraints.
+                <strong>Conference/Journal:</strong> Journal of Intelligent & Robotic Systems
             </p>
         `
     },
 
-    "dst-grant": {
+    "awards": {
         img: "images/projects/project2.jpg",
         html: `
-            <h2>DST Innovation Grant</h2>
-            <p><strong>Year:</strong> 2023</p>
-            <p><strong>Grant Amount:</strong> ₹5,00,000</p>
+            <h2>Idea Festival 2025 – Innovation Recognition</h2>
+            <p><strong>Year:</strong> 2025</p>
+            <p><strong>Granting Organization:</strong> Startup Bihar / Startup India initiative</p>
+            <p> <strong>Project:</strong> AI-powered VTOL-UAV innovation<br>
+                <strong>Team Members</strong>: Adarsh Aarav (lead),
+                                       Sonu Kumar,
+                                       Kumar Shourya,
+                                       Aditya Kumar
+            </p>
+        `
+    },
+
+    "grant": {
+        img: "images/projects/project2.jpg",
+        html: `
+            <h2>National Representation in E-Yantra / Smart India Hackathon</h2>
+            <p><strong>Year:</strong> multiple</p>
+            <p><strong> Granting Organization:</strong> Ministry of Education / IIT Bombay (e-Yantra) & SIH orgs</p>
             <p>
-                Awarded for research in AI-driven medical robotics
-                focusing on assistive healthcare solutions.
+                <strong>Team Members:</strong> Various club members across batches<br>
+                <strong>Award Value/Recognition:</strong> National level exposure & recognition certificates
             </p>
         `
     }
