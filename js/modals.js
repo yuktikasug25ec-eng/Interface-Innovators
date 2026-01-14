@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "apple-pie": {
         img: "images/projects/project1.jpg",
         html: `
-            <h2>Wingardiam LEVI DOSA </h2>
+            <h2>Participation & Representation at National Robotics Competitions</h2>
             <p><strong>Year:</strong> 2024</p>
             <p><strong>Prize:</strong> Winner</p>
             <p><strong>Team:</strong> Embedded Systems Group</p>
