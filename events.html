@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <link rel="icon" type="image/png" href="images/background/logot.png"/>
+
+  <link rel="icon" type="image/png" href="images/background/logot.png" />
 </head>
+
 <body>
 
   <canvas id="bgCanvas"></canvas>
@@ -20,23 +22,27 @@
     <div class="progress-bar" id="progressBar"></div>
   </div>
 
-  <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+  <nav class="p-4 glass shadow-md absolute-nav top-0 left-0 w-full z-50">
     <div class="flex justify-between items-center">
       <div>
         <img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo">
       </div>
-      
+
       <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
-      
-      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
-        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
-        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
-        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
-      </button>
+
+      <div style="width: 40px;"></div>
     </div>
   </nav>
 
-  <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+  <button id="rcs-menuBtn" class="w-10 h-10 fixed-menu-btn z-50 flex items-center justify-center focus:outline-none"
+    aria-label="Toggle Menu">
+    <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+    <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+    <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+  </button>
+
+  <div id="rcs-fullscreenMenu"
+    class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
     <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
       <a href="index.html" class="rcs-nav-link">Home</a>
       <a href="about.html" class="rcs-nav-link">About</a>
@@ -62,18 +68,20 @@
       </div>
 
       <div class="evt-grid evt-grid-2x3">
-        
+
         <div class="evt-card glass" data-category="competition">
           <div class="evt-card-media">
             <img src="images/projects/project11.jpg" alt="RoboWars image">
           </div>
           <h3>RoboWars 2.0</h3>
-          <p class="evt-text-small">A high-energy combat robotics competition where teams battle custom-built robots in a knockout arena.</p>
+          <p class="evt-text-small">A high-energy combat robotics competition where teams battle custom-built robots in
+            a knockout arena.</p>
           <p class="evt-text-large">
             Date: 18 January 2026<br>
             Time: 10:00 AM – 4:00 PM<br>
             Venue: Central Lawn, NIT Patna<br>
-            Teams design and build remote-controlled robots capable of withstanding intense battles inside a custom arena. Evaluates mechanical strength, control precision, and strategy.
+            Teams design and build remote-controlled robots capable of withstanding intense battles inside a custom
+            arena. Evaluates mechanical strength, control precision, and strategy.
           </p>
           <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
         </div>
@@ -83,12 +91,14 @@
             <img src="images/events/event2.jpg" alt="Workshop image">
           </div>
           <h3>Workshop: Python for Embedded Robotics</h3>
-          <p class="evt-text-small">Hands-on workshop on using Python for controlling robots and interfacing sensors.</p>
+          <p class="evt-text-small">Hands-on workshop on using Python for controlling robots and interfacing sensors.
+          </p>
           <p class="evt-text-large">
             Date: 17 January 2026<br>
             Time: 9:30 AM – 12:30 PM<br>
             Venue: EE Block, Lab-3<br>
-            Introduction to Python programming for Raspberry Pi and microcontrollers. Focuses on practical implementation with live demonstrations.
+            Introduction to Python programming for Raspberry Pi and microcontrollers. Focuses on practical
+            implementation with live demonstrations.
           </p>
           <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
         </div>
@@ -113,7 +123,8 @@
             <img src="images/events/event4.jpg" alt="Showcase image">
           </div>
           <h3>Project Showcase: Autonomous Delivery Bot</h3>
-          <p class="evt-text-small">Live demonstration of a student-built autonomous delivery robot with technical walkthrough.</p>
+          <p class="evt-text-small">Live demonstration of a student-built autonomous delivery robot with technical
+            walkthrough.</p>
           <p class="evt-text-large">
             Date: 3 February 2026<br>
             Time: 4:00 PM – 6:00 PM<br>
@@ -129,7 +140,8 @@
           </div>
           <h3>Tech Talk: AI in Robotics</h3>
           <p class="evt-text-small">Hands-on introduction to drone aerodynamics and basic flight controller tuning.</p>
-          <p class="evt-text-large">This intensive workshop walks participants through UAV fundamentals, flight challenges, and component selection with guided experiments.</p>
+          <p class="evt-text-large">This intensive workshop walks participants through UAV fundamentals, flight
+            challenges, and component selection with guided experiments.</p>
           <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
         </div>
 
@@ -139,7 +151,8 @@
           </div>
           <h3>Inter-College Robo Race</h3>
           <p class="evt-text-small">Competitive robotics event focused on speed, control, and robustness.</p>
-          <p class="evt-text-large">Teams compete with custom-built robots on a dynamic race track, testing mechanical design and real-time decision making.</p>
+          <p class="evt-text-large">Teams compete with custom-built robots on a dynamic race track, testing mechanical
+            design and real-time decision making.</p>
           <button class="evt-action-btn"><a href="https://google.com">Register</a></button>
         </div>
 
@@ -149,14 +162,16 @@
     <section class="evt-section">
       <h2 class="evt-title">Ongoing Events</h2>
       <div class="evt-grid evt-grid-1x3">
-        
+
         <div class="evt-card glass" data-category="competition">
           <div class="evt-card-media">
             <img src="images/events/event5.jpg" alt="Ongoing 1">
           </div>
           <h3>Autonomous Line-Following Delivery Robot</h3>
-          <p class="evt-text-small">A robot designed to follow a marked path and deliver small payloads autonomously.</p>
-          <p class="evt-text-large">Building a robot for indoor logistics using infrared and optical sensors, focusing on PID control and sensor calibration.</p>
+          <p class="evt-text-small">A robot designed to follow a marked path and deliver small payloads autonomously.
+          </p>
+          <p class="evt-text-large">Building a robot for indoor logistics using infrared and optical sensors, focusing
+            on PID control and sensor calibration.</p>
           <button class="evt-toggle-btn">Know More</button>
         </div>
 
@@ -165,8 +180,10 @@
             <img src="images/events/event6.jpg" alt="Ongoing 2">
           </div>
           <h3>Voice-Controlled Assistant Robot</h3>
-          <p class="evt-text-small">A smart robot that responds to voice commands to perform tasks like object retrieval.</p>
-          <p class="evt-text-large">Integrates speech recognition with robotic motion to create an interactive assistant using NLP and microcontrollers.</p>
+          <p class="evt-text-small">A smart robot that responds to voice commands to perform tasks like object
+            retrieval.</p>
+          <p class="evt-text-large">Integrates speech recognition with robotic motion to create an interactive assistant
+            using NLP and microcontrollers.</p>
           <button class="evt-toggle-btn">Know More</button>
         </div>
 
@@ -175,8 +192,10 @@
             <img src="images/events/event7.jpg" alt="Ongoing 3">
           </div>
           <h3>AI Vision-Guided Obstacle Avoidance Bot</h3>
-          <p class="evt-text-small">A robot that uses computer vision and AI to detect and navigate around obstacles.</p>
-          <p class="evt-text-large">Applies deep learning and real-time processing to navigation using camera and depth sensors.</p>
+          <p class="evt-text-small">A robot that uses computer vision and AI to detect and navigate around obstacles.
+          </p>
+          <p class="evt-text-large">Applies deep learning and real-time processing to navigation using camera and depth
+            sensors.</p>
           <button class="evt-toggle-btn">Know More</button>
         </div>
 
@@ -186,16 +205,30 @@
     <section class="evt-section">
       <h2 class="evt-title">Past Events</h2>
       <div class="evt-masonry">
-        <img src="images/projects/project10.jpg" class="evt-masonry-item evt-thumb" data-date="25–29 Jan 2023" data-title="RoboWar – TCF 2023" data-desc="A marquee robotics competition during TCF 2023 showcasing mechanical design." alt="">
-        <img src="images/projects/project9.jpg" class="evt-masonry-item evt-thumb" data-date="Jan 2024" data-title="Corona Fest – Robotics" data-desc="Multiple events including line followers and engineering showcases." alt="">
-        <img src="images/projects/project8.jpg" class="evt-masonry-item evt-thumb" data-date="3–5 Nov 2023" data-title="Robowar Participation" data-desc="Competing in high-intensity robowar events nationally." alt="">
-        <img src="images/projects/project7.jpg" class="evt-masonry-item evt-thumb" data-date="Annual" data-title="Orientation Session" data-desc="Welcoming new members to club projects and workshops." alt="">
-        <img src="images/projects/project6.jpg" class="evt-masonry-item evt-thumb" data-date="2024" data-title="Smart India Hackathon" data-desc="Competing in robotics and automation problem statements." alt="">
-        <img src="images/projects/project5.jpg" class="evt-masonry-item evt-thumb" data-date="2025" data-title="IRoC Team Build" data-desc="Autonomous aerial robot for the ISRO-theme challenge." alt="">
-        <img src="images/projects/project4.jpg" class="evt-masonry-item evt-thumb" data-date="2025" data-title="AI-Powered VTOL Project" data-desc="Won 2nd Prize in a national competition for VTOL UAV design." alt="">
-        <img src="images/projects/project3.jpg" class="evt-masonry-item evt-thumb" data-date="Recurring" data-title="Building Workshops" data-desc="Regular hands-on sessions on sensors and microcontrollers." alt="">
-        <img src="images/projects/project2.jpg" class="evt-masonry-item evt-thumb" data-date="2019–2021" data-title="YouTube Showcase" data-desc="Video compilation of hexapods, drones, and smart bots." alt="">
-        <img src="images/projects/project1.jpg" class="evt-masonry-item evt-thumb" data-date="Annual" data-title="Project Displays" data-desc="Exhibiting prototypes at every NIT Patna Tech Fest." alt="">
+        <img src="images/projects/project10.jpg" class="evt-masonry-item evt-thumb" data-date="25–29 Jan 2023"
+          data-title="RoboWar – TCF 2023"
+          data-desc="A marquee robotics competition during TCF 2023 showcasing mechanical design." alt="">
+        <img src="images/projects/project9.jpg" class="evt-masonry-item evt-thumb" data-date="Jan 2024"
+          data-title="Corona Fest – Robotics"
+          data-desc="Multiple events including line followers and engineering showcases." alt="">
+        <img src="images/projects/project8.jpg" class="evt-masonry-item evt-thumb" data-date="3–5 Nov 2023"
+          data-title="Robowar Participation" data-desc="Competing in high-intensity robowar events nationally." alt="">
+        <img src="images/projects/project7.jpg" class="evt-masonry-item evt-thumb" data-date="Annual"
+          data-title="Orientation Session" data-desc="Welcoming new members to club projects and workshops." alt="">
+        <img src="images/projects/project6.jpg" class="evt-masonry-item evt-thumb" data-date="2024"
+          data-title="Smart India Hackathon" data-desc="Competing in robotics and automation problem statements."
+          alt="">
+        <img src="images/projects/project5.jpg" class="evt-masonry-item evt-thumb" data-date="2025"
+          data-title="IRoC Team Build" data-desc="Autonomous aerial robot for the ISRO-theme challenge." alt="">
+        <img src="images/projects/project4.jpg" class="evt-masonry-item evt-thumb" data-date="2025"
+          data-title="AI-Powered VTOL Project" data-desc="Won 2nd Prize in a national competition for VTOL UAV design."
+          alt="">
+        <img src="images/projects/project3.jpg" class="evt-masonry-item evt-thumb" data-date="Recurring"
+          data-title="Building Workshops" data-desc="Regular hands-on sessions on sensors and microcontrollers." alt="">
+        <img src="images/projects/project2.jpg" class="evt-masonry-item evt-thumb" data-date="2019–2021"
+          data-title="YouTube Showcase" data-desc="Video compilation of hexapods, drones, and smart bots." alt="">
+        <img src="images/projects/project1.jpg" class="evt-masonry-item evt-thumb" data-date="Annual"
+          data-title="Project Displays" data-desc="Exhibiting prototypes at every NIT Patna Tech Fest." alt="">
       </div>
     </section>
 
@@ -225,8 +258,10 @@
         <div class="social-links">
           <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
           <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i
+              class="fab fa-linkedin-in"></i></a>
           <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
         </div>
       </div>
@@ -257,7 +292,7 @@
         <img src="images/background/logoM.png" alt="Robotics Club Logo">
       </div>
     </div>
-    
+
     <div class="footer-bottom">
       <p>&copy; 2025 Robotics Club NIT Patna. All rights reserved.</p>
     </div>
@@ -268,4 +303,5 @@
   <script src="js/filters.js"></script>
 
 </body>
+
 </html>

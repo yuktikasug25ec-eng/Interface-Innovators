@@ -916,4 +916,8 @@ p {
   #bgCanvas {
     opacity: 0.35;
   }
+  
+  .fixed-menu-btn {
+    right: 1.2rem !important; /* Match Mobile Padding */
+  }
 }

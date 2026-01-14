@@ -26,7 +26,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body, html {
+body,
+html {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -41,11 +42,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.55) 70%,
-    rgba(0,0,0,0.9) 100%
-  );
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.55) 70%,
+      rgba(0, 0, 0, 0.9) 100%);
   background-size: 100% 100vh;
   background-repeat: repeat-y;
   z-index: 1;
@@ -94,7 +94,7 @@ nav {
   z-index: 11000;
 }
 
-nav > div {
+nav>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,14 +159,36 @@ nav > div {
 }
 
 /* Bar Positions */
-#rcs-menuBtn .top-bar, #menuBtn .top-bar { transform: translate(-50%, -8px); }
-#rcs-menuBtn .middle-bar, #menuBtn .middle-bar { transform: translate(-50%, 0); }
-#rcs-menuBtn .bottom-bar, #menuBtn .bottom-bar { transform: translate(-50%, 8px); }
+#rcs-menuBtn .top-bar,
+#menuBtn .top-bar {
+  transform: translate(-50%, -8px);
+}
+
+#rcs-menuBtn .middle-bar,
+#menuBtn .middle-bar {
+  transform: translate(-50%, 0);
+}
+
+#rcs-menuBtn .bottom-bar,
+#menuBtn .bottom-bar {
+  transform: translate(-50%, 8px);
+}
 
 /* Animation: Open State */
-#rcs-menuBtn.open .top-bar, #menuBtn.open .top-bar { transform: translate(-50%, 0) rotate(45deg); }
-#rcs-menuBtn.open .middle-bar, #menuBtn.open .middle-bar { opacity: 0; }
-#rcs-menuBtn.open .bottom-bar, #menuBtn.open .bottom-bar { transform: translate(-50%, 0) rotate(-45deg); }
+#rcs-menuBtn.open .top-bar,
+#menuBtn.open .top-bar {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+#rcs-menuBtn.open .middle-bar,
+#menuBtn.open .middle-bar {
+  opacity: 0;
+}
+
+#rcs-menuBtn.open .bottom-bar,
+#menuBtn.open .bottom-bar {
+  transform: translate(-50%, 0) rotate(-45deg);
+}
 
 /* =========================================
    6. FULLSCREEN SIDEBAR MENU
@@ -224,7 +246,8 @@ nav > div {
 
 .rcs-nav-link::after,
 .nav-link::after {
-  content: "\2197"; /* Arrow */
+  content: "\2197";
+  /* Arrow */
   margin-left: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -416,7 +439,9 @@ nav > div {
   transition: width 0.3s ease;
 }
 
-.link-list a:hover::before { width: 100%; }
+.link-list a:hover::before {
+  width: 100%;
+}
 
 /* Footer Bottom / Logo */
 .footer-bottom {
@@ -439,7 +464,9 @@ nav > div {
   transition: opacity 0.3s ease;
 }
 
-.footer-logo img:hover { opacity: 1; }
+.footer-logo img:hover {
+  opacity: 1;
+}
 
 .footer-bottom p {
   font-size: 0.9rem;
@@ -482,4 +509,27 @@ nav > div {
 
 .space:hover {
   letter-spacing: 25px;
+}
+
+/* =========================================
+   NAVBAR SPLIT UTILITIES
+   ========================================= */
+.absolute-nav {
+  position: absolute !important;
+}
+
+.fixed-menu-btn {
+  position: fixed !important;
+  top: 10px;
+  right: 100px;
+  z-index: 12001 !important;
+  /* Glass Effect & Shape */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 50px;
+  height: 50px;
 }

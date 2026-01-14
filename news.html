@@ -22,23 +22,28 @@
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+    <nav class="p-4 glass shadow-md absolute-nav top-0 left-0 w-full z-50">
         <div class="flex justify-between items-center">
             <div>
-                <img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo">
+                <img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png"
+                    alt="logo">
             </div>
 
             <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
 
-            <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
-                <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
-                <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
-                <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
-            </button>
+            <div style="width: 40px;"></div>
         </div>
     </nav>
 
-    <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+    <button id="rcs-menuBtn" class="w-10 h-10 fixed-menu-btn z-50 flex items-center justify-center focus:outline-none"
+        aria-label="Toggle Menu">
+        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+    </button>
+
+    <div id="rcs-fullscreenMenu"
+        class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
         <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
             <a href="index.html" class="rcs-nav-link">Home</a>
             <a href="about.html" class="rcs-nav-link">About</a>
@@ -71,7 +76,8 @@
                 <h3>Weekly Core Team Review</h3>
                 <p class="meta">📅 12 September 2025 | 🏷 Robotics Club NIT Patna</p>
                 <p class="summary">
-                    The core team reviewed progress on ongoing robotics projects, finalized task distribution for freshers, and discussed preparation strategies for upcoming inter-college competitions.
+                    The core team reviewed progress on ongoing robotics projects, finalized task distribution for
+                    freshers, and discussed preparation strategies for upcoming inter-college competitions.
                 </p>
                 <button class="read-more" data-modal="modal-club-meet">Read More</button>
             </article>
@@ -81,7 +87,8 @@
                 <h3>Freshers’ Orientation & Recruitment Drive</h3>
                 <p class="meta">📅 20 August 2025 | 🏷 Club Administration</p>
                 <p class="summary">
-                    The Robotics Club announced its annual recruitment drive for first-year students, outlining the selection process, domains offered, and timelines for orientation sessions.
+                    The Robotics Club announced its annual recruitment drive for first-year students, outlining the
+                    selection process, domains offered, and timelines for orientation sessions.
                 </p>
                 <button class="read-more" data-modal="modal-club-announcement">Read More</button>
             </article>
@@ -91,7 +98,8 @@
                 <h3>Hands-on Arduino & Sensors Workshop</h3>
                 <p class="meta">📅 5 October 2025 | 🏷 Robotics Club NIT Patna</p>
                 <p class="summary">
-                    A beginner-friendly workshop introduced participants to Arduino programming, basic electronics, and real-time sensor interfacing through guided practical demonstrations.
+                    A beginner-friendly workshop introduced participants to Arduino programming, basic electronics, and
+                    real-time sensor interfacing through guided practical demonstrations.
                 </p>
                 <button class="read-more" data-modal="modal-club-workshop">Read More</button>
             </article>
@@ -101,7 +109,8 @@
                 <h3>Introduction to ROS & Robot Simulation</h3>
                 <p class="meta">📅 18 October 2025 | 🏷 Robotics Club NIT Patna</p>
                 <p class="summary">
-                    Participants were introduced to the basics of Robot Operating System (ROS), including node architecture and simulating mobile robots using Gazebo in a guided hands-on session.
+                    Participants were introduced to the basics of Robot Operating System (ROS), including node
+                    architecture and simulating mobile robots using Gazebo in a guided hands-on session.
                 </p>
                 <button class="read-more" data-modal="modal-club-fourth">Read More</button>
             </article>
@@ -129,7 +138,9 @@
                 <h3>“Teams from Costa Rica, Malaysia and Australia Receive the Aramco Innovation Award”</h3>
                 <p class="meta">📅 November 28, 2025 | 🏷 World Robot Olympiad Association (WRO) press release</p>
                 <p class="summary">
-                    At the 2025 World Robot Olympiad (WRO) International Final in Singapore, top teams from Costa Rica, Malaysia, and Australia won the prestigious Aramco Innovation Award for creative robotics solutions aimed at global challenges.
+                    At the 2025 World Robot Olympiad (WRO) International Final in Singapore, top teams from Costa Rica,
+                    Malaysia, and Australia won the prestigious Aramco Innovation Award for creative robotics solutions
+                    aimed at global challenges.
                 </p>
                 <button class="read-more" data-modal="modal-strategy-meet">
                     Read More
@@ -139,9 +150,12 @@
             <article class="news-card" data-category="tech">
                 <span class="tag tech">Tech Innovations</span>
                 <h3>Doosan Robotics Wins Two CES Innovation Awards 2026 for AI-Driven Industrial Robot</h3>
-                <p class="meta">📅 November 6, 2025 | 🏷 CES Innovation Awards / Doosan Robotics press release – PR Newswire via RoboticsTomorrow</p>
+                <p class="meta">📅 November 6, 2025 | 🏷 CES Innovation Awards / Doosan Robotics press release – PR
+                    Newswire via RoboticsTomorrow</p>
                 <p class="summary">
-                    Doosan Robotics has been honored with two CES Innovation Awards—Best of Innovation in the AI category and an Honoree in Robotics—for their Scan & Go Autonomous Robotic Solution, an advanced AI-driven robot designed to automate hazardous industrial tasks more safely and efficiently.
+                    Doosan Robotics has been honored with two CES Innovation Awards—Best of Innovation in the AI
+                    category and an Honoree in Robotics—for their Scan & Go Autonomous Robotic Solution, an advanced
+                    AI-driven robot designed to automate hazardous industrial tasks more safely and efficiently.
                 </p>
                 <button class="read-more" data-modal="modal-strategy-workshop">
                     Read More
@@ -153,7 +167,10 @@
                 <h3>INSAIT Advances Robotic Visual Generalization at ICRA 2025</h3>
                 <p class="meta">📅 May 23, 2025 | 🏷 INSAIT press release & research announcement</p>
                 <p class="summary">
-                    At the 2025 International Conference on Robotics and Automation (ICRA) in Atlanta, researchers from INSAIT unveiled a significant breakthrough in robotic visual generalization by developing ReVLA, a new method that dramatically improves how robots interpret and perform tasks in real-world environments that differ from their training data.
+                    At the 2025 International Conference on Robotics and Automation (ICRA) in Atlanta, researchers from
+                    INSAIT unveiled a significant breakthrough in robotic visual generalization by developing ReVLA, a
+                    new method that dramatically improves how robots interpret and perform tasks in real-world
+                    environments that differ from their training data.
                 </p>
                 <button class="read-more" data-modal="modal-strategy-rb">
                     Read More
@@ -165,7 +182,9 @@
                 <h3>Vietnam Wins Runner-Up Title at the 2025 FIRST Tech Challenge World Championship</h3>
                 <p class="meta">📅 April 20, 2025 | 🏷 PANO (Vietnam News)</p>
                 <p class="summary">
-                    Vietnam’s GreenAms Robotics Team 24751 from Hanoi-Amsterdam High School secured the runner-up title at the 2025 FIRST Tech Challenge (FTC) World Championship in Houston, USA, the world’s largest robotics competition, marking a historic achievement for the country’s robotics scene.
+                    Vietnam’s GreenAms Robotics Team 24751 from Hanoi-Amsterdam High School secured the runner-up title
+                    at the 2025 FIRST Tech Challenge (FTC) World Championship in Houston, USA, the world’s largest
+                    robotics competition, marking a historic achievement for the country’s robotics scene.
                 </p>
                 <button class="read-more" data-modal="modal-strategy-cn">
                     Read More
@@ -189,11 +208,15 @@
             <div class="footer-section social-media">
                 <h3>Follow Us</h3>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/robonitp" class="social-link"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" class="social-link"><i
+                            class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -215,7 +238,8 @@
                 <ul class="contact-list">
                     <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
                     <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, National Institute of Technology Patna Incubation Center 3rd Floor - 800005</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, National Institute of Technology Patna
+                        Incubation Center 3rd Floor - 800005</li>
                 </ul>
             </div>
 
@@ -237,17 +261,21 @@
             <p class="meta">📅 November 28, 2025 | 🏷 World Robot Olympiad Association (WRO) press release</p>
 
             <p>
-                The 2025 WRO International Final, one of the world’s largest competitive robotics events, concluded on November 28, 2025, in Singapore, drawing participation from over 5,700 teams across more than 95 countries.
+                The 2025 WRO International Final, one of the world’s largest competitive robotics events, concluded on
+                November 28, 2025, in Singapore, drawing participation from over 5,700 teams across more than 95
+                countries.
             </p>
 
             <p>
-                In the Future Innovators category—a project-based challenge where student teams design robotic solutions to real-world problems—the Aramco Innovation Award was presented to three standout teams:<br>
+                In the Future Innovators category—a project-based challenge where student teams design robotic solutions
+                to real-world problems—the Aramco Innovation Award was presented to three standout teams:<br>
                 🥇 Team Sprout (Costa Rica) – First place<br>
                 🥈 Team SKYLUX (Malaysia) – Second place<br>
                 🥉 The Simpsons (Australia) – Third place
             </p>
 
-            <a href="https://wro-association.org/wro-2025-aramco-innovation-award-winners/?utm_source=chatgpt.com" target="_blank" class="external-link">
+            <a href="https://wro-association.org/wro-2025-aramco-innovation-award-winners/?utm_source=chatgpt.com"
+                target="_blank" class="external-link">
                 Read Full Article ↗
             </a>
         </div>
@@ -258,17 +286,29 @@
             <span class="close" onclick="closeModal('modal-strategy-workshop')">&times;</span>
 
             <h3>Doosan Robotics Wins Two CES Innovation Awards 2026 for AI-Driven Industrial Robot</h3>
-            <p class="meta">📅 November 6, 2025 | 🏷 CES Innovation Awards / Doosan Robotics press release – PR Newswire via RoboticsTomorrow</p>
+            <p class="meta">📅 November 6, 2025 | 🏷 CES Innovation Awards / Doosan Robotics press release – PR Newswire
+                via RoboticsTomorrow</p>
 
             <p>
-                In November 2025, Doosan Robotics, a South Korea–based leader in collaborative and industrial automation, received two distinguished honors at the CES Innovation Awards 2026 ahead of the major annual technology expo in Las Vegas. The company’s Scan & Go Autonomous Robotic Solution was recognized as a Best of Innovation winner in the Artificial Intelligence category and also recognized in the Robotics category for its groundbreaking design and engineering.
+                In November 2025, Doosan Robotics, a South Korea–based leader in collaborative and industrial
+                automation, received two distinguished honors at the CES Innovation Awards 2026 ahead of the major
+                annual technology expo in Las Vegas. The company’s Scan & Go Autonomous Robotic Solution was recognized
+                as a Best of Innovation winner in the Artificial Intelligence category and also recognized in the
+                Robotics category for its groundbreaking design and engineering.
             </p>
 
             <p>
-                The Scan & Go system is an AI-powered autonomous robotic solution developed in collaboration with Maple Advanced Robotics Inc. It’s engineered specifically to improve safety and productivity in demanding industrial environments—such as composite maintenance operations—where traditional manual labor poses risks from noise, fine dust, repetitive strain, and hazardous conditions. With advanced safety protocols, torque-sensing collision detection, and fence-free operation, Scan & Go enables more efficient and secure execution of complex tasks, particularly in sectors like wind energy manufacturing where safety and precision are critical.
+                The Scan & Go system is an AI-powered autonomous robotic solution developed in collaboration with Maple
+                Advanced Robotics Inc. It’s engineered specifically to improve safety and productivity in demanding
+                industrial environments—such as composite maintenance operations—where traditional manual labor poses
+                risks from noise, fine dust, repetitive strain, and hazardous conditions. With advanced safety
+                protocols, torque-sensing collision detection, and fence-free operation, Scan & Go enables more
+                efficient and secure execution of complex tasks, particularly in sectors like wind energy manufacturing
+                where safety and precision are critical.
             </p>
 
-            <a href="https://www.prnewswire.com/news-releases/doosan-robotics-wins-two-ces-innovation-awards-2026-including-best-of-innovation-in-ai-category-302608002.html?utm_source=chatgpt.com" target="_blank" class="external-link">
+            <a href="https://www.prnewswire.com/news-releases/doosan-robotics-wins-two-ces-innovation-awards-2026-including-best-of-innovation-in-ai-category-302608002.html?utm_source=chatgpt.com"
+                target="_blank" class="external-link">
                 Read Full Article ↗
             </a>
         </div>
@@ -282,14 +322,24 @@
             <p class="meta">📅 May 23, 2025 | 🏷 INSAIT press release & research announcement</p>
 
             <p>
-                At ICRA 2025, one of the most prestigious global conferences in robotics and automation, a research team from the Bulgarian institute INSAIT achieved a major scientific milestone in the field of robot vision and generalization. Their study focused on a core challenge in robotics: enabling machines to apply learned visual skills reliably in environments and situations that differ from their training data—so-called “out-of-domain” (OOD) scenarios.
+                At ICRA 2025, one of the most prestigious global conferences in robotics and automation, a research team
+                from the Bulgarian institute INSAIT achieved a major scientific milestone in the field of robot vision
+                and generalization. Their study focused on a core challenge in robotics: enabling machines to apply
+                learned visual skills reliably in environments and situations that differ from their training
+                data—so-called “out-of-domain” (OOD) scenarios.
             </p>
 
             <p>
-                The researchers evaluated the robustness of leading robotic visual foundation models and found that existing approaches often struggle when faced with unfamiliar contexts due to issues like catastrophic forgetting and insufficient training diversity. To tackle this, they developed a new approach called ReVLA. This method improves visual reasoning by applying gradual backbone reversal through model merging, which significantly enhances a robot’s ability to generalize its visual understanding while keeping strong performance in known environments.
+                The researchers evaluated the robustness of leading robotic visual foundation models and found that
+                existing approaches often struggle when faced with unfamiliar contexts due to issues like catastrophic
+                forgetting and insufficient training diversity. To tackle this, they developed a new approach called
+                ReVLA. This method improves visual reasoning by applying gradual backbone reversal through model
+                merging, which significantly enhances a robot’s ability to generalize its visual understanding while
+                keeping strong performance in known environments.
             </p>
 
-            <a href="https://insait.ai/insait-makes-history-at-icra-2025-with-breakthrough-research-in-robotic-visual-generalization/?utm_source=chatgpt.com" target="_blank" class="external-link">
+            <a href="https://insait.ai/insait-makes-history-at-icra-2025-with-breakthrough-research-in-robotic-visual-generalization/?utm_source=chatgpt.com"
+                target="_blank" class="external-link">
                 Read Full Article ↗
             </a>
         </div>
@@ -303,14 +353,20 @@
             <p class="meta">📅 April 20, 2025 | 🏷PANO (Vietnam News)</p>
 
             <p>
-                At the 2025 FIRST Tech Challenge World Championship—widely regarded as the largest and most prestigious international robotics competition—the GreenAms Robotics Team 24751 from Hanoi-Amsterdam High School for the Gifted delivered an exceptional performance, earning the runner-up title in the finals held on April 20, 2025 in Houston, Texas.
+                At the 2025 FIRST Tech Challenge World Championship—widely regarded as the largest and most prestigious
+                international robotics competition—the GreenAms Robotics Team 24751 from Hanoi-Amsterdam High School for
+                the Gifted delivered an exceptional performance, earning the runner-up title in the finals held on April
+                20, 2025 in Houston, Texas.
             </p>
 
             <p>
-                The FTC World Championship draws participation from hundreds of thousands of students and teams around the globe, with this year’s event hosting over 1,100 teams from more than 50 countries, all competing in engineering, design, and autonomous robotics challenges.
+                The FTC World Championship draws participation from hundreds of thousands of students and teams around
+                the globe, with this year’s event hosting over 1,100 teams from more than 50 countries, all competing in
+                engineering, design, and autonomous robotics challenges.
             </p>
 
-            <a href="https://en.qdnd.vn/social-affairs/news/vietnam-wins-runner-up-title-at-world-s-largest-robotics-competition-577438" target="_blank" class="external-link">
+            <a href="https://en.qdnd.vn/social-affairs/news/vietnam-wins-runner-up-title-at-world-s-largest-robotics-competition-577438"
+                target="_blank" class="external-link">
                 Read Full Article ↗
             </a>
         </div>
@@ -324,11 +380,16 @@
             <p class="meta">📅 12 September 2025 | 🏷Robotics Club NIT Patna</p>
 
             <p>
-                The weekly review meeting focused on evaluating the status of ongoing robotics projects and identifying bottlenecks. Sub-teams presented progress on drone navigation, line-following optimization, and the newly proposed robotic arm initiative.
+                The weekly review meeting focused on evaluating the status of ongoing robotics projects and identifying
+                bottlenecks. Sub-teams presented progress on drone navigation, line-following optimization, and the
+                newly proposed robotic arm initiative.
             </p>
 
             <p>
-                A brief discussion was held on component procurement delays and strategies to improve coordination across domains. Seniors also emphasized documentation practices for long-term continuity and advised juniors on competition preparation timelines. Actionable tasks were assigned for the upcoming week with follow-ups scheduled for the next meeting.
+                A brief discussion was held on component procurement delays and strategies to improve coordination
+                across domains. Seniors also emphasized documentation practices for long-term continuity and advised
+                juniors on competition preparation timelines. Actionable tasks were assigned for the upcoming week with
+                follow-ups scheduled for the next meeting.
             </p>
         </div>
     </div>
@@ -341,11 +402,16 @@
             <p class="meta">📅 20 August 2025 | 🏷Club Administration</p>
 
             <p>
-                The club officially announced the freshers’ orientation and recruitment program for first-year students. The announcement includes an overview of roles across mechanical, electronics, and software divisions, along with the multi-stage selection process consisting of orientation, a basic aptitude test, and a hands-on task round.
+                The club officially announced the freshers’ orientation and recruitment program for first-year students.
+                The announcement includes an overview of roles across mechanical, electronics, and software divisions,
+                along with the multi-stage selection process consisting of orientation, a basic aptitude test, and a
+                hands-on task round.
             </p>
 
             <p>
-                Interested students were instructed to register through the club portal, with deadlines and event dates clearly communicated. The drive aims to onboard talented newcomers and expand the club’s project bandwidth ahead of the upcoming competition season.
+                Interested students were instructed to register through the club portal, with deadlines and event dates
+                clearly communicated. The drive aims to onboard talented newcomers and expand the club’s project
+                bandwidth ahead of the upcoming competition season.
             </p>
         </div>
     </div>
@@ -358,11 +424,16 @@
             <p class="meta">📅 5 October 2025 | 🏷 Robotics Club NIT Patna</p>
 
             <p>
-                This beginner-level workshop introduced attendees to Arduino microcontrollers, electrical interfacing, and environmental sensors. Over the session, participants learned how to set up Arduino IDE, write basic sketches, and interface modules like ultrasonic sensors, IR sensors, and temperature modules.
+                This beginner-level workshop introduced attendees to Arduino microcontrollers, electrical interfacing,
+                and environmental sensors. Over the session, participants learned how to set up Arduino IDE, write basic
+                sketches, and interface modules like ultrasonic sensors, IR sensors, and temperature modules.
             </p>
 
             <p>
-                Mentors guided students through real-time debugging, signal reading, and actuating outputs such as LEDs and buzzers. The workshop concluded with a mini challenge where teams built small sensor-based interaction circuits. Feedback from participants indicated high engagement and enthusiasm for more hardware-based learning sessions.
+                Mentors guided students through real-time debugging, signal reading, and actuating outputs such as LEDs
+                and buzzers. The workshop concluded with a mini challenge where teams built small sensor-based
+                interaction circuits. Feedback from participants indicated high engagement and enthusiasm for more
+                hardware-based learning sessions.
             </p>
         </div>
     </div>
@@ -375,11 +446,16 @@
             <p class="meta">📅 18 October 2025 | 🏷Robotics Club NIT Patna</p>
 
             <p>
-                This intermediate workshop introduced students to ROS (Robot Operating System), covering key concepts such as nodes, topics, services, publishers/subscribers, and TF frames. Attendees also gained exposure to Gazebo for 3D simulation of mobile robots.
+                This intermediate workshop introduced students to ROS (Robot Operating System), covering key concepts
+                such as nodes, topics, services, publishers/subscribers, and TF frames. Attendees also gained exposure
+                to Gazebo for 3D simulation of mobile robots.
             </p>
 
             <p>
-                Demonstrations included configuring ROS workspaces, visualizing sensor data in RViz, and simulating differential-drive robots under dynamic conditions. The goal of the workshop was to familiarize students with modern robotic software stacks used in research and industry, laying foundational skills for autonomous systems and future SLAM/navigation projects.
+                Demonstrations included configuring ROS workspaces, visualizing sensor data in RViz, and simulating
+                differential-drive robots under dynamic conditions. The goal of the workshop was to familiarize students
+                with modern robotic software stacks used in research and industry, laying foundational skills for
+                autonomous systems and future SLAM/navigation projects.
             </p>
         </div>
     </div>
