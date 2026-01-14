@@ -3,7 +3,7 @@
 // ==================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   // ------------------------
   // 1. Detect Touch Devices
   // ------------------------
@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentScroll = window.scrollY;
     let velocity = 0;
     window.addEventListener('wheel', e => {
-        e.preventDefault();
-        velocity = Math.max(Math.min(velocity + e.deltaY * 0.1, 30), -30);
-        requestAnimationFrame(function step() {
-            currentScroll = Math.max(0, Math.min(currentScroll + velocity, document.body.scrollHeight - window.innerHeight));
-            window.scrollTo(0, currentScroll);
-            velocity *= 0.9;
-            if (Math.abs(velocity) > 0.1) requestAnimationFrame(step);
-        });
+      e.preventDefault();
+      velocity = Math.max(Math.min(velocity + e.deltaY * 0.1, 30), -30);
+      requestAnimationFrame(function step() {
+        currentScroll = Math.max(0, Math.min(currentScroll + velocity, document.body.scrollHeight - window.innerHeight));
+        window.scrollTo(0, currentScroll);
+        velocity *= 0.9;
+        if (Math.abs(velocity) > 0.1) requestAnimationFrame(step);
+      });
     }, { passive: false });
   })();
 
@@ -51,10 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuBtn && fullscreenMenu) {
     const toggleMenu = () => {
       fullscreenMenu.classList.toggle('rcs-open');
+      menuBtn.classList.toggle('open');
       if (fullscreenMenu.classList.contains('rcs-open')) {
-          fullscreenMenu.style.transform = "translateX(0)";
+        fullscreenMenu.style.transform = "translateX(0)";
       } else {
-          fullscreenMenu.style.transform = "translateX(100%)";
+        fullscreenMenu.style.transform = "translateX(100%)";
       }
     };
     menuBtn.addEventListener('click', toggleMenu);
@@ -149,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const dist = Math.sqrt(dx * dx + dy * dy);
         const targetGlow = dist < GLOW_RADIUS ? 1 - dist / GLOW_RADIUS : 0;
         dot.glow += (targetGlow - dot.glow) * 0.18;
-        
+
         ctx.beginPath();
         ctx.fillStyle = "rgba(120,180,255,0.45)";
         ctx.arc(dot.x, dot.y, DOT_RADIUS, 0, Math.PI * 2);
