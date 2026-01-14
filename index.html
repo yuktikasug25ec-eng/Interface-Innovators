@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotics Club NIT Patna - Home</title>
-    
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="icon" type="image/png" href="images/background/logot.png"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics Club NIT Patna - Home</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="icon" type="image/png" href="images/background/logot.png" />
 </head>
+
 <body>
 
   <canvas id="bgCanvas"></canvas>
@@ -20,24 +22,28 @@
     <div class="progress-bar" id="progressBar"></div>
   </div>
 
-  <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+  <nav class="p-4 glass shadow-md absolute-nav top-0 left-0 w-full z-50">
     <div class="flex justify-between items-center">
-      
+
       <div class="flex items-center">
         <img width="120px" style="margin-left: 20px;" src="images/background/logot.png" alt="Robotics Club Logo">
       </div>
       <div class="text-xl space text-white hidden md:block">ROBOTICS CLUB NIT PATNA</div>
 
-      <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none" aria-label="Toggle Menu">
-        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
-        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
-        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
-      </button>
+      <div style="width: 40px;"></div> <!-- Placeholder to keep text centered/aligned -->
 
     </div>
   </nav>
 
-  <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+  <button id="rcs-menuBtn" class="w-10 h-10 fixed-menu-btn z-50 flex items-center justify-center focus:outline-none"
+    aria-label="Toggle Menu">
+    <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+    <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+    <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+  </button>
+
+  <div id="rcs-fullscreenMenu"
+    class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
     <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
       <a href="about.html" class="rcs-nav-link">About</a>
       <a href="projects.html" class="rcs-nav-link">Projects</a>
@@ -55,7 +61,9 @@
         <h1 class="hero-title"><span>ROBOTICS</span> <br> CLUB</h1>
         <h2 class="hero-tagline">INNOVATE . AUTOMATE . ELEVATE</h2>
         <p class="hero-copy">
-          Fascinated by robots and curious to build one yourself? The Robotics Club of NIT Patna fosters innovation and interest in the rapidly evolving field of robotics. Open to students from all academic disciplines, the club encourages hands-on learning, collaboration, and creative problem-solving.
+          Fascinated by robots and curious to build one yourself? The Robotics Club of NIT Patna fosters innovation and
+          interest in the rapidly evolving field of robotics. Open to students from all academic disciplines, the club
+          encourages hands-on learning, collaboration, and creative problem-solving.
         </p>
         <a href="#three-cards" class="btn-primary">GET STARTED</a>
       </div>
@@ -67,7 +75,7 @@
     <div class="container">
       <h2 class="section-title">Club Highlights</h2>
       <div class="cards">
-        
+
         <article class="card glass">
           <div class="card-image" style="background-image: url('images/projects/project1.jpg');"></div>
           <div class="card-peeker"><i class="fa-solid fa-trophy"></i></div>
@@ -107,12 +115,12 @@
       <div class="teaser-image"></div>
       <div class="teaser-content">
         <span class="teaser-eyebrow">Upcoming Event</span>
-        
+
         <h2 class="teaser-title">
           RoboWars 2.0<br />
           <span>Challenge 2026</span>
         </h2>
-        
+
         <p class="teaser-desc">
           A high-energy combat robotics competition where teams battle custom-built robots in a knockout arena.
         </p>
@@ -145,7 +153,7 @@
       </p>
 
       <div class="achievements-grid">
-        
+
         <div class="achievement-card">
           <div class="achievement-image">
             <img src="images/team/pic1.jpg" alt="RoboCon Achievement">
@@ -166,7 +174,8 @@
           </div>
           <div class="achievement-content">
             <h3>Startup Bihar's Idea Festival 2025</h3>
-            <p>Member Adarsh Aarav won 2nd prize among 25,000+ teams for a VTOL-UAV idea, recognized by Union Minister Piyush Goyal.</p>
+            <p>Member Adarsh Aarav won 2nd prize among 25,000+ teams for a VTOL-UAV idea, recognized by Union Minister
+              Piyush Goyal.</p>
             <div class="achievement-meta">
               <span class="achievement-date">📅 September 11, 2025</span>
               <span class="achievement-badge blue">2nd Prize</span>
@@ -180,15 +189,20 @@
 
   <footer class="footer">
     <div class="footer-container">
-      
+
       <div class="footer-section social-media">
         <h3>Follow Us</h3>
         <div class="social-links">
-          <a href="https://www.facebook.com/robonitp" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/robonitp" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/robotics-club-nitp" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.facebook.com/robonitp" class="social-link" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/robonitp" class="social-link" aria-label="Twitter"><i
+              class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link" aria-label="Instagram"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"
+            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/robotics-club-nitp" class="social-link" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
         </div>
       </div>
 
@@ -210,7 +224,8 @@
         <ul class="contact-list">
           <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
           <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-          <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, National Institute of Technology Patna, Incubation Center 3rd Floor - 800005</li>
+          <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, National Institute of Technology Patna, Incubation
+            Center 3rd Floor - 800005</li>
         </ul>
       </div>
 
@@ -228,4 +243,5 @@
   <script src="js/modals.js"></script>
   <script src="js/filters.js"></script>
 </body>
+
 </html>

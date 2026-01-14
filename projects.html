@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Page</title>
-    
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="icon" type="image/png" href="images/background/logot.png"/>
+
+    <link rel="icon" type="image/png" href="images/background/logot.png" />
 </head>
+
 <body>
 
     <canvas id="bgCanvas"></canvas>
-    
+
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <nav class="p-4 glass shadow-md fixed top-0 left-0 w-full z-50">
+    <nav class="p-4 glass shadow-md absolute-nav top-0 left-0 w-full z-50">
         <div class="flex justify-between items-center">
             <div>
-                <img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png" alt="logo">
+                <img width="120px" style="margin-left: 20px; margin-top: 0px;" src="images/background/logot.png"
+                    alt="logo">
             </div>
-            
+
             <div class="text-xl space text-white">ROBOTICS CLUB NIT PATNA</div>
-            
-            <button id="rcs-menuBtn" class="w-10 h-10 relative z-50 flex items-center justify-center focus:outline-none">
-                <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
-                <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
-                <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
-            </button>
+
+            <div style="width: 40px;"></div>
         </div>
     </nav>
 
-    <div id="rcs-fullscreenMenu" class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
+    <button id="rcs-menuBtn" class="w-10 h-10 fixed-menu-btn z-50 flex items-center justify-center focus:outline-none"
+        aria-label="Toggle Menu">
+        <span class="bar top-bar w-6 h-[3px] bg-white absolute translate-y-[-8px]"></span>
+        <span class="bar middle-bar w-6 h-[3px] bg-white absolute"></span>
+        <span class="bar bottom-bar w-6 h-[3px] bg-white absolute translate-y-[8px]"></span>
+    </button>
+
+    <div id="rcs-fullscreenMenu"
+        class="fixed top-0 right-0 h-full w-[400px] glass text-white transform translate-x-full transition-transform duration-300 z-40 shadow-lg">
         <div class="flex flex-col justify-center h-full items-start pl-10 space-y-6 text-xl rcs-menu-items w-[100%]">
             <a href="index.html" class="rcs-nav-link">Home</a>
             <a href="about.html" class="rcs-nav-link">About</a>
@@ -79,9 +86,12 @@
                         A robot that maintains its balance dynamically using sensors and control algorithms.
                     </p>
                     <p class="project-desc-long">
-                        Description: A two-wheeled robot that balances upright using feedback from gyroscope/accelerometer sensors. It demonstrates control theory fundamentals by dynamically adjusting wheel motion to keep its center of gravity stable using closed-loop PID control.<br>
+                        Description: A two-wheeled robot that balances upright using feedback from
+                        gyroscope/accelerometer sensors. It demonstrates control theory fundamentals by dynamically
+                        adjusting wheel motion to keep its center of gravity stable using closed-loop PID control.<br>
                         Year: 2024–25 (recent club build cycle)<br>
-                        Technologies: Arduino/ESP32, MPU-6050 IMU, DC motors with encoders, PID control algorithms, C/C++ programming, battery power.
+                        Technologies: Arduino/ESP32, MPU-6050 IMU, DC motors with encoders, PID control algorithms,
+                        C/C++ programming, battery power.
                     </p>
                 </div>
             </div>
@@ -94,9 +104,12 @@
                         An upgraded version of a modular robot platform (likely for motion/navigation tasks).
                     </p>
                     <p class="project-desc-long">
-                        Description: A modular, Bluetooth-controlled mobile robot platform used for demos and testing autonomous functions. It is designed to be controlled via mobile or controller, providing a base platform for sensor integration and navigation experiments.<br>
+                        Description: A modular, Bluetooth-controlled mobile robot platform used for demos and testing
+                        autonomous functions. It is designed to be controlled via mobile or controller, providing a base
+                        platform for sensor integration and navigation experiments.<br>
                         Year: 2024<br>
-                        Technologies: Bluetooth modules (HC-05/HC-06), Arduino/ESP32, motor drivers (L298/NFET H-bridge), mobile UI/BT pairing, chassis fabrication. 
+                        Technologies: Bluetooth modules (HC-05/HC-06), Arduino/ESP32, motor drivers (L298/NFET
+                        H-bridge), mobile UI/BT pairing, chassis fabrication.
                     </p>
                 </div>
             </div>
@@ -109,9 +122,12 @@
                         A specialized robotics platform (name suggests an autonomous or mission-oriented robot).
                     </p>
                     <p class="project-desc-long">
-                        Description: A mission-oriented robot built for navigation challenges and campus events. PLUTOX integrates basic line or obstacle detection to run autonomously or via controller, showcasing path-following and sensor fusion.<br>
+                        Description: A mission-oriented robot built for navigation challenges and campus events. PLUTOX
+                        integrates basic line or obstacle detection to run autonomously or via controller, showcasing
+                        path-following and sensor fusion.<br>
                         Year: 2025<br>
-                        Technologies: Line trackers, ultrasonic sensors, microcontrollers (Arduino/ESP32), DC/servo motors, logic control, PCB prototyping.
+                        Technologies: Line trackers, ultrasonic sensors, microcontrollers (Arduino/ESP32), DC/servo
+                        motors, logic control, PCB prototyping.
                     </p>
                 </div>
             </div>
@@ -124,9 +140,12 @@
                         General autonomous robotic system showcasing basic automation functions.
                     </p>
                     <p class="project-desc-long">
-                        Description: A general autonomous robotic unit created to explore automation principles. It typically includes simple environment sensing and decision rules — for example, obstacle avoidance or task execution (like object retrieval).<br>
+                        Description: A general autonomous robotic unit created to explore automation principles. It
+                        typically includes simple environment sensing and decision rules — for example, obstacle
+                        avoidance or task execution (like object retrieval).<br>
                         Year: 2024<br>
-                        Technologies: IR/ultrasonic sensors, microcontrollers, motor drivers, basic path-planning logic, embedded C++. 
+                        Technologies: IR/ultrasonic sensors, microcontrollers, motor drivers, basic path-planning logic,
+                        embedded C++.
                     </p>
                 </div>
             </div>
@@ -139,9 +158,12 @@
                         A project integrating radar sensors for navigation or obstacle detection.
                     </p>
                     <p class="project-desc-long">
-                        Description: A project designed to integrate radar or ultrasonic ranging for robot navigation, enabling advanced obstacle detection for autonomous mobility beyond basic sensors — useful for indoor/outdoor robotics.<br>
+                        Description: A project designed to integrate radar or ultrasonic ranging for robot navigation,
+                        enabling advanced obstacle detection for autonomous mobility beyond basic sensors — useful for
+                        indoor/outdoor robotics.<br>
                         Year: 2025<br>
-                        Technologies: Radar/SONAR modules, microcontrollers (ESP32/RPi), signal processing algorithms, SLAM-style localization concepts, ROS-lite testing.
+                        Technologies: Radar/SONAR modules, microcontrollers (ESP32/RPi), signal processing algorithms,
+                        SLAM-style localization concepts, ROS-lite testing.
                     </p>
                 </div>
             </div>
@@ -154,9 +176,12 @@
                         A six-legged walking robot for advanced locomotion and terrain handling.
                     </p>
                     <p class="project-desc-long">
-                        Description: A six-legged biomimetic robot capable of walking over varied surfaces. It allows experimentation with gait algorithms and advanced motion control, useful for terrain-aware robotics research and competitions.<br>
+                        Description: A six-legged biomimetic robot capable of walking over varied surfaces. It allows
+                        experimentation with gait algorithms and advanced motion control, useful for terrain-aware
+                        robotics research and competitions.<br>
                         Year: 2025<br>
-                        Technologies: Servo motors (18+), custom chassis fabrication/3D parts, gait kinematics, remote control/ROS nodes for motion, wireless communications.
+                        Technologies: Servo motors (18+), custom chassis fabrication/3D parts, gait kinematics, remote
+                        control/ROS nodes for motion, wireless communications.
                     </p>
                 </div>
             </div>
@@ -166,13 +191,17 @@
                 <div class="project-content">
                     <h3>ESP32-Based Autonomous Drone (IRoC 2025 Challenge)<span>(2025)</span></h3>
                     <p class="project-desc-short">
-                        A custom drone built using ESP32 and Raspberry Pi or Jetson Nano for robotics challenges, focusing on autonomous control and embedded intelligence (used in the IRoC 2025 Challenge).
+                        A custom drone built using ESP32 and Raspberry Pi or Jetson Nano for robotics challenges,
+                        focusing on autonomous control and embedded intelligence (used in the IRoC 2025 Challenge).
                     </p>
                     <p class="project-desc-long">
                         Year: 2025<br>
-                        Description: Designed around an ESP32 + higher-compute board (e.g., Raspberry Pi/Jetson Nano) to autonomously fly for the Indian Robotics Challenge (IRoC). Tasks include waypoint following, object detection, and autonomous control without GPS.<br>
+                        Description: Designed around an ESP32 + higher-compute board (e.g., Raspberry Pi/Jetson Nano) to
+                        autonomously fly for the Indian Robotics Challenge (IRoC). Tasks include waypoint following,
+                        object detection, and autonomous control without GPS.<br>
                         Team (est.): 8–10 members (Mechatronics & ECE heavy)<br>
-                        Tech Stack: ESP32, ArduPilot/PX4 stack, IMU/GPS/optical flow sensors, Python/C++ for algorithms, possibly ROS.
+                        Tech Stack: ESP32, ArduPilot/PX4 stack, IMU/GPS/optical flow sensors, Python/C++ for algorithms,
+                        possibly ROS.
                     </p>
                 </div>
             </div>
@@ -186,9 +215,11 @@
                     </p>
                     <p class="project-desc-long">
                         Year: ~2022<br>
-                        Description: Tracks and follows a marked line on a surface via optical sensors — fundamental robotics challenge.<br>
+                        Description: Tracks and follows a marked line on a surface via optical sensors — fundamental
+                        robotics challenge.<br>
                         Team (est.): 3–4 members<br>
-                        Tech & Tools: IR reflectance sensors, PIC/Arduino microcontroller, basic PID control, robot frame with wheels.
+                        Tech & Tools: IR reflectance sensors, PIC/Arduino microcontroller, basic PID control, robot
+                        frame with wheels.
                     </p>
                 </div>
             </div>
@@ -198,13 +229,17 @@
                 <div class="project-content">
                     <h3>ANAV — Autonomous Navigation Aerial Vehicle (ISRO “Fly Me on Mars”)<span>2025</span></h3>
                     <p class="project-desc-short">
-                        A fully autonomous aerial vehicle built under the ISRO Robotics Challenge 2025 (“Fly Me on Mars”) with advanced navigation systems such as Extended Kalman Filter, IMU, and real-time decision-making without GPS.
+                        A fully autonomous aerial vehicle built under the ISRO Robotics Challenge 2025 (“Fly Me on
+                        Mars”) with advanced navigation systems such as Extended Kalman Filter, IMU, and real-time
+                        decision-making without GPS.
                     </p>
                     <p class="project-desc-long">
                         Year: 2025<br>
-                        Description: A custom aerial vehicle tackling NASA/ISRO-style autonomy challenges — includes Kalman filters, IMU fusion, and onboard decision logic.<br>
+                        Description: A custom aerial vehicle tackling NASA/ISRO-style autonomy challenges — includes
+                        Kalman filters, IMU fusion, and onboard decision logic.<br>
                         Team (est.): 8–10 members<br>
-                        Tools/Tech: Extended Kalman Filter (EKF), ROS/DroneKit, IMUs, GPS, Jetson Nano/Pi compute module.
+                        Tools/Tech: Extended Kalman Filter (EKF), ROS/DroneKit, IMUs, GPS, Jetson Nano/Pi compute
+                        module.
                     </p>
                     <div class="project-tech">Python • OpenCV • ROS • PX4</div>
                     <div class="project-team">Team: A. Kumar, S. Verma</div>
@@ -216,15 +251,19 @@
 
     <footer class="footer">
         <div class="footer-container">
-            
+
             <div class="footer-section social-media">
                 <h3>Follow Us</h3>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/robonitp" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/robonitp" class="social-link"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="https://twitter.com/robonitp" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/robotics-club-nitp" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp/" class="social-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna/" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" class="social-link"><i
+                            class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -246,7 +285,8 @@
                 <ul class="contact-list">
                     <li><i class="fas fa-envelope"></i> robotics@nitp.ac.in</li>
                     <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, National Institute of Technology Patna Incubation Center 3rd Floor - 800005</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ashok Rajpath, National Institute of Technology Patna
+                        Incubation Center 3rd Floor - 800005</li>
                 </ul>
             </div>
 
@@ -264,4 +304,5 @@
     <script src="js/modals.js"></script>
     <script src="js/filters.js"></script>
 </body>
+
 </html>
