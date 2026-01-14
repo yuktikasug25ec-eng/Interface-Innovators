@@ -1608,8 +1608,8 @@ a {
   position: relative;
 }
 
-.achv-header h1 { letter-spacing: 6px; font-size: 2.2rem; }
-.achv-header p { color: #9ca3af; margin-top: 10px; }
+.achv-header h1 { letter-spacing: 6px; font-size: 2.2rem;  text-align: center; }
+.achv-header p { color: #9ca3af; margin-top: 10px;   text-align: center;}
 
 .achv-section .achv-metrics {
   display: flex;
